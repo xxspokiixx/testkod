@@ -1,0 +1,1 @@
+logo= "http://es.web.img2.acsta.net/pictures/17/07/03/09/41/146201.jpg" name= "La Torre Oscura" url= "http://www.cinevall.club/videos/la_torre_oscura.m4v" 
