@@ -7,7 +7,7 @@ def mainMenu():
    
 def liveTv():   
 	addDir3('Izzi','https://raw.githubusercontent.com/xxspokiixx/testkod/master/lista.txt',20,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
-    addDir3('GameSnake','https://raw.githubusercontent.com/xxspokiixx/testkod/master/snake.txt',21,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
+	addDir3('Game Snake List','https://raw.githubusercontent.com/xxspokiixx/testkod/master/snake.txt',21,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
    
 def MoviesCategories():
 	addDir3('Todas [Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
