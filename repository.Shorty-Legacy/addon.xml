@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.Shorty-Legacy" name="Shorty legacy official Repo" version="1.0.2" provider-name="Shorty">
-	<extension point="xbmc.addon.repository" name="Shorty legacy official Repo">
-		<info compressed="false">https://raw.githubusercontent.com/xxspokiixx/testkod/master/addons.xml</info>
+<addon id="repository.Shorty-Legacy" name="Shorty legacy official Repo" version="1.0.3" provider-name="Shorty">
+	<extension point="xbmc.addon.repository" name="[COLOR red]Shorty[/COLOR] legacy official Repo">
+		<info compressed="false">https://github.com/xxspokiixx/testkod/raw/master/addons.xml</info>
 		<checksum>https://github.com/xxspokiixx/testkod/raw/master/addons.xml.md5</checksum>
 		<datadir zip="true">https://github.com/xxspokiixx/testkod/raw/master</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Shorty-Legacy official Repo</summary>
    		<description lang="en">Instala los Addons mas chidoliros. \n Se agregaron fixes.</description>
-		<disclaimer></disclaimer>
+		<disclaimer>Nosotros no alojamos ni creamos, solo compartimos contenido encontrado en otras partes.</disclaimer>
 		<platform>all</platform>
 	</extension>
 </addon>
