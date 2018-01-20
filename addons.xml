@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.ShortyLiveTV"
        name="ShortyLiveTV"
-       version="6.6.6"
+       version="6.6.7"
        provider-name="Shorty">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
