@@ -63,7 +63,7 @@ logo= "https://pbs.twimg.com/media/DEd4r3UXcAA0Dbz.jpg" name= "Como cortar a tu 
 logo= "https://imagessl6.casadellibro.com/m/ig/6/2650976.jpg" name= "El Rostro De Un Angel" url= "https://archive.org/download/angelSRREGIO/el.rostro.de.un.angelSRREGIO.mkv"
 logo= "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ5NTE5OTI2MV5BMl5BanBnXkFtZTgwNzc1NzY1NDE@._V1_.jpg" name= "Una Loca Pelicula de The Walking Dead" url= "https://archive.org/download/DocumentalZombieSRREGIO/The%20Walking%20DeadSRREGIO.mkv"
 logo= "http://www.miracine.com/imagenes/peliculas/Sangre-por-sangre.jpg" name= "Sangre por Sangre" url= "https://archive.org/download/54n6r3.SrRegio/Sangre.por.Sangre.SrRegio.mp4"
-logo= "https://images1.dallasobserver.com/imager/u/teaser/9877544/243877h1.jpg" name= "Marjorie Prime url= "https://ia801507.us.archive.org/22/items/major_201710/major.mp4""
+logo= "https://images1.dallasobserver.com/imager/u/teaser/9877544/243877h1.jpg" name= "Marjorie Prime url= "https://ia801507.us.archive.org/22/items/major_201710/major.mp4"
 logo= "http://br.web.img3.acsta.net/c_215_290/pictures/17/09/06/11/27/0502981.jpg" name= "Wheelman" url= "https://archive.org/download/96352487.SRREGIO.NET/96352487.SRREGIO.NET.mp4"
 logo= "http://www.dreadcentral.com/wp-content/uploads/2016/03/amityville_the_awakening.jpg" name= "Amytiville El Despertar" url= "https://archive.org/download/4w4k3n1ng.SRREGIO/4w4k3n1ng.SRREGIO.mkv"
 logo= "https://upload.wikimedia.org/wikipedia/en/5/53/L.O.R.D_Legend_of_Ravaging_Dynasties_poster.jpeg" name= "L.O.R.D The Legend Of Ravaging Dynasties" url= "https://archive.org/download/L.SRREGIOt/L.SRREGIOt.mkv"
