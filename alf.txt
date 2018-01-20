@@ -1,78 +1,78 @@
-logo= "http://158.69.228.135:8000/images/3595.jpg" name= Alf-T01E01-Bienvenidos url= http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3595.mkv
-logo= "http://158.69.228.135:8000/images/3596.jpg" name= Alf-T01E02-Extraños en la noche url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3596.mkv
-logo= "http://158.69.228.135:8000/images/3597.jpg" name= Alf-T01E03-En busca de Suertudo url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3597.mkv
-logo= "http://158.69.228.135:8000/images/3598.jpg" name= Alf-T01E04-Pennsylvania 6 a 5000 url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3598.mkv
-logo= "http://158.69.228.135:8000/images/3599.jpg" name= Alf-T01E05-Sigamos con fe url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3599.mkv
-logo= "http://158.69.228.135:8000/images/3600.jpg" name= Alf-T01E06-Sólo para tus ojos url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3600.mkv
-logo= "http://158.69.228.135:8000/images/3601.jpg" name= Alf-T01E07-Ayúdame, Rhonda url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3601.mkv
-logo= "http://158.69.228.135:8000/images/3602.jpg" name= Alf-T01E08-Eres alguien fuera de este mundo url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3602.mkv
-logo= "http://158.69.228.135:8000/images/3603.jpg" name= Alf-T01E09-Salta url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3603.mkv
-logo= "http://158.69.228.135:8000/images/3604.jpg" name= Alf-T01E10-Nena, puedes conducir mi auto url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3604.mkv
-logo= "http://158.69.228.135:8000/images/3605.jpg" name= Alf-T01E11-Vacaciones url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3605.mkv
-logo= "http://158.69.228.135:8000/images/3606.jpg" name= Alf-T01E12-Ah, la Navidad url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3606.mkv
-logo= "http://158.69.228.135:8000/images/3607.jpg" name= Alf-T01E13-Reunión de madre e hija url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3607.mkv
-logo= "http://158.69.228.135:8000/images/3608.jpg" name= Alf-T01E14-Trama familiar url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3608.mkv
-logo= "http://158.69.228.135:8000/images/3609.jpg" name= Alf-T01E15-Tengo una nueva actitud url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3609.mkv
-logo= "http://158.69.228.135:8000/images/3610.jpg" name= Alf-T01E16-Trata de recordar (Primera parte) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3610.mkv
-logo= "http://158.69.228.135:8000/images/3611.jpg" name= Alf-T01E17-Trata de recordar (Segunda parte) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3611.mkv
-logo= "http://158.69.228.135:8000/images/3612.jpg" name= Alf-T01E18-Canción de la frontera url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3612.mkv
-logo= "http://158.69.228.135:8000/images/3613.jpg" name= Alf-T01E19-Cosa salvaje url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3613.mkv
-logo= "http://158.69.228.135:8000/images/3614.jpg" name= Alf-T01E20-Perdiendo la cabeza por ti url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3614.mkv
-logo= "http://158.69.228.135:8000/images/3615.jpg" name= Alf-T01E21-Mirando a través de la ventana url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3615.mkv
-logo= "http://158.69.228.135:8000/images/3616.jpg" name= Alf-T01E22-No es fácil ser verde url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3616.mkv
-logo= "http://158.69.228.135:8000/images/3617.jpg" name= Alf-T01E23-El apostador url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3617.mkv
-logo= "http://158.69.228.135:8000/images/3618.jpg" name= Alf-T01E24-Ciencia rara url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3618.mkv
-logo= "http://158.69.228.135:8000/images/3619.jpg" name= Alf-T01E25-La cucaracha url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3619.mkv
-logo= "http://158.69.228.135:8000/images/3620.jpg" name= Alf-T01E26-Ven a volar conmigo url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3620.mkv
-logo= "http://158.69.228.135:8000/images/3890.jpg" name= Alf-T02E01-El trabajo amansa a las fieras url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3890.mkv
-logo= "http://158.69.228.135:8000/images/3891.jpg" name= Alf-T02E02-La balada de la Isla de Gilligan url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3891.mkv
-logo= "http://158.69.228.135:8000/images/3892.jpg" name= Alf-T02E03-El abominable ALF del espacio url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3892.mkv
-logo= "http://158.69.228.135:8000/images/3893.jpg" name= Alf-T02E04-El retiro de ALF url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3893.mkv
-logo= "http://158.69.228.135:8000/images/3894.jpg" name= Alf-T02E05-Horario triple A url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3894.mkv
-logo= "http://158.69.228.135:8000/images/3895.jpg" name= Alf-T02E06-Noche de Halloween url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3895.mkv
-logo= "http://158.69.228.135:8000/images/3896.jpg" name= Alf-T02E07-Una chica hermosa url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3896.mkv
-logo= "http://158.69.228.135:8000/images/3897.jpg" name= Alf-T02E08-Algo me sucede url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3897.mkv
-logo= "http://158.69.228.135:8000/images/3898.jpg" name= Alf-T02E09-Tren nocturno url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3898.mkv
-logo= "http://158.69.228.135:8000/images/3899.jpg" name= Alf-T02E10-¡Qué romántico! url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3899.mkv
-logo= "http://158.69.228.135:8000/images/3900.jpg" name= Alf-T02E11-Arriba, el jefe url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3900.mkv
-logo= "http://158.69.228.135:8000/images/3901.jpg" name= Alf-T02E12-La Navidad especial de ALF (parte 1) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3901.mkv
-logo= "http://158.69.228.135:8000/images/3902.jpg" name= Alf-T02E13-La Navidad especial de ALF (parte 2) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3902.mkv
-logo= "http://158.69.228.135:8000/images/3903.jpg" name= Alf-T02E14-El chico de al lado url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3903.mkv
-logo= "http://158.69.228.135:8000/images/3904.jpg" name= Alf-T02E15-Tengo derecho a un juicio url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3904.mkv
-logo= "http://158.69.228.135:8000/images/3905.jpg" name= Alf-T02E16-Lo sentimos mucho, tío Alberto url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3905.mkv
-logo= "http://158.69.228.135:8000/images/3906.jpg" name= Alf-T02E17-Alguien que me cuide (parte 1) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3906.mkv
-logo= "http://158.69.228.135:8000/images/3907.jpg" name= Alf-T02E18-Alguien que me cuide (parte 2) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3907.mkv
-logo= "http://158.69.228.135:8000/images/3908.jpg" name= Alf-T02E19-Tengo que salir de aquí url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3908.mkv
-logo= "http://158.69.228.135:8000/images/3909.jpg" name= Alf-T02E20-No eres más que un perro de caza url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3909.mkv
-logo= "http://158.69.228.135:8000/images/3910.jpg" name= Alf-T02E21-Noquéame con tu mejor golpe url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3910.mkv
-logo= "http://158.69.228.135:8000/images/3911.jpg" name= Alf-T02E22-Cambiándose url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3911.mkv
-logo= "http://158.69.228.135:8000/images/3912.jpg" name= Alf-T02E23-Soy tu marioneta url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3912.mkv
-logo= "http://158.69.228.135:8000/images/3913.jpg" name= Alf-T02E24-Tequila url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3913.mkv
-logo= "http://158.69.228.135:8000/images/3914.jpg" name= Alf-T02E25-Somos una familia url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3914.mkv
-logo= "http://158.69.228.135:8000/images/3915.jpg" name= Alf-T02E26-Universitaria de primera url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3915.mkv
-logo= "http://158.69.228.135:8000/images/3964.jpg" name= Alf-T03E01-Alto, en nombre del amor url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3964.mkv
-logo= "http://158.69.228.135:8000/images/3965.jpg" name= Alf-T03E02-Escalera al cielo url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3965.mkv
-logo= "http://158.69.228.135:8000/images/3966.jpg" name= Alf-T03E03-A tu mirar me acostumbré url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3966.mkv
-logo= "http://158.69.228.135:8000/images/3967.jpg" name= Alf-T03E04-El show de Johnny Carson (parte 1) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3967.mkv
-logo= "http://158.69.228.135:8000/images/3968.jpg" name= Alf-T03E05-El show de Johnny Carson (parte 2) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3968.mkv
-logo= "http://158.69.228.135:8000/images/3969.jpg" name= Alf-T03E06-Promesas, promesas url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3969.mkv
-logo= "http://158.69.228.135:8000/images/3970.jpg" name= Alf-T03E07-El pavo desaparecido (parte 1) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3970.mkv
-logo= "http://158.69.228.135:8000/images/3971.jpg" name= Alf-T03E08-El pavo desaparecido (parte 2) url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3971.mkv
-logo= "http://158.69.228.135:8000/images/3972.jpg" name= Alf-T03E09-Cambios url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3972.mkv
-logo= "http://158.69.228.135:8000/images/3973.jpg" name= Alf-T03E10-Mis páginas anteriores url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3973.mkv
-logo= "http://158.69.228.135:8000/images/3974.jpg" name= Alf-T03E11-Sólo de nuevo, naturalmente url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3974.mkv
-logo= "http://158.69.228.135:8000/images/3975.jpg" name= Alf-T03E12-¿Crees en la magia? url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3975.mkv
-logo= "http://158.69.228.135:8000/images/3976.jpg" name= Alf-T03E13-El fugitivo url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3976.mkv
-logo= "http://158.69.228.135:8000/images/3977.jpg" name= Alf-T03E14-Regresando el golpe url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3977.mkv
-logo= "http://158.69.228.135:8000/images/3978.jpg" name= Alf-T03E15-Mentes suspicaces url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3978.mkv
-logo= "http://158.69.228.135:8000/images/3979.jpg" name= Alf-T03E16-Amor infantil url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3979.mkv
-logo= "http://158.69.228.135:8000/images/3980.jpg" name= Alf-T03E17-Huyendo asustado url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3980.mkv
-logo= "http://158.69.228.135:8000/images/3981.jpg" name= Alf-T03E18-Parado a la sombra del amor url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3981.mkv
-logo= "http://158.69.228.135:8000/images/3982.jpg" name= Alf-T03E19-Superstición url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3982.mkv
-logo= "http://158.69.228.135:8000/images/3983.jpg" name= Alf-T03E20-Conflicto entre enamorados url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3983.mkv
-logo= "http://158.69.228.135:8000/images/3984.jpg" name= Alf-T03E21-Funeral para un amigo url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3984.mkv
-logo= "http://158.69.228.135:8000/images/3985.jpg" name= Alf-T03E22-No temas a la oscuridad url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3985.mkv
-logo= "http://158.69.228.135:8000/images/3986.jpg" name= Alf-T03E23-¿Has visto a tu madre parada en la oscuridad, bebé? url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3986.mkv
-logo= "http://158.69.228.135:8000/images/3987.jpg" name= Alf-T03E24-Como en las viejas películas url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3987.mkv
-logo= "http://158.69.228.135:8000/images/3988.jpg" name= Alf-T03E25-Salta, sacúdete y rueda url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3988.mkv
-logo= "http://158.69.228.135:8000/images/3989.jpg" name= Alf-T03E26-Voy a tener un bebé url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3989.mkv
+logo= "http://158.69.228.135:8000/images/3595.jpg" name= "Alf-T01E01-Bienvenidos " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3595.mkv
+logo= "http://158.69.228.135:8000/images/3596.jpg" name= "Alf-T01E02-Extraños en la noche " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3596.mkv
+logo= "http://158.69.228.135:8000/images/3597.jpg" name= "Alf-T01E03-En busca de Suertudo " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3597.mkv
+logo= "http://158.69.228.135:8000/images/3598.jpg" name= "Alf-T01E04-Pennsylvania 6 a 5000 " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3598.mkv
+logo= "http://158.69.228.135:8000/images/3599.jpg" name= "Alf-T01E05-Sigamos con fe " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3599.mkv
+logo= "http://158.69.228.135:8000/images/3600.jpg" name= "Alf-T01E06-Sólo para tus ojos " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3600.mkv
+logo= "http://158.69.228.135:8000/images/3601.jpg" name= "Alf-T01E07-Ayúdame, Rhonda " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3601.mkv
+logo= "http://158.69.228.135:8000/images/3602.jpg" name= "Alf-T01E08-Eres alguien fuera de este mundo " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3602.mkv
+logo= "http://158.69.228.135:8000/images/3603.jpg" name= "Alf-T01E09-Salta " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3603.mkv
+logo= "http://158.69.228.135:8000/images/3604.jpg" name= "Alf-T01E10-Nena, puedes conducir mi auto " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3604.mkv
+logo= "http://158.69.228.135:8000/images/3605.jpg" name= "Alf-T01E11-Vacaciones " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3605.mkv
+logo= "http://158.69.228.135:8000/images/3606.jpg" name= "Alf-T01E12-Ah, la Navidad " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3606.mkv
+logo= "http://158.69.228.135:8000/images/3607.jpg" name= "Alf-T01E13-Reunión de madre e hija " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3607.mkv
+logo= "http://158.69.228.135:8000/images/3608.jpg" name= "Alf-T01E14-Trama familiar " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3608.mkv
+logo= "http://158.69.228.135:8000/images/3609.jpg" name= "Alf-T01E15-Tengo una nueva actitud " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3609.mkv
+logo= "http://158.69.228.135:8000/images/3610.jpg" name= "Alf-T01E16-Trata de recordar (Primera parte) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3610.mkv
+logo= "http://158.69.228.135:8000/images/3611.jpg" name= "Alf-T01E17-Trata de recordar (Segunda parte) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3611.mkv
+logo= "http://158.69.228.135:8000/images/3612.jpg" name= "Alf-T01E18-Canción de la frontera " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3612.mkv
+logo= "http://158.69.228.135:8000/images/3613.jpg" name= "Alf-T01E19-Cosa salvaje " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3613.mkv
+logo= "http://158.69.228.135:8000/images/3614.jpg" name= "Alf-T01E20-Perdiendo la cabeza por ti " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3614.mkv
+logo= "http://158.69.228.135:8000/images/3615.jpg" name= "Alf-T01E21-Mirando a través de la ventana " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3615.mkv
+logo= "http://158.69.228.135:8000/images/3616.jpg" name= "Alf-T01E22-No es fácil ser verde " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3616.mkv
+logo= "http://158.69.228.135:8000/images/3617.jpg" name= "Alf-T01E23-El apostador " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3617.mkv
+logo= "http://158.69.228.135:8000/images/3618.jpg" name= "Alf-T01E24-Ciencia rara " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3618.mkv
+logo= "http://158.69.228.135:8000/images/3619.jpg" name= "Alf-T01E25-La cucaracha " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3619.mkv
+logo= "http://158.69.228.135:8000/images/3620.jpg" name= "Alf-T01E26-Ven a volar conmigo " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3620.mkv
+logo= "http://158.69.228.135:8000/images/3890.jpg" name= "Alf-T02E01-El trabajo amansa a las fieras " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3890.mkv
+logo= "http://158.69.228.135:8000/images/3891.jpg" name= "Alf-T02E02-La balada de la Isla de Gilligan " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3891.mkv
+logo= "http://158.69.228.135:8000/images/3892.jpg" name= "Alf-T02E03-El abominable ALF del espacio " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3892.mkv
+logo= "http://158.69.228.135:8000/images/3893.jpg" name= "Alf-T02E04-El retiro de ALF " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3893.mkv
+logo= "http://158.69.228.135:8000/images/3894.jpg" name= "Alf-T02E05-Horario triple A " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3894.mkv
+logo= "http://158.69.228.135:8000/images/3895.jpg" name= "Alf-T02E06-Noche de Halloween " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3895.mkv
+logo= "http://158.69.228.135:8000/images/3896.jpg" name= "Alf-T02E07-Una chica hermosa " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3896.mkv
+logo= "http://158.69.228.135:8000/images/3897.jpg" name= "Alf-T02E08-Algo me sucede " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3897.mkv
+logo= "http://158.69.228.135:8000/images/3898.jpg" name= "Alf-T02E09-Tren nocturno " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3898.mkv
+logo= "http://158.69.228.135:8000/images/3899.jpg" name= "Alf-T02E10-¡Qué romántico! " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3899.mkv
+logo= "http://158.69.228.135:8000/images/3900.jpg" name= "Alf-T02E11-Arriba, el jefe " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3900.mkv
+logo= "http://158.69.228.135:8000/images/3901.jpg" name= "Alf-T02E12-La Navidad especial de ALF (parte 1) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3901.mkv
+logo= "http://158.69.228.135:8000/images/3902.jpg" name= "Alf-T02E13-La Navidad especial de ALF (parte 2) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3902.mkv
+logo= "http://158.69.228.135:8000/images/3903.jpg" name= "Alf-T02E14-El chico de al lado " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3903.mkv
+logo= "http://158.69.228.135:8000/images/3904.jpg" name= "Alf-T02E15-Tengo derecho a un juicio " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3904.mkv
+logo= "http://158.69.228.135:8000/images/3905.jpg" name= "Alf-T02E16-Lo sentimos mucho, tío Alberto " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3905.mkv
+logo= "http://158.69.228.135:8000/images/3906.jpg" name= "Alf-T02E17-Alguien que me cuide (parte 1) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3906.mkv
+logo= "http://158.69.228.135:8000/images/3907.jpg" name= "Alf-T02E18-Alguien que me cuide (parte 2) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3907.mkv
+logo= "http://158.69.228.135:8000/images/3908.jpg" name= "Alf-T02E19-Tengo que salir de aquí " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3908.mkv
+logo= "http://158.69.228.135:8000/images/3909.jpg" name= "Alf-T02E20-No eres más que un perro de caza " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3909.mkv
+logo= "http://158.69.228.135:8000/images/3910.jpg" name= "Alf-T02E21-Noquéame con tu mejor golpe " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3910.mkv
+logo= "http://158.69.228.135:8000/images/3911.jpg" name= "Alf-T02E22-Cambiándose " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3911.mkv
+logo= "http://158.69.228.135:8000/images/3912.jpg" name= "Alf-T02E23-Soy tu marioneta " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3912.mkv
+logo= "http://158.69.228.135:8000/images/3913.jpg" name= "Alf-T02E24-Tequila " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3913.mkv
+logo= "http://158.69.228.135:8000/images/3914.jpg" name= "Alf-T02E25-Somos una familia " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3914.mkv
+logo= "http://158.69.228.135:8000/images/3915.jpg" name= "Alf-T02E26-Universitaria de primera " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3915.mkv
+logo= "http://158.69.228.135:8000/images/3964.jpg" name= "Alf-T03E01-Alto, en nombre del amor " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3964.mkv
+logo= "http://158.69.228.135:8000/images/3965.jpg" name= "Alf-T03E02-Escalera al cielo " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3965.mkv
+logo= "http://158.69.228.135:8000/images/3966.jpg" name= "Alf-T03E03-A tu mirar me acostumbré " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3966.mkv
+logo= "http://158.69.228.135:8000/images/3967.jpg" name= "Alf-T03E04-El show de Johnny Carson (parte 1) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3967.mkv
+logo= "http://158.69.228.135:8000/images/3968.jpg" name= "Alf-T03E05-El show de Johnny Carson (parte 2) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3968.mkv
+logo= "http://158.69.228.135:8000/images/3969.jpg" name= "Alf-T03E06-Promesas, promesas " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3969.mkv
+logo= "http://158.69.228.135:8000/images/3970.jpg" name= "Alf-T03E07-El pavo desaparecido (parte 1) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3970.mkv
+logo= "http://158.69.228.135:8000/images/3971.jpg" name= "Alf-T03E08-El pavo desaparecido (parte 2) " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3971.mkv
+logo= "http://158.69.228.135:8000/images/3972.jpg" name= "Alf-T03E09-Cambios " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3972.mkv
+logo= "http://158.69.228.135:8000/images/3973.jpg" name= "Alf-T03E10-Mis páginas anteriores " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3973.mkv
+logo= "http://158.69.228.135:8000/images/3974.jpg" name= "Alf-T03E11-Sólo de nuevo, naturalmente " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3974.mkv
+logo= "http://158.69.228.135:8000/images/3975.jpg" name= "Alf-T03E12-¿Crees en la magia? " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3975.mkv
+logo= "http://158.69.228.135:8000/images/3976.jpg" name= "Alf-T03E13-El fugitivo " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3976.mkv
+logo= "http://158.69.228.135:8000/images/3977.jpg" name= "Alf-T03E14-Regresando el golpe " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3977.mkv
+logo= "http://158.69.228.135:8000/images/3978.jpg" name= "Alf-T03E15-Mentes suspicaces " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3978.mkv
+logo= "http://158.69.228.135:8000/images/3979.jpg" name= "Alf-T03E16-Amor infantil " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3979.mkv
+logo= "http://158.69.228.135:8000/images/3980.jpg" name= "Alf-T03E17-Huyendo asustado " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3980.mkv
+logo= "http://158.69.228.135:8000/images/3981.jpg" name= "Alf-T03E18-Parado a la sombra del amor " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3981.mkv
+logo= "http://158.69.228.135:8000/images/3982.jpg" name= "Alf-T03E19-Superstición " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3982.mkv
+logo= "http://158.69.228.135:8000/images/3983.jpg" name= "Alf-T03E20-Conflicto entre enamorados " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3983.mkv
+logo= "http://158.69.228.135:8000/images/3984.jpg" name= "Alf-T03E21-Funeral para un amigo " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3984.mkv
+logo= "http://158.69.228.135:8000/images/3985.jpg" name= "Alf-T03E22-No temas a la oscuridad " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3985.mkv
+logo= "http://158.69.228.135:8000/images/3986.jpg" name= "Alf-T03E23-¿Has visto a tu madre parada en la oscuridad, bebé? " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3986.mkv
+logo= "http://158.69.228.135:8000/images/3987.jpg" name= "Alf-T03E24-Como en las viejas películas " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3987.mkv
+logo= "http://158.69.228.135:8000/images/3988.jpg" name= "Alf-T03E25-Salta, sacúdete y rueda " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3988.mkv
+logo= "http://158.69.228.135:8000/images/3989.jpg" name= "Alf-T03E26-Voy a tener un bebé " url= "http://portal.iptvprivado.net:8000/movie/dsolis/7u3yh3/3989.mkv
