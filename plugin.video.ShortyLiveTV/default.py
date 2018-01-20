@@ -1,55 +1,60 @@
 import xbmcaddon,os,requests,xbmc,xbmcgui,urllib,urllib2,re,xbmcplugin
 
 def mainMenu():
-   addDir3('Live Tv','goLiveTV',4,'https://www.materialui.co/materialIcons/notification/live_tv_black_192x192.png','','')
-   addDir3('Movies','goMovies',2,'https://cdn2.iconfinder.com/data/icons/bazza-internet-and-websites/60/12_-_Film_slate-512.png','','')
+   addDir3('Live Tv','goLiveTV',2,'https://www.materialui.co/materialIcons/notification/live_tv_black_192x192.png','','')
+   addDir3('Movies','goMovies',4,'https://cdn2.iconfinder.com/data/icons/bazza-internet-and-websites/60/12_-_Film_slate-512.png','','')
    addDir3('Series','goSeries',3,'https://cdn2.iconfinder.com/data/icons/bazza-internet-and-websites/60/12_-_Film_slate-512.png','','')
    
 def liveTv():   
 	addDir3('Izzi','https://raw.githubusercontent.com/xxspokiixx/testkod/master/lista.txt',20,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
-	addDir3('Game Snake List','https://raw.githubusercontent.com/xxspokiixx/testkod/master/snake.txt',21,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
+	addDir3('Game Snake List','https://raw.githubusercontent.com/xxspokiixx/testkod/master/snake.txt',21,'https://lh4.ggpht.com/yJe6HqfvYKO2ej-qfsoWf50T71o4346gXkF6T66FMXBAjJ5DhMt7buBDESUMqYaeIqI=w300','','')
    
 def MoviesCategories():
-	addDir3('Todas [Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
-	addDir3('Todas [Ingles/Sub]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
-	addDir3('Accion [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'http://icons.veryicon.com/ico/System/Icons8%20Metro%20Style/Movie%20Genres%20Action.ico','','')
-	addDir3('Animacion [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'https://cdn3.iconfinder.com/data/icons/movies-3/32/shrek-character-animation-movie-ogre-512.png','','')
-	addDir3('Comedia [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'https://d30y9cdsu7xlg0.cloudfront.net/png/60743-200.png','','')
-	addDir3('Drama [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'http://icons.veryicon.com/ico/System/iOS7%20Minimal/Movie%20Genres%20Drama.ico','','')
-	addDir3('Romance [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'http://icons.iconarchive.com/icons/icons8/ios7/256/Cinema-Romance-icon.png','','')
-	addDir3('Terror [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',30,'http://www.iconarchive.com/download/i87740/icons8/ios7/Cinema-Horror-2.ico','','')
+	addDir3('Todas [Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',40,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
+	addDir3('Todas [Ingles/Sub]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',41,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
+	addDir3('Accion [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',42,'http://icons.veryicon.com/ico/System/Icons8%20Metro%20Style/Movie%20Genres%20Action.ico','','')
+	addDir3('Animacion [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',43,'https://cdn3.iconfinder.com/data/icons/movies-3/32/shrek-character-animation-movie-ogre-512.png','','')
+	addDir3('Comedia [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',44,'https://d30y9cdsu7xlg0.cloudfront.net/png/60743-200.png','','')
+	addDir3('Drama [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',45,'http://icons.veryicon.com/ico/System/iOS7%20Minimal/Movie%20Genres%20Drama.ico','','')
+	addDir3('Romance [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',46,'http://icons.iconarchive.com/icons/icons8/ios7/256/Cinema-Romance-icon.png','','')
+	addDir3('Terror [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',47,'http://www.iconarchive.com/download/i87740/icons8/ios7/Cinema-Horror-2.ico','','')
 	
 def seriesCategories():
-	addDir3('Series [En construccion]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/lista.txt',40,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
+	addDir3('Series [En construccion]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/alf.txt',30,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
 	
 def channel():
-   r = requests.get('https://raw.githubusercontent.com/xxspokiixx/testkod/master/lista.txt')
-   match = re.compile('logo= "(.+?)" name= "(.+?)" url= "(.+?)"').findall(r.content)
-   #match = re.compile('name= (.+?) url= "(.+?)" logo= "(.+?)"').findall(r.content)
-   for logo,name,link in match:
-     addLink(name,link,logo,'','')
-	 
-	 
-def snakeGame():
-   r = requests.get('https://raw.githubusercontent.com/xxspokiixx/testkod/master/snake.txt')
-   match = re.compile('tvg-logo="(.+?)" group-title="(.+?) http(.+?)').findall(r.content)
-   #match = re.compile('name= (.+?) url= "(.+?)" logo= "(.+?)"').findall(r.content)
-   for logo,name,link in match:
-     addLink(name,link,logo,'','') 
-	 
+	if mode==20:
+		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/lista.txt'
+		createListMenu(l)
+	elif mode==21:
+		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt'
+		createListMenu(l)
+		 
+def seriesPlay():
+	if mode==30:
+		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/alf.txt'
+		createListMenu(l)
+	elif mode==None:
+		print "Oops!..."
+		
+def pelis():
+	if mode==40:
+		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt'
+		createListMenu(l)
+	elif mode==None:
+		print "Oops!..."
+		
 #def Moviess():
  #  r = requests.get('')
   # match = re.compile('<div class="folder-cell"><a href="(.+?)">(.+?)</a></div>').findall(r.content)
    #for videoUrl,videoName  in match:
     # addLink(videoName,'https://www.googledrive.com%s'%videoUrl,'','','')
 
-def pelis():
-   r = requests.get('https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt')
-   match = re.compile('logo= "(.+?)" name= "(.+?)" url= "(.+?)"').findall(r.content)
-  # match = re.compile('name= (.+?) url= "(.+?)" logo= "(.+?)"').findall(r.content)
-   for logo,name,link in match:
-     addLink(name,link,logo,'','')
-    # addLink(name,link,logo,'','')
+def createListMenu(l):
+		r = requests.get(l)
+		match = re.compile('logo= "(.+?)" name= "(.+?)" url= "(.+?)"').findall(r.content)
+		for logo,name,link in match:
+			addLink(name,link,logo,'','')
 	 
 def addLink(name,url,image,urlType,fanart):
         ok=True
@@ -106,8 +111,7 @@ def addDir3(name,url,mode,iconimage,fanart,description):
         liz.setProperty( "Fanart_Image", fanart )
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
         return ok
-
-
+		
 def setView(content, viewType):
     # set content type so library shows more views and info
     if content:
@@ -162,21 +166,22 @@ if mode==None or url==None or len(url)<1:
        
 elif mode==1:
         OPEN_URL(url)
-elif mode==4:
+elif mode==2:
 		print ""
 		liveTv()
-elif mode==20:
-        channel()
-elif mode==21:
-        snakeGame()		
 elif mode==3:
 		print ""
 		seriesCategories()
-elif mode==2:
+elif mode==4:
         print ""
         MoviesCategories()
-elif mode==30:
+elif mode==20 or mode<=29:
+        channel()	
+elif mode==30 or mode<=39:
+		seriesPlay()
+elif mode==40 or mode<=49:
 		pelis()
+
 		
 
 
