@@ -55,6 +55,6 @@ logo= "http://puu.sh/mbGSP/45ab2c58f3.png" name= "ESPN 2" url= "http://live.izzi
 logo= "http://puu.sh/mbLku/738fa2b5a4.png" name= "ESPN 3" url= "http://live.izzitv.mx/Content/HLS/Live/Channel(ESPN3)/index.m3u8"
 logo= "http://puu.sh/mw4XE/6a57b1ac9a.png" name= "Golden HD" url= "http://live.izzitv.mx/Content/HLS/Live/Channel(GOLDEN_HD)/index.m3u8"
 logo= "http://puu.sh/m9UfE/5bb8480ed7.png" name= "History HD" url= "http://live.izzitv.mx/Content/HLS/Live/Channel(HISTORY)/index.m3u8"
-logo= "http://puu.sh/mbLha/55295e0162.PNG" name= "H2" url= "http://live.izzitv.mx/Content/HLS/Live/Channel(H2)/index.m3u8"
+logo= "http://puu.sh/mbLha/55295e0162.png" name= "H2" url= "http://live.izzitv.mx/Content/HLS/Live/Channel(H2)/index.m3u8"
 logo= "http://puu.sh/mb2Rd/9c56f73248.png" name= "NatGeo Wild" url= "http://live.izzitv.mx/Content/HLS/Live/Channel(NAT_GEO_WILD)/index.m3u8"
 logo= "http://puu.sh/mbGI5/21150fe27d.png" name= "Telehit" url= "http://live.izzitv.mx/Content/HLS/Live/Channel(TELEHIT)/index.m3u8"
