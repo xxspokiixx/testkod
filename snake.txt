@@ -32,23 +32,12 @@ tvg-logo="http://nick.mtvnimages.com/nick-assets/common/nick-logo-200x200.png?qu
 tvg-logo="http://nick.mtvnimages.com/nick-assets/common/nick-logo-200x200.png?quality=0.75",Nickop2 (GaMe SNAKE Land s.U) http://latinowebtv.ml/live_3.m3u8?token=U2FsdGVkX1+U1aOXetc5mlsiGAc9t6iZ2lG2ruE4kdyncSBlLmBcb69/cZjtdUjo8LkNsaWtXZEJBwwLXuVEcg==
 tvg-logo="http://z.cdn.entutele.com/media/channels/medium/hbo-family-e.gif" HBO Family (GaMe SNAKE Land s.U) http://streaming.wirenetserver.com.ar:1935/canal4/live_1/livestream.m3u8
 tvg-logo="http://www.liveonlinetv247.info/images/miamitv.png" Miami Tv Mexico (GaMe Snk Land s.U) http://mexicoserver.miamitvchannel.com/miamitv/smil:miamitvmexico/chunklist_w324994460_b1896000.m3u8
-tvg-logo="http://1.bp.blogspot.com/_GI1mUAUV6jo/RxWx0q2TJmI/AAAAAAAAAAM/FLkHGZoxqXU/s1600/Logo+Miami+TV.gif" MIAMI TV (GaMe Snk Land s.U) 
-http://usaserver.miamitvchannel.com/miamitv/smil:miamitv/playlist.m3u8
-tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/7b/Imagen_TV_logo.png"IMAGEN TV 
-
-tvg-logo="http://i67.tinypic.com/291f0pg.jpg" UFC (Game Snake Land S. y L. )
-tvg-logo="http://www.totalplay.com.mx/images/logos/canales/entretenimiento/2.png" Fox (Game Snake Land S. y L. )
-tvg-logo="http://www.xtremostereo.net/wp-content/uploads/2016/11/Caracol_TV_HD_envivo-150x150.png"CARACOL HD 
-http://mdstrm.com/live-stream-playlist/58dc3d471cbe05ff3c8e463e.m3u8
-tvg-logo="http://puu.sh/mbLOY/25fd3c0724.png" HBO 
-http://iptvchannel.ml/LIVE/J02/62.m3u8
+tvg-logo="http://1.bp.blogspot.com/_GI1mUAUV6jo/RxWx0q2TJmI/AAAAAAAAAAM/FLkHGZoxqXU/s1600/Logo+Miami+TV.gif" MIAMI TV (GaMe Snk Land s.U) http://usaserver.miamitvchannel.com/miamitv/smil:miamitv/playlist.m3u8
+tvg-logo="http://www.xtremostereo.net/wp-content/uploads/2016/11/Caracol_TV_HD_envivo-150x150.png"CARACOL HD http://mdstrm.com/live-stream-playlist/58dc3d471cbe05ff3c8e463e.m3u8
+tvg-logo="http://puu.sh/mbLOY/25fd3c0724.png" HBO http://iptvchannel.ml/LIVE/J02/62.m3u8
 tvg-logo="http://www.totalplay.com.mx/images/logos/canales/cine/16.png"  CINEMAX http://207.244.78.99/stream_115_sk_st.m3u8
 tvg-logo="http://www.todocanales.net/wp-content/uploads/2013/10/Space-hd.png" SPACE http://189.216.247.113/Content/HLS/Live/Channel(SPACE)/index.m3u8
 tvg-logo="http://www.tntla.com/billboard/images/logo_tnt_grey.png", TNT (Game Snake Land S.y L. ) http://189.216.247.113/Content/HLS/Live/Channel(TNT_HD)/index.m3u8
-group-title="ESTABLES BY GAME SNAKE LAND l.S"tvg-logo="https://www.foromedios.com/uploads/gallery/category_2/gallery_5610_2_9848.png", H2 (Game Snake Land SyL.)
-
-tvg-logo="http://www.totalplay.com.mx/images/logos/canales/infantil/dicovery-kids.png" Dyscovery Kids 
-
 tvg-logo="https://3.bp.blogspot.com/-dnoADpGQHtk/WQ9NVzskrmI/AAAAAAAAAig/cDLXo3tvieAf4QDNOz2tuDvNGCLoTx0CwCLcB/s1600/gol%2Bperu.jpg" GOL Peru (Game Snake Land S. y L. )
 tvg-logo="https://www.brandeps.com/logo-download/U/Univision-01.png" UNIVISION(nokodi) (Game Snake Land S. y L. )
 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/09/Logo_Distrito_Comedia.png"DISTRITO COMEDIA 
