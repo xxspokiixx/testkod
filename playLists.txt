@@ -1,0 +1,10 @@
+[
+    {
+        "url": "https://raw.githubusercontent.com/xxspokiixx/testkod/master/plugin.video.ShortyLiveTV/canalesTemp.m3u", 
+        "logos": "", 
+        "image": "", 
+        "cache": 5, 
+        "name": "Canales Temp"
+    }
+	
+]
