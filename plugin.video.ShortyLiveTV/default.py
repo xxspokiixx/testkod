@@ -6,18 +6,18 @@ def mainMenu():
    addDir3('Series','goSeries',3,'https://cdn2.iconfinder.com/data/icons/bazza-internet-and-websites/60/12_-_Film_slate-512.png','','')
    
 def liveTv():   
-	addDir3('Izzi','https://raw.githubusercontent.com/xxspokiixx/testkod/master/lista.txt',20,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
-	addDir3('Game Snake List','https://raw.githubusercontent.com/xxspokiixx/testkod/master/snake.txt',21,'https://lh4.ggpht.com/yJe6HqfvYKO2ej-qfsoWf50T71o4346gXkF6T66FMXBAjJ5DhMt7buBDESUMqYaeIqI=w300','','')
+	addDir3('[COLOR cyan][B]Izzi[/B][/COLOR]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/lista.txt',20,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
+	addDir3('[COLOR red][B]IPTV Canales[/B][/COLOR]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/snake.txt',21,'https://iptvcanales.com/wp-content/uploads/2018/01/logo.png','','')
    
 def MoviesCategories():
-	addDir3('Todas [Latino/Ingles/Sub]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',40,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
-	#addDir3('Todas [Ingles/Sub]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',41,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
-	addDir3('Accion [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/accion.txt',42,'https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/resources/action.png','','')
-	addDir3('Animacion [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/animacion.txt',43,'https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/resources/animation.png','','')
-	addDir3('Comedia [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/comedia.txt',44,'https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/resources/comedy.png','','')
-	addDir3('Drama [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/drama.txt',45,'https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/resources/drama.png','','')
-	addDir3('Romance [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/romance.txt',46,'https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/resources/romance.png','','')
-	addDir3('Terror [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/terror.txt',47,'https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/resources/horror.png','','')
+	addDir3('Todas [Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',40,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
+	addDir3('Todas [Ingles/Sub]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt',41,'http://cdn.revistagq.com/uploads/images/thumbs/201536/superheroes_gq_4812_645x485.jpg','','')
+	addDir3('Accion [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/accion.txt',42,'http://icons.veryicon.com/ico/System/Icons8%20Metro%20Style/Movie%20Genres%20Action.ico','','')
+	addDir3('Animacion [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/animacion.txt',43,'https://cdn3.iconfinder.com/data/icons/movies-3/32/shrek-character-animation-movie-ogre-512.png','','')
+	addDir3('Comedia [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/comedia.txt',44,'https://d30y9cdsu7xlg0.cloudfront.net/png/60743-200.png','','')
+	addDir3('Drama [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/drama.txt',45,'http://icons.veryicon.com/ico/System/iOS7%20Minimal/Movie%20Genres%20Drama.ico','','')
+	addDir3('Romance [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/romance.txt',46,'http://icons.iconarchive.com/icons/icons8/ios7/256/Cinema-Romance-icon.png','','')
+	addDir3('Terror [Ingles/Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/terror.txt',47,'http://www.iconarchive.com/download/i87740/icons8/ios7/Cinema-Horror-2.ico','','')
 	
 def seriesCategories():
 	addDir3('Alf [Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/alf.txt',30,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
@@ -27,8 +27,8 @@ def channel():
 		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/lista.txt'
 		createListMenu(l)
 	elif mode==21:
-		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/movies.txt'
-		createListMenu(l)
+		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/plugin.video.ShortyLiveTV/canalesTemp.m3u'
+		createListM3U(l)
 		 
 def seriesPlay():
 	if mode==30:
@@ -72,6 +72,12 @@ def pelis():
 def createListMenu(l):
 		r = requests.get(l)
 		match = re.compile('logo= "(.+?)" name= "(.+?)" url= "(.+?)"').findall(r.content)
+		for logo,name,link in match:
+			addLink(name,link,logo,'','')
+
+def createListM3U(l):
+		r = requests.get(l)
+		match = re.compile('^#EXTINF:-?[0-9]*(.*?),(.*?)\n(.*?)$',re.I+re.M+re.U+re.S).findall(r.content)
 		for logo,name,link in match:
 			addLink(name,link,logo,'','')
 	 
