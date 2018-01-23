@@ -11,13 +11,18 @@
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 <item>
-<title>                    [COLOR white]Actualizado: [COLOR deepskyblue]23[/COLOR] ENERO 2018[/COLOR]      </title>
+<title>                    [COLOR white]<<<Actualizado: [COLOR deepskyblue]23[/COLOR] ENERO 2018[/COLOR]>>>      </title>
 <link>NA</link>
 <thumbnail>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.Shortyness/icon.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart><info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 
-
+<item>
+<title>Live TV</title>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/tp.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+<externallink>https://raw.githubusercontent.com/xxspokiixx/testkod/master/livetv.xml</externallink>
+<info>[B][COLOR skyblue]Shorty TV[/COLOR]
+[COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>Peliculas</title>
@@ -38,13 +43,6 @@
 <link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/series.png</thumbnail>
 	<fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/gnula.xml</externallink>
-<info>[B][COLOR skyblue]Shorty TV[/COLOR]
-[COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
-
-<item>
-<title>TotalPlay</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/tp.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
-<externallink>http://adryanlist.org/adryan/totalp.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
@@ -70,26 +68,11 @@
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
-<title>[COLOR white]IPTV [/COLOR][COLOR lightslategray][World Servers Updated Daily][/COLOR] </title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/iptv.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
-<externallink>http://adryanlist.org/adryan/iptv.xml</externallink>
-<info>[B][COLOR skyblue]Shorty TV[/COLOR]
-[COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
-
-<item>
 <title>Fitness-</title>
 <link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/fitness.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/fitness.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
-
-<item>
-<title>Paises </title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/paises.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
-<externallink>http://adryanlist.org/adryan/paises.xml</externallink>
-<info>[B][COLOR skyblue]Shorty TV[/COLOR]
-[COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
-
 
 <item><title>SR REGIO</title>
 <link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/regio.png</thumbnail>

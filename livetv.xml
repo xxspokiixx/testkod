@@ -1,0 +1,51 @@
+<item>
+		<title>[COLOR lime]•  [/COLOR][COLOR skyblue][B]TotalPlay[/B] [/COLOR] [COLOR lightslategray][ Opcion [COLOR lightblue][B]Adryanlist IZZI[/B] [/COLOR]][/COLOR][COLOR lightslategray][B]   [/B] [/COLOR] </title>
+<link>NA</link>2
+<externallink>http://adryanlist.org/adryan/izzi.xml</externallink>
+ 			<thumbnail>http://adryanlist.org/adryan/img/tp.jpg</thumbnail>
+<fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart></item>
+
+<item>
+		<title>[COLOR lime]•  [/COLOR][COLOR skyblue][B]TotalPlay[/B] [/COLOR] [COLOR lightslategray][ Opcion [COLOR lightblue][B]CeceGeek[/B] [/COLOR]][/COLOR][COLOR lightslategray][B]   [/B] [/COLOR] </title>
+<link>NA</link>2
+<externallink>http://cecegeek.com/cecetv.m3u</externallink>
+ 			<thumbnail>https://lh3.googleusercontent.com/b6xFsQ6sD23-Qm_ItjbjRKwHnQ7XvyqDAL_qhKIZuloQ917Q3EfmvJW2kTl5yEo0_Q=w300</thumbnail>
+<fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart></item>
+
+<item>
+<title>[COLOR lime]•  [/COLOR][COLOR skyblue][B]TotalPlay[/B] [/COLOR] [COLOR lightslategray][ Opcion [COLOR lightblue][B]Adryanlist Claro[/B] [/COLOR]][/COLOR][COLOR lightslategray][B]   [/B] [/COLOR] </title>
+<link>NA</link>2
+<externallink>http://adryanlist.org/adryan/claro.m3u</externallink>
+<thumbnail>http://adryanlist.org/adryan/img/tp.jpg</thumbnail>
+<fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart></item>
+
+<item>
+		<title>[COLOR lime]•  [/COLOR][COLOR skyblue][B]TotalPlay[/B] [/COLOR] [COLOR lightslategray][ Opcion [COLOR lightblue][B]TecnoTV[/B] [/COLOR]][/COLOR][COLOR lightslategray][B]  [/B] [/COLOR] </title>
+<link>NA</link>
+<externallink>http://tecnotv.xyz/lista.m3u</externallink>
+ 			<thumbnail>http://adryanlist.org/adryan/img/tp.jpg</thumbnail>
+<fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart></item>
+
+
+<item>
+		<title>[COLOR lime]•  [/COLOR][COLOR skyblue][B]TotalPlay[/B] [/COLOR] [COLOR lightslategray][ Opcion [COLOR lightblue][B]SrRegio[/B] [/COLOR]][/COLOR][COLOR lightslategray][B]  [/B] [/COLOR] </title>
+<link>NA</link>
+<externallink>http://srregio.xyz/regiotv.m3u</externallink>
+ 			<thumbnail>http://adryanlist.org/adryan/img/tp.jpg</thumbnail>
+<fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart></item>
+
+
+<item>
+<title>[COLOR white]IPTV [/COLOR][COLOR lightslategray][World Servers Updated Daily][/COLOR] </title>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/iptv.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+<externallink>http://adryanlist.org/adryan/iptv.xml</externallink>
+<info>[B][COLOR skyblue]Shorty TV[/COLOR]
+[COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
+
+
+<item>
+<title>Paises </title>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/paises.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+<externallink>http://adryanlist.org/adryan/paises.xml</externallink>
+<info>[B][COLOR skyblue]Shorty TV[/COLOR]
+[COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
