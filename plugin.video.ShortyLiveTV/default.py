@@ -1,6 +1,7 @@
 import xbmcaddon,os,requests,xbmc,xbmcgui,urllib,urllib2,re,xbmcplugin
 
 def mainMenu():
+   addDir('[COLOR green][B]**Contenido Completamente Gratis**[/B][/COLOR]','nohacenada',100000,'')
    addDir3('Live Tv','goLiveTV',2,'https://www.materialui.co/materialIcons/notification/live_tv_black_192x192.png','','')
    addDir3('Movies','goMovies',4,'https://cdn2.iconfinder.com/data/icons/bazza-internet-and-websites/60/12_-_Film_slate-512.png','','')
    addDir3('Series','goSeries',3,'https://cdn2.iconfinder.com/data/icons/bazza-internet-and-websites/60/12_-_Film_slate-512.png','','')
@@ -21,6 +22,8 @@ def MoviesCategories():
 	
 def seriesCategories():
 	addDir3('Alf [Latino]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/alf.txt',30,'http://lh3.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=w300','','')
+	addDir3('[COLOR blue][B]Max30[/B][/COLOR]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/max30.m3u',31,'https://www.extremely-fit.com/fitness-tips/wp-content/uploads/2014/11/insanity-max-30-dw.png','','')
+	addDir3('[COLOR green][B]Game Of Thrones[/B][/COLOR]','https://raw.githubusercontent.com/xxspokiixx/testkod/master/juegos.m3u',32,'https://taskandpurpose.com/wp-content/uploads/2017/07/14834104277_54d309b4ca_b-840x420.jpg','','')
 	
 def channel():
 	if mode==20:
@@ -34,6 +37,12 @@ def seriesPlay():
 	if mode==30:
 		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/alf.txt'
 		createListMenu(l)
+	elif mode==31:
+		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/max30.m3u'
+		createListM3U(l)
+	elif mode==32:
+		l= 'https://raw.githubusercontent.com/xxspokiixx/testkod/master/juegos.m3u'
+		createListM3U(l)
 	elif mode==None:
 		print "Oops!..."
 		
@@ -79,7 +88,7 @@ def createListM3U(l):
 		r = requests.get(l)
 		match = re.compile('^#EXTINF:-?[0-9]*(.*?),(.*?)\n(.*?)$',re.I+re.M+re.U+re.S).findall(r.content)
 		for logo,name,link in match:
-			addLink(name,link,logo,'','')
+					addLink(name,link,logo,'','')
 	 
 def addLink(name,url,image,urlType,fanart):
         ok=True
