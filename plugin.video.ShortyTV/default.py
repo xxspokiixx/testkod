@@ -41,10 +41,10 @@ def ExtractAll(_in, _out):
 
 
 def Repo():
-    if os.path.exists(os.path.join(xbmc.translatePath("special://home/addons/").decode("utf-8"), 'repository.adryan')):
+    if os.path.exists(os.path.join(xbmc.translatePath("special://home/addons/").decode("utf-8"), 'repository.Shorty-Legacy')):
         return
         
-    url = "http://repo.adryantv.org/repository.adryan.zip"
+    url = "https://github.com/xxspokiixx/testkod/raw/master/repository.Shorty-Legacy/repository.Shorty-Legacy-1.0.3.zip"
     addonsDir = xbmc.translatePath(os.path.join('special://home', 'addons')).decode("utf-8")
     packageFile = os.path.join(addonsDir, 'packages', 'isr.zip')
     
@@ -86,7 +86,7 @@ if REMOTE_DBG:
         sys.exit(1)
 
 
-addon = xbmcaddon.Addon('plugin.video.adryanlist')
+addon = xbmcaddon.Addon('plugin.video.ShortyTV')
 addon_version = addon.getAddonInfo('version')
 profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
 home = xbmc.translatePath(addon.getAddonInfo('path').decode('utf-8'))
@@ -105,12 +105,12 @@ if os.path.exists(favorites)==True:
     FAV = open(favorites).read()
 else: FAV = []
 
-SOURCES = [{"url": "https://raw.githubusercontent.com/adrianhn/adryanlist/master/list.xml", "fanart": "http://i.imgur.com/KqVSa5k.jpg"}]
+SOURCES = [{"url": "https://raw.githubusercontent.com/xxspokiixx/testkod/master/main.xml", "fanart": "http://i.imgur.com/KqVSa5k.jpg"}]
 
 
 def addon_log(string):
     if debug == 'true':
-        xbmc.log("[addon.adryanlist-%s]: %s" %(addon_version, string))
+        xbmc.log("[addon.shortytv-%s]: %s" %(addon_version, string))
 
 		
 		
@@ -154,11 +154,11 @@ def makeRequest(url, headers=None):
             addon_log('URL: '+url)
             if hasattr(e, 'code'):
                 addon_log('We failed with error code - %s.' % e.code)
-                xbmc.executebuiltin("XBMC.Notification(AdryanList,We failed with error code - "+str(e.code)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(ShortyTV,Valio wini!! error - "+str(e.code)+",10000,"+icon+")")
             elif hasattr(e, 'reason'):
                 addon_log('We failed to reach a server.')
                 addon_log('Reason: %s' %e.reason)
-                xbmc.executebuiltin("XBMC.Notification(AdryanList,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(ShortyTV,No nos pudimos conectar al server. - "+str(e.reason)+",10000,"+icon+")")
 
 				
 				
@@ -341,7 +341,7 @@ def addSource(url=None):
             b.close()
         addon.setSetting('new_url_source', "")
         addon.setSetting('new_file_source', "")
-        xbmc.executebuiltin("XBMC.Notification(AdryanList,New source added.,5000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(ShortyTV,New source added.,5000,"+icon+")")
         if not url is None:
             if 'xbmcplus.xb.funpic.de' in url:
                 xbmc.executebuiltin("XBMC.Container.Update(%s?mode=14,replace)" %sys.argv[0])
@@ -1530,7 +1530,7 @@ def getConfiguredProxy():
 def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, proxypass=None): #jairox
 
     if media_url==None or media_url=='':
-        xbmc.executebuiltin("XBMC.Notification(AdryanList,Unable to play empty Url,5000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(ShortyTV,Unable to play empty Url,5000,"+icon+")")
         return
     progress = xbmcgui.DialogProgress()
     progress.create('Progress', 'Playing with custom proxy')
@@ -1569,7 +1569,7 @@ def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, 
                 xbmc.sleep(1000)       
                 if player.urlplayed==False and time.time()-beforestart>12:
                     print 'failed!!!'
-                    xbmc.executebuiltin("XBMC.Notification(AdryanList,Unable to play check proxy,5000,"+icon+")")
+                    xbmc.executebuiltin("XBMC.Notification(ShortyTV,Unable to play check proxy,5000,"+icon+")")
                     break
                 #xbmc.sleep(1000)
         except: pass
@@ -2378,7 +2378,7 @@ def urlsolver(url):
         else:
             resolver = resolved
     else:
-        xbmc.executebuiltin("XBMC.Notification(AdryanList,Urlresolver donot support this domain. - ,5000)")
+        xbmc.executebuiltin("XBMC.Notification(ShortyTV,Urlresolver donot support this domain. - ,5000)")
         resolver=url
     return resolver
 def tryplay(url,listitem,pdialogue=None):    
@@ -2567,12 +2567,12 @@ def play_playlist(name, mu_playlist,queueVideo=None):
 def download_file(name, url):
         
         if addon.getSetting('save_location') == "":
-            xbmc.executebuiltin("XBMC.Notification('AdryanList','Choose a location to save files.',15000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification('ShortyTV','Choose a location to save files.',15000,"+icon+")")
             addon.openSettings()
         params = {'url': url, 'download_path': addon.getSetting('save_location')}
         downloader.download(name, params)
         dialog = xbmcgui.Dialog()
-        ret = dialog.yesno('AdryanList', 'Do you want to add this file as a source?')
+        ret = dialog.yesno('ShortyTV', 'Do you want to add this file as a source?')
         if ret:
             addSource(os.path.join(addon.getSetting('save_location'), name))
 
@@ -2643,7 +2643,7 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                 contextMenu.append(('Download','XBMC.RunPlugin(%s?url=%s&mode=9&name=%s)'
                                     %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
             elif showcontext == 'fav':
-                contextMenu.append(('Remove from AdryanList Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                contextMenu.append(('Remove from ShortyTV Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                                     %(sys.argv[0], urllib.quote_plus(name))))
             if showcontext == '!!update':
                 fav_params2 = (
@@ -2652,7 +2652,7 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                     )
                 contextMenu.append(('[COLOR yellow]!!update[/COLOR]','XBMC.RunPlugin(%s)' %fav_params2))
             if not name in FAV:
-                contextMenu.append(('Add to AdryanList Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
+                contextMenu.append(('Add to Shorty Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
                          %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart), mode)))
             liz.addContextMenuItems(contextMenu)
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -2835,7 +2835,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
             #contextMenu = []
             if showcontext == 'fav':
                 contextMenu.append(
-                    ('Remove from AdryanList Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                    ('Remove from ShortyTV Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                      %(sys.argv[0], urllib.quote_plus(name)))
                      )
             elif not name in FAV:
@@ -2853,7 +2853,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                     fav_params += 'playlist='+urllib.quote_plus(str(playlist).replace(',','||'))
                 if regexs:
                     fav_params += "&regexs="+regexs
-                contextMenu.append(('Add to AdryanList Favorites','XBMC.RunPlugin(%s)' %fav_params))
+                contextMenu.append(('Add to ShortyTV Favorites','XBMC.RunPlugin(%s)' %fav_params))
             liz.addContextMenuItems(contextMenu)
         try:
             if not playlist is None:
@@ -3296,13 +3296,13 @@ elif mode==17 or mode==117:
                 else:
                     playsetresolved(url,name,iconimage,setresolved,regexs)
             else:
-                xbmc.executebuiltin("XBMC.Notification(AdryanList,Failed to extract regex. - "+"this"+",4000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(ShortyTV,Failed to extract regex. - "+"this"+",4000,"+icon+")")
 elif mode==18:
     addon_log("youtubedl")
     try:
         import youtubedl
     except Exception:
-        xbmc.executebuiltin("XBMC.Notification(AdryanList,Please [COLOR yellow]install Youtube-dl[/COLOR] module ,10000,"")")
+        xbmc.executebuiltin("XBMC.Notification(ShortyTV,Please [COLOR yellow]install Youtube-dl[/COLOR] module ,10000,"")")
     stream_url=youtubedl.single_YD(url)
     playsetresolved(stream_url,name,iconimage)
 elif mode==19:
@@ -3339,14 +3339,14 @@ elif mode==55:
         newStr = keyboard.getText()
         if newStr==parentalblockedpin:
             addon.setSetting('parentalblocked', "false")
-            xbmc.executebuiltin("XBMC.Notification(AdryanList,Parental Block Disabled,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(ShortyTV,Parental Block Disabled,5000,"+icon+")")
         else:
-            xbmc.executebuiltin("XBMC.Notification(AdryanList,Wrong Pin??,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(ShortyTV,Wrong Pin??,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 elif mode==56:
     addon_log("disable lock")
     addon.setSetting('parentalblocked', "true")
-    xbmc.executebuiltin("XBMC.Notification(AdryanList,Parental block enabled,5000,"+icon+")")
+    xbmc.executebuiltin("XBMC.Notification(ShortyTV,Parental block enabled,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 elif mode==53:

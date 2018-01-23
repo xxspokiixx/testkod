@@ -4,7 +4,7 @@
 
 <item>
 
-<title>                    [B] [COLOR skyblue]Shorty [/COLOR][COLOR lightslategray] TV [/COLOR][COLOR skyblue]Multimedia[COLOR] [/B]</title>
+<title>                    [B] [COLOR skyblue]Shorty [/COLOR][COLOR lightslategray] TV [/COLOR][COLOR skyblue]Multimedia[/COLOR] [/B]</title>
 <link>NA</link>
 <thumbnail>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.Shortyness/icon.png</thumbnail>
 <fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
@@ -18,23 +18,17 @@
 
 
 
-<item>
-<title>Deportes</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/deportes.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
-<externallink>http://adryanlist.org/adryan/deportes_adryan_list.xml</externallink>
-<info>[B][COLOR skyblue]Shorty TV[/COLOR]
-[COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>Peliculas</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/peliculas.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/peliculas.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/pyt_vod.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>KIDS [COLOR lightslategray]Peliculas Infantiles [/COLOR] -</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/kids.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/kids.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/infantiles.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
@@ -42,14 +36,14 @@
 <item>
 <title>Series de TV </title>
 <link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/series.png</thumbnail>
-	<fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+	<fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/gnula.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>TotalPlay</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/tp.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/tp.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/totalp.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
@@ -71,27 +65,27 @@
 <referer></referer>
 <cookieJar></cookieJar>
 </regex>
-<thumbnail>http://adryanlist.org/adryan/img/247.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<thumbnail>http://adryanlist.org/adryan/img/247.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>[COLOR white]IPTV [/COLOR][COLOR lightslategray][World Servers Updated Daily][/COLOR] </title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/iptv.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/iptv.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/iptv.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>Fitness-</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/fitness.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/fitness.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/fitness.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>Paises </title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/paises.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/paises.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>http://adryanlist.org/adryan/paises.xml</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
@@ -99,28 +93,28 @@
 
 <item><title>SR REGIO</title>
 <link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/regio.png</thumbnail>
-<externallink>http://srregio.xyz</externallink><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<externallink>http://srregio.xyz</externallink><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>TECNOTV</title>
 <link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/tecno.png</thumbnail>
-<externallink>http://tecnotv.xyz/addon/index.htm</externallink><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<externallink>http://tecnotv.xyz/addon/index.htm</externallink><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
 <title>SUPER MOSPY TV</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/mospy.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
-<externallink>http://www.blog.kodipro.org/Supermospy%20TV.xml</externallink><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/mospy.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+<externallink>http://www.blog.kodipro.org/Supermospy%20TV.xml</externallink><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 
 <item>
 <title>TUTEVE</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/tuteve.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
-<externallink>https://tutve.000webhostapp.com/Addon.htm?TuTeVe</externallink><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/tuteve.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+<externallink>https://tutve.000webhostapp.com/Addon.htm?TuTeVe</externallink><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
