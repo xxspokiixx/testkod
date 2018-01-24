@@ -12,9 +12,7 @@ Server:"Western" src="http://diskokosmiko.mx/naredo/western-19889/list,1,22";
 Server:"Peliculas" src="http://diskokosmiko.mx/INTERALIOS/peliculas-4976/list,1,3";
 
 
-playlist:"http://diskokosmiko.mx/naredo" name:"SERIES" info:"RETRO / CLASICAS";
-playlist:"http://diskokosmiko.mx/titotv" name:"Tito TV" info:"Las mejores series ";
-playlist:"http://diskokosmiko.mx/trivianita" name:"Trivianita" info:"las series mas popules";
+playlist:"http://diskokosmiko.mx/Cesarike_MA" name:"Anime" info:"Algunos animes";
 playlist:"http://diskokosmiko.mx/seri5" name:"Series 5" info:" the greatest playlist ";
 playlist:"http://diskokosmiko.mx/monnet" name:"Series Latinas" info:"El Chema  y mas";
 playlist:"http://diskokosmiko.mx/FLAYSINA" name:"Flaysina" info:"NOVELAS FAVORITAS";
