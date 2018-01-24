@@ -3,21 +3,13 @@ Server:"Accion" src="http://diskokosmiko.mx/naredo/accion-20343/list,1,4";
 Server:"Animacion" src="http://diskokosmiko.mx/naredo/animacion-20219/list,1,3";
 Server:"Fantastico" src="http://diskokosmiko.mx/naredo/fantastico-20056/list,1,4";
 Server:"Terror" src="http://diskokosmiko.mx/naredo/terror-20055/list,1,2";
+Server:"Terror2" src="http://diskokosmiko.mx/Jeviathan/cine-terror-23445/list,1,2"
 Server:"Belicas" src="http://diskokosmiko.mx/naredo/belicas-20003/list,1,11";
 Server:"Piratas" src="http://diskokosmiko.mx/naredo/piratas-20002/list,1,1";
 Server:"Comedia" src="http://diskokosmiko.mx/naredo/comedia-19991/list,1,3";
 Server:"Misterio" src="http://diskokosmiko.mx/naredo/misterio-19965/list,1,3";
 Server:"Western" src="http://diskokosmiko.mx/naredo/western-19889/list,1,22";
 Server:"Peliculas" src="http://diskokosmiko.mx/INTERALIOS/peliculas-4976/list,1,3";
-
-
-http://copiapop.com/iiirepublica/cine-infantil-disney-59881/list,1,6
-http://copiapop.com/JOE221277/peliculas-s-50026/gallery,1,13
-
-
-
-
-
 
 
 playlist:"http://diskokosmiko.mx/naredo" name:"SERIES" info:"RETRO / CLASICAS";

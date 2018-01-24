@@ -7,7 +7,7 @@
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
-<title> [COLOR lime]•[/COLOR]    [COLOR lightgreen][B]Series[/B] [/COLOR][COLOR skyblue]PLAYLIST[/COLOR] I </title>
+<title> [COLOR lime]•[/COLOR]    [COLOR lightgreen][B]Series[/B] [/COLOR][COLOR skyblue]Ki[/COLOR]  </title>
 <link>$doregex[makelist3]</link>
 
 <regex>
@@ -18,7 +18,7 @@
 		<thumbnail></thumbnail>
         ]]></listrepeat>
 <expres>playlist:"(.*?)" name:"(.*?)" info:"(.*?)";</expres>
-<page>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//kozm.txt</page>
+<page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
 <cookieJar></cookieJar>
 </regex>
 
