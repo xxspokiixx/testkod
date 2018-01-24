@@ -7,6 +7,66 @@
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
 
 <item>
+<title> [COLOR lime]•[/COLOR]    [COLOR lightgreen][B]Series[/B] [/COLOR][COLOR skyblue]PLAYLIST[/COLOR] I </title>
+<link>$doregex[makelist3]</link>
+
+<regex>
+  <name>makelist3</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][makelist3.param2] - [makelist3.param3][/COLOR]</title>
+        <link>$doregex[makelist2]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>playlist:"(.*?)" name:"(.*?)" info:"(.*?)";</expres>
+<page>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//kozm.txt</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+  <name>makelist2</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][makelist2.param2][/COLOR]</title>
+        <link>$doregex[makelist]</link>
+		<thumbnail>[makelist2.param3]</thumbnail>
+        ]]></listrepeat>
+<expres>class="name" href="(.*?)">(.*?)<[\w\W\s]{0,190}src="(.*?)"</expres>
+<page>[makelist3.param1]</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>http://diskokosmiko.mx[makelist2.param1]/list,1,20</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>http://diskokosmiko.mx[makelist2.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//img/adryflix.png</thumbnail><fanart>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//img/fanart.jpg</fanart>
+</item>
+
+<item>
 <title>[COLOR lime][B][  ][/B][/COLOR]    [COLOR lightgreen][B]BUSCAR SERIE[/B] [/COLOR][COLOR lightslategray]seriespapaya[/COLOR]</title>
 <link>$doregex[makelist1]</link>
 
@@ -369,10 +429,6 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <page>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//kozm.txt</page>
 <cookieJar></cookieJar>
 </regex>
-
-
-
-
 
 <regex>
   <name>makelist2</name>
