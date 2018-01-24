@@ -80,7 +80,7 @@
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="http://www.animeyt.tv/emision/(.*?)" class="anime__img-container";</expres>
+<expres>a href="http://www.animeyt.tv/(.*?)" class="anime__img-container";</expres>
 <page>www.animeyt.tv/emision</page>
 <cookieJar></cookieJar>
 </regex>
