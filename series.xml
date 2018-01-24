@@ -80,7 +80,7 @@
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="http://www.animeyt.tv/(.*?)" class="anime__img-container";</expres>
+<expres>a href="http://www.animeyt.tv/(.*?)";</expres>
 <page>www.animeyt.tv/emision</page>
 <cookieJar></cookieJar>
 </regex>
@@ -90,10 +90,10 @@
   <listrepeat><![CDATA[
         <title>[COLOR skyblue][makelist2.param2][/COLOR]</title>
         <link>$doregex[makelist]</link>
-		<thumbnail>[makelist2.param3]</thumbnail>
+		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>class="name" href="(.*?)">(.*?)<[\w\W\s]{0,190}src="(.*?)"</expres>
-<page>[makelist3.param1]</page>
+<expres>a href="http://www.animeyt.tv/ver/(.*?)""</expres>
+<page>[makelist3]</page>
 <cookieJar></cookieJar>
 </regex>
 
@@ -104,7 +104,7 @@
         <link>$doregex[getUrl]</link>
         ]]></listrepeat>
 <expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
-<page>http://diskokosmiko.mx[makelist2.param1]/list,1,20</page>
+<page>http://www.animeyt.tv/ver/></page>
 <cookieJar></cookieJar>
 </regex>
 <regex>
