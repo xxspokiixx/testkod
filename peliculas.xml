@@ -1,9 +1,38 @@
 <item>
-<title>Peliculas</title>
-<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/peliculas.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
-<externallink>http://adryanlist.org/adryan/pyt_vod.xml</externallink>
+<title> [COLOR lime]Peliculas ShortyTV [/COLOR] -</title>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/kids.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+<externallink>https://github.com/xxspokiixx/testkod/raw/master/movies.txt</externallink>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
+
+<item>
+<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas Sr.Regio[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>http://ignora.me</link>
+<externallink>http://srregio.xyz/regioflix.m3u</externallink>
+<fanart>http://fotonin.com/data_images/out/5/776482-cool-movie-wallpaper.jpg</fanart>
+<thumbnail>http://adryanlist.org/adryan/img/adryflix.png</thumbnail>
+<info></info>
+</item>
+
+  <item>
+<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas TecnoTV[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>http://ignora.me</link>
+<externallink>http://tecnotv.xyz/peliculas.m3u</externallink>
+<fanart>http://fotonin.com/data_images/out/5/776482-cool-movie-wallpaper.jpg</fanart>
+<thumbnail>http://adryanlist.org/adryan/img/adryflix.png</thumbnail>
+<info></info>
+</item>
+
+
+ <item>
+<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas CeceGeek[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>http://ignora.me</link>
+<externallink>http://cecegeek.com/movies.m3u</externallink>
+<fanart>http://fotonin.com/data_images/out/5/776482-cool-movie-wallpaper.jpg</fanart>
+<thumbnail>http://adryanlist.org/adryan/img/adryflix.png</thumbnail>
+<info></info>
+</item>
+
 
 <item>
 <title> [COLOR lightslategray]Peliculas Infantiles [/COLOR] -</title>
