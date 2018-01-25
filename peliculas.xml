@@ -43,7 +43,7 @@
 
 
 <item>
-<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas Diskokosmiko4[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas Diskokosmiko2[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
 <link>$doregex[makelist3]</link>
 
 <regex>
@@ -55,17 +55,6 @@
         ]]></listrepeat>
 <expres>peliculas:"(.*?)" name:"(.*?)" info:"(.*?)";</expres>
 <page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
-<cookieJar></cookieJar>
-</regex>
-
-<regex>
-  <name>makelist2</name>
-  <listrepeat><![CDATA[
-        <title> [makelist2.param3]</title>
-        <link>$doregex[getUrl]</link>
-        ]]></listrepeat>
-<expres><![CDATA[href="(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
-<page>[makelist3.param1]/list,1,20</page>
 <cookieJar></cookieJar>
 </regex>
 
