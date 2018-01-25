@@ -13,6 +13,7 @@ Server:"Peliculas" src="http://diskokosmiko.mx/INTERALIOS/peliculas-4976/list,1,
 
 
 playlist:"http://diskokosmiko.mx/Cesarike_MA" name:"Anime" info:"Algunos animes";
+playlist:"http://diskokosmiko.mx/ijordi" name:"Pelis" info:" Por Genero";
 playlist:"http://diskokosmiko.mx/seri5" name:"Series 5" info:" the greatest playlist ";
 playlist:"http://diskokosmiko.mx/monnet" name:"Series Latinas" info:"El Chema  y mas";
 playlist:"http://diskokosmiko.mx/FLAYSINA" name:"Flaysina" info:"NOVELAS FAVORITAS";
