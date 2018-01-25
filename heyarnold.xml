@@ -1,5 +1,5 @@
 <item>
-<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Hey Arnold Temporadas 3x3[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<title>  [COLOR deepskyblue][B]Hey Arnold Temporadas 3x3[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
 <link>$doregex[makelist3]</link>
 <regex>
   <name>makelist3</name>

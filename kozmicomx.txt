@@ -68,9 +68,9 @@ peliculas:"http://diskokosmiko.mx/matubass/estrenos-49008" name:"Bassfox Estreno
 
 
 
-HeyArnold:"http://diskokosmiko.mx/marcos20/hey-arnold-temporada1-x-36-latino-19371" name:"Hey Arnold Temp:1 36x36"
-HeyArnold:"http://diskokosmiko.mx/marcos20/hey-arnold-temporada-2-x-39-19445" name:"Hey Arnold Temp:2 39x39"
-HeyArnold:"http://diskokosmiko.mx/marcos20/hey-arnold-temporada-3-x-53-latino-19494" name:"Hey Arnold Temp:3 59x59"
+HeyArnold:"http://diskokosmiko.mx/marcos20/hey-arnold-temporada1-x-36-latino-19371" name:"Hey Arnold Temp:1 36x36";
+HeyArnold:"http://diskokosmiko.mx/marcos20/hey-arnold-temporada-2-x-39-19445" name:"Hey Arnold Temp:2 39x39";
+HeyArnold:"http://diskokosmiko.mx/marcos20/hey-arnold-temporada-3-x-53-latino-19494" name:"Hey Arnold Temp:3 59x59";
 
 Series:"http://diskokosmiko.mx/shipwreck/marvel-agente-carter-temp-1-20675" name:"Marvel Agente Carter Temporada 1"; 
 Series:"http://diskokosmiko.mx/shipwreck/marvel-agente-carter-temp-1-20675" name:"Marvel Agente Carter Temporada 1"; 
