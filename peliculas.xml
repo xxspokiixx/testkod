@@ -49,11 +49,11 @@
 <regex>
   <name>makelist3</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
+        <title>[COLOR skyblue][makelist3.param2] - [makelist3.param3][/COLOR]</title>
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>peliculas:"(.*?)" name:"(.*?)";</expres>
+<expres>playlist:"(.*?)" name:"(.*?)";</expres>
 <page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
 <cookieJar></cookieJar>
 </regex>
@@ -101,4 +101,3 @@
 </regex>
 <thumbnail>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//img/adryflix.png</thumbnail><fanart>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//img/fanart.jpg</fanart>
 	</item>
-	
