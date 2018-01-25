@@ -23,18 +23,19 @@ playlist:"http://diskokosmiko.mx/arthurking/" name:"ArthurKing " info:" coleccio
 
 
 peliculasShorty:"http://diskokosmiko.mx/xxspokiixx/estrenos-latino-101970" name:"Estrenos Shorty" info:"Movies";
-peliculas:"http://diskokosmiko.mx/adryanlist/fileuploader-67183/list,1,5" name:"Estrenos " info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/accion-20343/list,1,4" name:"Accion" info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/animacion-20219/list,1,3" name:"Animacion" info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/fantastico-20056/list,1,4" name:"Fantastico" info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/terror-20055/list,1,2" name:"Terror" info:"Movies";
-peliculas:"http://diskokosmiko.mx/Jeviathan/cine-terror-23445/list,1,2" name:"Terror2" info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/belicas-20003/list,1,11" name:"Belicas" info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/piratas-20002/list,1,1" name:"Piratas" info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/comedia-19991/list,1,3" name:"Comedia" info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/misterio-19965/list,1,3" name:"Misterio" info:"Movies";
-peliculas:"http://diskokosmiko.mx/naredo/western-19889/list,1,22" name:"Western" info:"Movies";
-peliculas:"http://diskokosmiko.mx/INTERALIOS/peliculas-4976/list,1,3" name:"Peliculas" info:"Movies";
+
+peliculas:"http://diskokosmiko.mx/adryanlist/fileuploader-67183" name:"Estrenos " info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/accion-20343" name:"Accion" info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/animacion-20219" name:"Animacion" info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/fantastico-20056" name:"Fantastico" info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/terror-20055" name:"Terror" info:"Movies";
+peliculas:"http://diskokosmiko.mx/Jeviathan/cine-terror-23445" name:"Terror2" info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/belicas-20003" name:"Belicas" info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/piratas-20002" name:"Piratas" info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/comedia-19991" name:"Comedia" info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/misterio-19965" name:"Misterio" info:"Movies";
+peliculas:"http://diskokosmiko.mx/naredo/western-19889" name:"Western" info:"Movies";
+peliculas:"http://diskokosmiko.mx/INTERALIOS/peliculas-4976" name:"Peliculas" info:"Movies";
 peliculas:"http://diskokosmiko.mx/IngArturo/super-coleccion-de-pelis-audio-latino-20342" name:"Super Coleccion de peliculas" info:"Movies";
 peliculas:"http://diskokosmiko.mx/marcos20/peliculas-de-accion-en-espanol-latino-16521" name:"Peliculas Accion Audio Latino" info:"Movies";
 peliculas:"http://diskokosmiko.mx/marcos20/peliculas-de-caricaturas-en-espanol-latino-16449" name:"Peliculas Infantiles Audio Latino" info:"Movies";
@@ -63,7 +64,7 @@ peliculas:"http://diskokosmiko.mx/PukinG/peliculas-antiguas-6-44636" name:"Pelic
 peliculas:"http://diskokosmiko.mx/PukinG/peliculas-antiguas-7-45847" name:"Peliculas antiguas - Sala 7";
 peliculas:"http://diskokosmiko.mx/maria-santos-lopez/peliculas-32997" name:"mas que ver";
 peliculas:"http://diskokosmiko.mx/jml/peliculas-25581" name:"Peliculas plus";
-peliculas:"http://diskokosmiko.mx/matubass/estrenos-49008/list,1,3" name:"Bassfox Estrenos";
+peliculas:"http://diskokosmiko.mx/matubass/estrenos-49008" name:"Bassfox Estrenos";
 
 
 
