@@ -44,16 +44,16 @@
 
 <item>
 <title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas Diskokosmiko[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
-<link>$doregex[makelist3]</link>
+<link>$doregex[makelist2]</link>
 
 <regex>
   <name>makelist3</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][makelist3.param2] - [makelist3.param3][/COLOR]</title>
+        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>peliculas:"(.*?)" name:"(.*?)" info:"(.*?)";</expres>
+<expres>peliculas:"(.*?)" name:"(.*?)";</expres>
 <page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
 <cookieJar></cookieJar>
 </regex>
@@ -63,10 +63,10 @@
   <listrepeat><![CDATA[
         <title>[COLOR skyblue][makelist2.param2][/COLOR]</title>
         <link>$doregex[makelist]</link>
-		<thumbnail>[makelist2.param3]</thumbnail>
+		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>class="name" href="(.*?)">(.*?)<[\w\W\s]{0,190}src="(.*?)"</expres>
-<page>[makelist3.param1]</page>
+<expres>peliculas:"(.*?)" name:"(.*?)";</expres>
+<page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
 <cookieJar></cookieJar>
 </regex>
 
