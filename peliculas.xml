@@ -1,9 +1,49 @@
 <item>
 <title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas ShortyTV[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
-<link>http://ignorame</link><thumbnail>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.Shortyness/icon.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
-<externallink>https://github.com/xxspokiixx/testkod/raw/master/mov.m3u</externallink>
-<info>[B][COLOR skyblue]Shorty TV[/COLOR]
-[COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
+<link>$doregex[makelist3]</link>
+<regex>
+  <name>makelist3</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][makelist3.param2] - [makelist3.param3][/COLOR]</title>
+        <link>$doregex[makelist]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>peliculasShorty:"(.*?)" name:"(.*?)" info:"(.*?)";</expres>
+<page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>[makelist3.param1]/list,1,20</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>[makelist3.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.Shortyness/icon.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+	</item>
 
 <item>
 <title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas Sr.Regio[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
@@ -43,7 +83,7 @@
 
 
 <item>
-<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas Diskokosmiko2[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<title> [COLOR lime]•[/COLOR]    [COLOR deepskyblue][B]Peliculas Diskokosmiko[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
 <link>$doregex[makelist3]</link>
 
 <regex>
