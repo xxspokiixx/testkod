@@ -49,7 +49,7 @@
 <regex>
   <name>makelist3</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue]Test [makelist3.param2] [makelist3.param3][/COLOR]</title>
+        <title>[COLOR skyblue][makelist3.param2]</title>
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
@@ -65,8 +65,8 @@
         <link>$doregex[makelist]</link>
 		<thumbnail>[makelist2.param3]</thumbnail>
         ]]></listrepeat>
-<expres>class="name" href="(.*?)">(.*?)<[\w\W\s]{0,190}src="(.*?)"</expres>
-<page>[makelist3.param1]</page>
+<expres>class="name" href="(.*?)">(.*?)</expres>
+<page>[makelist3.makelist2]</page>
 <cookieJar></cookieJar>
 </regex>
 
