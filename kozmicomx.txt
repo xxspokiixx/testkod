@@ -22,7 +22,7 @@ playlist:"http://diskokosmiko.mx/matubass/" name:"BASSFOX " info:" coleccion de 
 playlist:"http://diskokosmiko.mx/arthurking/" name:"ArthurKing " info:" coleccion de Peliculas y Series ";
 
 
-peliculas: "http://diskokosmiko.mx/xxspokiixx/estrenos-latino-101970" name:"Estrenos Shorty";
+peliculas:"http://diskokosmiko.mx/xxspokiixx/estrenos-latino-101970" name:"Estrenos Shorty";
 peliculas:"http://diskokosmiko.mx/adryanlist/fileuploader-67183/list,1,5" name:"Estrenos " ;
 peliculas:"http://diskokosmiko.mx/naredo/accion-20343/list,1,4" name:"Accion" ;
 peliculas:"http://diskokosmiko.mx/naredo/animacion-20219/list,1,3" name:"Animacion" ;
