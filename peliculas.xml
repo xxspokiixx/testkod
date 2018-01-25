@@ -72,9 +72,9 @@
 <regex>
 <name>getUrl</name>
 <expres>DownloadUrl":"([^"]+)<expres>
-<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
-<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
-<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist2.param1]</page>
+<rawpost>fileId=[makelist2.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist2.param2]</referer>
 <connection>keep-alive</connection>
 <accept>*/*</accept>
 <X-Req>XMLHttpRequest</X-Req>
