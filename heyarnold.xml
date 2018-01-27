@@ -47,18 +47,7 @@
 
 <item>
 <title>  [COLOR deepskyblue][B]La Vida Moderna de Rocko Temporadas 3x3[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
-<link>$doregex[makelist3]</link>
-<regex>
-  <name>makelist3</name>
-  <listrepeat><![CDATA[
-        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
-        <link>$doregex[makelist]</link>
-		<thumbnail></thumbnail>
-        ]]></listrepeat>
-<expres>Rocko:"(.*?)" name:"(.*?)";</expres>
-<page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
-<cookieJar></cookieJar>
-</regex>
+<link>$doregex[makelist]</link>
 <regex>
   <name>makelist</name>
   <listrepeat><![CDATA[
@@ -66,7 +55,7 @@
         <link>$doregex[getUrl]</link>
         ]]></listrepeat>
 <expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
-<page>[makelist3.param1]/list,1,20</page>
+<page>http://diskokosmiko.mx/xxspokiixx/la-vida-moderna-de-rocko-101991/list,1,20</page>
 <cookieJar></cookieJar>
 </regex>
 <regex>
