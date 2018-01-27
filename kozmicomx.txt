@@ -73,10 +73,10 @@ HeyArnold:"http://diskokosmiko.mx/marcos20/hey-arnold-temporada-2-x-39-19445" na
 HeyArnold:"http://diskokosmiko.mx/marcos20/hey-arnold-temporada-3-x-53-latino-19494" name:"Hey Arnold Temp:3 59x59";
 Rocko:"http://diskokosmiko.mx/xxspokiixx/la-vida-moderna-de-rocko-101991" name:"La Vida Moderna de Rocko";
 
-FitnessMax30:"http://diskokosmiko.mx/xxspokiixx/max-30-101973" name: "Max 30"
-FitnessT25Alpha:"http://diskokosmiko.mx/xxspokiixx/t25-alpha-102182" name: "T25 Alpha"
-FitnessT25Beta:"http://diskokosmiko.mx/xxspokiixx/t25-beta-102193" name: "T25 Beta"
-FitnessT25Gama:"http://diskokosmiko.mx/xxspokiixx/t25-gama-102200" name: "T25 Gama"
+FitnessMax30:"http://diskokosmiko.mx/xxspokiixx/max-30-101973" name: "Max 30";
+FitnessT25Alpha:"http://diskokosmiko.mx/xxspokiixx/t25-alpha-102182" name: "T25 Alpha";
+FitnessT25Beta:"http://diskokosmiko.mx/xxspokiixx/t25-beta-102193" name: "T25 Beta";
+FitnessT25Gama:"http://diskokosmiko.mx/xxspokiixx/t25-gama-102200" name: "T25 Gama";
 
 Series:"http://diskokosmiko.mx/shipwreck/marvel-agente-carter-temp-1-20675" name:"Marvel Agente Carter Temporada 1"; 
 Series:"http://diskokosmiko.mx/shipwreck/marvel-agente-carter-temp-1-20675" name:"Marvel Agente Carter Temporada 1"; 
