@@ -75,6 +75,8 @@ Rocko:"http://diskokosmiko.mx/xxspokiixx/la-vida-moderna-de-rocko-101991" name:"
 
 FitnessMax30:"http://diskokosmiko.mx/xxspokiixx/max-30-101973" name: "Max 30"
 FitnessT25Alpha:"http://diskokosmiko.mx/xxspokiixx/t25-alpha-102182" name: "T25 Alpha"
+FitnessT25Beta:"http://diskokosmiko.mx/xxspokiixx/t25-beta-102193" name: "T25 Beta"
+FitnessT25Gama:"http://diskokosmiko.mx/xxspokiixx/t25-gama-102200" name: "T25 Gama"
 
 Series:"http://diskokosmiko.mx/shipwreck/marvel-agente-carter-temp-1-20675" name:"Marvel Agente Carter Temporada 1"; 
 Series:"http://diskokosmiko.mx/shipwreck/marvel-agente-carter-temp-1-20675" name:"Marvel Agente Carter Temporada 1"; 
