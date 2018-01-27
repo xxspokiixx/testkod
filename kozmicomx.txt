@@ -138,7 +138,7 @@ street:"http://diskokosmiko.mx/naredo/street-fighter-serie-animada-68763" name:"
 gatossamurai:"http://diskokosmiko.mx/naredo/los-gatos-samurai-serie-anime-72147" name:"Gatos Samurai";
 rugratscrecidos:"http://diskokosmiko.mx/jorge-garcia-luis/los-rugrats-crecidos-94136" name:"Rugrats Crecidos";
 simpsons:"http://diskokosmiko.mx/yokesesss/los-simpson-serie-completa-49543" name:"Los Simpsons";
-sailor:"http://diskokosmiko.mx/EternalFenix/sailor-moon-1-la-reina-mejelenia-01-a-46-52097" name:"Sailor Moon";
+sailor:"http://diskokosmiko.mx/anime1/sailor-moon-26122" name:"Sailor Moon";
 slamdunk:"http://diskokosmiko.mx/Cielos/slam-dunk-38134" name:"Slamdunk";
 sakura:"http://diskokosmiko.mx/sandbox/sakura-card-captors-20306" name:"Sakura Card Captor";
 sabrina:"http://diskokosmiko.mx/BellaNapoli/sabrina-cosas-de-brujas-la-bruja-adolescente-82307" name:"Sabrina La Bruja Adolescente";
