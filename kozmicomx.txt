@@ -143,6 +143,24 @@ slamdunk:"http://diskokosmiko.mx/Cielos/slam-dunk-38134" name:"Slamdunk";
 sakura:"http://diskokosmiko.mx/sandbox/sakura-card-captors-20306" name:"Sakura Card Captor";
 sabrina:"http://diskokosmiko.mx/BellaNapoli/sabrina-cosas-de-brujas-la-bruja-adolescente-82307" name:"Sabrina La Bruja Adolescente";
 zenki:"http://diskokosmiko.mx/sandbox/zenki-latino-21719" name:"Zenki";
+pokemon:"http://diskokosmiko.mx/jorge-garcia-luis/pokemon-peliculas-84336" name:"Peliculas Pokemon";
+pokemon:"http://diskokosmiko.mx/anime1/pokemon-cronicas-23843" name:"Cronicas Pokemon";
+pokemon:"http://diskokosmiko.mx/anime/pokemon-temporada-1-completa-espanol-latino-1170" name:"Pokemon T01";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp2-23750" name:"Pokemon T02";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp3-23773" name:"Pokemon T03";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp4-23774" name:"Pokemon T04";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp5-23784" name:"Pokemon T05";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp6-23799" name:"Pokemon T06";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp7-23800" name:"Pokemon T07";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp8-23802" name:"Pokemon T08";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp9-23804" name:"Pokemon T09";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp10-23821" name:"Pokemon T10";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp11-23823" name:"Pokemon T11";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp12-23824" name:"Pokemon T12";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp13-23825" name:"Pokemon T13";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp14-23826" name:"Pokemon T14";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp15-23828" name:"Pokemon T15";
+pokemon:"http://diskokosmiko.mx/anime1/pokemontemp16-23829" name:"Pokemon T16";
 
 
 
