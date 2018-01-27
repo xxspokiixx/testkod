@@ -1339,7 +1339,7 @@
         <link>$doregex[getUrl]</link>
         ]]></listrepeat>
 <expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
-<page>http://diskokosmiko.mx/EternalFenix/sailor-moon-1-la-reina-mejelenia-01-a-46-52097/list,1,20</page>
+<page>http://diskokosmiko.mx/anime1/sailor-moon-26122/list,1,20</page>
 <cookieJar></cookieJar>
 </regex>
 <regex>
