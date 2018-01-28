@@ -1,3 +1,4 @@
+playlist:"http://diskokosmiko.mx/ayachii name:"Anime" info:"Animes en actualizacion";
 playlist:"http://diskokosmiko.mx/Cesarike_MA" name:"Anime" info:"Algunos animes";
 playlist:"http://diskokosmiko.mx/ijordi" name:"Pelis" info:" Por Genero";
 playlist:"http://diskokosmiko.mx/seri5" name:"Series 5" info:" the greatest playlist ";
@@ -78,7 +79,7 @@ Animaniacs:"http://diskokosmiko.mx/titotv/caballeros-del-zodiaco-1158" name:"Ani
 Tortugas:"http://diskokosmiko.mx/lokario1/las-tortugas-ninja-11953" name:"Tortugas Ninjas";
 Ginger:"http://diskokosmiko.mx/shuichi/ginger-serie-completa-50680" name:"Ginger";
 Daria:"http://diskokosmiko.mx/shuichi/daria-serie-completa-2-peliculas-50911" name:"Daria";
-Zoey101:"http://diskokosmiko.mx/shuichi/zoey-101-serie-completa-50983" name:"Zoey101";
+Zoey101:"http://diskokosmiko.mx/RickardoBuitron/zoey-101-97421" name:"Zoey101";
 pinky:"http://diskokosmiko.mx/shuichi/pinky-elmyra-y-cerebro-serie-completa-50909" name:"Pinky, Elvira y Cerebro";
 pinky:"http://diskokosmiko.mx/naredo/pinky-y-cerebro-31429" name:"Pinky y Cerebro";
 Flapjack:"http://diskokosmiko.mx/shuichi/las-maravillosas-desventuras-de-flapjack-50720" name:"Flapjack";
@@ -161,6 +162,26 @@ pokemon:"http://diskokosmiko.mx/anime1/pokemontemp13-23825" name:"Pokemon T13";
 pokemon:"http://diskokosmiko.mx/anime1/pokemontemp14-23826" name:"Pokemon T14";
 pokemon:"http://diskokosmiko.mx/anime1/pokemontemp15-23828" name:"Pokemon T15";
 pokemon:"http://diskokosmiko.mx/anime1/pokemontemp16-23829" name:"Pokemon T16";
+onepiece:"http://diskokosmiko.mx/ayachii/redlinesp-one-piece-774-22900" name:"One Piece Sub";
+victorious:"http://diskokosmiko.mx/gemma-valencia/victorious-t1-castellano-101939" name:"Victorious";
+morty:"http://diskokosmiko.mx/euronime/60625-01-78938" name:"Rick & Morty T1";
+morty:"http://diskokosmiko.mx/euronime/60625-02-78939" name:"Rick & Morty T2";
+bigbang:"http://diskokosmiko.mx/euronime/tbb1-78605" name:"The Big Bang Theory T1";
+bigbang:"http://diskokosmiko.mx/euronime/tbb02-78606" name:"The Big Bang Theory T2";
+bigbang:"http://diskokosmiko.mx/euronime/tbb03-78607" name:"The Big Bang Theory T3";
+bigbang:"http://diskokosmiko.mx/euronime/tbb04-78608" name:"The Big Bang Theory T4";
+bigbang:"http://diskokosmiko.mx/euronime/tbb05-78609" name:"The Big Bang Theory T5";
+bigbang:"http://diskokosmiko.mx/euronime/tbb06-78610" name:"The Big Bang Theory T6";
+bigbang:"http://diskokosmiko.mx/euronime/tbb07-78611" name:"The Big Bang Theory T7";
+bigbang:"http://diskokosmiko.mx/euronime/1418-08-78612" name:"The Big Bang Theory T8";
+bigbang:"http://diskokosmiko.mx/euronime/1418-09-78613" name:"The Big Bang Theory T9";
+bigbang:"http://diskokosmiko.mx/euronime/1418-10-78614" name:"The Big Bang Theory T10";
+malcom:"http://diskokosmiko.mx/euronime/2004-01-78959" name:"Malcom el de Enmedio T1";
+malcom:"http://diskokosmiko.mx/euronime/2004-02-78960" name:"Malcom el de Enmedio T2";
+malcom:"http://diskokosmiko.mx/euronime/2004-03-78961" name:"Malcom el de Enmedio T3";
+malcom:"http://diskokosmiko.mx/euronime/2004-04-78962" name:"Malcom el de Enmedio T4";
+screamq:"http://diskokosmiko.mx/euronime/reinasgritonassub-78345" name:"Scream Queens";
+
 
 
 

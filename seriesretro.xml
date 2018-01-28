@@ -952,6 +952,54 @@
 <thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
 	</item>	
 	
+	
+<item>
+<title>  [COLOR deepskyblue][B]Malcom in the Middle[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>$doregex[makelist3]</link>
+<regex>
+  <name>makelist3</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
+        <link>$doregex[makelist]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>malcom:"(.*?)" name:"(.*?)";</expres>
+<page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>[makelist3.param1]/list,1,20</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>[makelist3.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
+	</item>			
+	
 <title>  [COLOR deepskyblue][B]Mar: Marchen Awakens Romance[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
 <link>$doregex[makelist]</link>
 <regex>
@@ -1134,6 +1182,43 @@
 </regex>
 <thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
 	</item>	
+	
+	
+<item>
+<title>  [COLOR deepskyblue][B]One Piece[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>http://diskokosmiko.mx/ayachii/redlinesp-one-piece-774-22900/list,1,50</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>[makelist3.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
+	</item>		
 	
 	
 <item>
@@ -1341,6 +1426,56 @@
 <thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
 	</item>	
 	
+	
+<item>
+<title>  [COLOR deepskyblue][B]Rick & Morty[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>$doregex[makelist3]</link>
+<regex>
+  <name>makelist3</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
+        <link>$doregex[makelist]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>morty:"(.*?)" name:"(.*?)";</expres>
+<page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>[makelist3.param1]/list,1,20</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>[makelist3.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
+	</item>		
+	
+	
+	
 	<item>
 <title>  [COLOR deepskyblue][B]Rugrats Crecidos[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
 <link>$doregex[makelist]</link>
@@ -1535,6 +1670,42 @@
 </regex>
 <thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
 	</item>	
+	
+<item>
+<title>  [COLOR deepskyblue][B]Scream Queens[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>http://diskokosmiko.mx/euronime/reinasgritonassub-78345/list,1,20</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>[makelist3.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
+	</item>		
 	
 <item>
 <title>  [COLOR deepskyblue][B]Shaman King[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
@@ -1851,7 +2022,55 @@
 <thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
 	</item>	
 		
-	
+
+<item>
+<title>  [COLOR deepskyblue][B]The Big Bang Theory[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>$doregex[makelist3]</link>
+<regex>
+  <name>makelist3</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
+        <link>$doregex[makelist]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>bigbang:"(.*?)" name:"(.*?)";</expres>
+<page>https://github.com/xxspokiixx/testkod/raw/master/kozmicomx.txt</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>[makelist3.param1]/list,1,20</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>[makelist3.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
+	</item>				
+		
+		
 	
 <item>
 <title>  [COLOR deepskyblue][B]Tortugas Ninjas[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
@@ -1925,6 +2144,44 @@
 <thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
 	</item>		
 	
+	<item>
+<title>  [COLOR deepskyblue][B]Victorious[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>http://diskokosmiko.mx/gemma-valencia/victorious-t1-castellano-101939/list,1,20</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>[makelist3.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
+	</item>		
+	
+	
+	
 <item>
 <title>  [COLOR deepskyblue][B]X-Men[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
 <link>$doregex[makelist3]</link>
@@ -1985,6 +2242,44 @@
         ]]></listrepeat>
 <expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
 <page>http://diskokosmiko.mx/sandbox/zenki-latino-21719/list,1,20</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+
+<name>getUrl</name>
+<expres>DownloadUrl":"([^"]+)<expres>
+<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
+<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
+<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>tok</name>
+<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
+<page>http://diskokosmiko.mx/[makelist.param2]</page>
+<referer>[makelist3.param1]/list,1,15</referer>
+<connection>keep-alive</connection>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/20969?region=US&size=952x536</thumbnail><fanart>http://www.gamerfocus.co/wp-content/uploads/2017/10/Hey-Arnold.jpg</fanart>
+	</item>		
+
+	
+	
+	<item>
+<title>  [COLOR deepskyblue][B]Zoey 101[/B] [/COLOR][COLOR skyblue][I]  [/I][/COLOR] </title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title> [makelist.param3]</title>
+        <link>$doregex[getUrl]</link>
+        ]]></listrepeat>
+<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
+<page>http://diskokosmiko.mx/RickardoBuitron/zoey-101-97421/list,1,20</page>
 <cookieJar></cookieJar>
 </regex>
 <regex>
