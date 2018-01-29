@@ -32,11 +32,11 @@
 <regex>
   <name>makelist2</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B]Server: [COLOR white]Zippyshare - http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html [/B][/COLOR]</title>
+        <title>[COLOR skyblue][B]Server: [COLOR white]Mediafire - [makelist2.param1] [/B][/COLOR]</title>
         <link>$doregex[makelist]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>http%3A%2F%2Fwww(.*?).zippyshare.com%2Fv%2F(.*?)%2Ffile.html"</expres>
+<expres>http://s3.animeflv.com/efire.php?v=(.*?)"</expres>
 <page>https://animeflv.net/ver/[makelist3.param1]/[makelist3.param2]</page>
 <cookieJar></cookieJar>
 </regex>
@@ -44,16 +44,26 @@
 <regex>
   <name>makelist</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B]Link: http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html][makelist.param1] [/B][/COLOR]</title>
-        <link>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html][makelist.param1]</link>
+        <title>[COLOR skyblue][B]ScrappingLink: [makelist.param1]  [/B][/COLOR]</title>
+        <link>$doregex[getURL]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>property="og:title" content="(.*?) "</expres>
-<page>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html</page>
+<expres>http://www.mediafire.com/file/(.*?)/</expres>
+<page>http://s3.animeflv.com/efire.php?v=[makelist2.param1]</page>
 <cookieJar></cookieJar>
 </regex>
 
-
+<regex>
+  <name>getURL</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][B]Link: http://download[getURL.param1]  [/B][/COLOR]</title>
+        <link>http://download[getURL.param1]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>href='http://download(.*?)'</expres>
+<page>http://www.mediafire.com/file/[makelist.param1]/</page>
+<cookieJar></cookieJar>
+</regex>
 
 <thumbnail>https://i.ytimg.com/vi/ay5CIzGLoTg/hqdefault.jpg</thumbnail><fanart>https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200</fanart>
 	</item>
