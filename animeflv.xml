@@ -44,11 +44,11 @@
 <regex>
   <name>makelist</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B]Link3: [makelist.param1] - [makelist.param2] - [makelist.param3] [/B][/COLOR]</title>
-        <link>http://www[makelist.param1].zippyshare.com/v/[makelist.param2]/file.html][makelist.param3]</link>
+        <title>[COLOR skyblue][B]Link: [makelist.param1] [/B][/COLOR]</title>
+        <link>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html[makelist.param1]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>input value="[url=http://www(.*?).zippyshare.com/v/(.*?)/file.html](.*?)[/url]"</expres>
+<expres>input value="[url=(.*?).mp4[/url]"</expres>
 <page>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html</page>
 <cookieJar></cookieJar>
 </regex>
