@@ -44,11 +44,11 @@
 <regex>
   <name>makelist</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B][makelist.param1] [/B][/COLOR]</title>
-        <link>$doregex[getUrl]</link>
+        <title>[COLOR skyblue][B]Link: [makelist.param1] [/B][/COLOR]</title>
+        <link>[makelist.param1].mp4</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>input value="[url=(.*?)[/url]" onclick=</expres>
+<expres>input value="[url=(.*?).mp4[/url]" onclick=(.*?)"</expres>
 <page>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html</page>
 <cookieJar></cookieJar>
 </regex>
@@ -57,6 +57,9 @@
 <name>getUrl</name>
 <expres>url=(.*?)[/url]"<expres>
 <page>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html</page>
+<connection>keep-alive</connection>
+<accept>*/*</accept>
+<X-Req>XMLHttpRequest</X-Req>
 <cookieJar></cookieJar>
 </regex>
 
