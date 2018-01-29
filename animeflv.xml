@@ -1,11 +1,5 @@
-<item><title>[COLOR white][UPPERCASE][B]Capitulo[/COLOR][/UPPERCASE][/B]</title>
-<link>ignorme</link>
-<jsonrpc>plugin://plugin.video.dailymotion_com/embed/video/k7mtnCs3Zj7GQ9q7wEP?autoPlay=1</jsonrpc>
-<thumbnail>https://www.jfsdelaware.org/wp-content/uploads/2016/07/yoga-icon-2.png</thumbnail> 
-<info>[B][COLOR skyblue]Shorty TV[/COLOR][/B]</info></item>
-
 <item>
-<title> [COLOR lightgreen][B]Animeyt:[/B] [/COLOR][COLOR skyblue] Emision[/COLOR]  </title>
+<title> [COLOR lightgreen][B]AnimeFLV:[/B] [/COLOR][COLOR skyblue] Emision[/COLOR]  </title>
 <link>$doregex[makelist4]</link>
 
  <!--Animes en Emision-->
@@ -43,7 +37,7 @@
 		<thumbnail></thumbnail>
         ]]></listrepeat>
 <expres>http%3A%2F%2Fwww(.*?).zippyshare.com%2Fv%2F(.*?)%2Ffile.html"</expres>
-<page>http://www.animeyt.tv/ver/[makelist3.param1]</page>
+<page>https://animeflv.net/ver/[makelist3.param1]/[makelist3.param2]</page>
 <cookieJar></cookieJar>
 </regex>
 
