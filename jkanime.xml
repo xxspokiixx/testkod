@@ -32,8 +32,8 @@
 <regex>
   <name>makelist2</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B}Server: [COLOR white][makelist2.param1] [/B][/COLOR]</title>
-        <link>$doregex[makelist1]</link>
+        <title>[COLOR skyblue][B]Server: [COLOR white][makelist2.param1] [/B][/COLOR]</title>
+        <link>$doregex[getUrl]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
 <expres>u003Ciframe src="(.*?)"</expres>
@@ -42,33 +42,15 @@
 </regex>
 
 <regex>
-  <name>makelist</name>
-  <listrepeat><![CDATA[
-        <title> [makelist2.param3]</title>
-        <link>$doregex[getUrl]</link>
-        ]]></listrepeat>
-<expres><![CDATA[href="\/.*,(.*?),list.*\n.*\n.*\n.*href="\/([^"]*)".*?>(.*?)<]]></expres>
-<page>http://jkanime.net/[makelist3.param1]</page>
-<cookieJar></cookieJar>
-</regex>
-<regex>
 <name>getUrl</name>
-<expres>DownloadUrl":"([^"]+)<expres>
-<page>http://diskokosmiko.mx/action/DownloadFile?location=fi&amp;f=[makelist.param1]</page>
-<rawpost>fileId=[makelist.param1]&__RequestVerificationToken=$doregex[tok]</rawpost>
-<referer>http://diskokosmiko.mx/[makelist.param2]</referer>
+<expres>u003Ciframe src="(.*?)"<expres>
+<page>http://www.animeyt.tv/ver/[makelist3.param1]</page>
 <connection>keep-alive</connection>
 <accept>*/*</accept>
 <X-Req>XMLHttpRequest</X-Req>
 <cookieJar></cookieJar>
 </regex>
-<regex>
-<name>tok</name>
-<expres>DownloadFile.*RequestVerificationToken.*?value="([^"]+)<expres>
-<page>http://diskokosmiko.mx/[makelist.param2]</page>
-<referer>http://diskokosmiko.mx[makelist2.param1]/list,1,15</referer>
-<connection>keep-alive</connection>
-<cookieJar></cookieJar>
-</regex>
-<thumbnail>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//img/adryflix.png</thumbnail><fanart>https://raw.githubusercontent.com/adrianhn/adryanlist/master/adryan//img/fanart.jpg</fanart>
+
+
+<thumbnail>https://i.ytimg.com/vi/ay5CIzGLoTg/hqdefault.jpg</thumbnail><fanart>https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200</fanart>
 	</item>
