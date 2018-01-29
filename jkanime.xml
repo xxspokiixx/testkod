@@ -1,9 +1,10 @@
 <item>
-<title> [COLOR lightgreen][B]Anime:[/B] [/COLOR][COLOR skyblue]Animeyt2 Emision[/COLOR]  </title>
+<title> [COLOR lightgreen][B]Anime:[/B] [/COLOR][COLOR skyblue]Animeyt Emision[/COLOR]  </title>
 <link>$doregex[makelist4]</link>
 
+ <!--Animes en Emision-->
   <regex>
-  <name>makelist4</name>
+  <name>makelist4</name> 
   <listrepeat><![CDATA[
         <title>[COLOR skyblue][makelist4.param1][/COLOR]</title>
         <link>$doregex[makelist3]</link>
@@ -14,6 +15,7 @@
 <cookieJar></cookieJar>
 </regex>
 
+ <!--Capitulos de Anime seleccionado-->
 <regex>
   <name>makelist3</name>
   <listrepeat><![CDATA[
@@ -26,6 +28,7 @@
 <cookieJar></cookieJar>
 </regex>
 
+ <!--Servers de Capitulo-->
 <regex>
   <name>makelist2</name>
   <listrepeat><![CDATA[
@@ -39,7 +42,7 @@
 </regex>
 
 <regex>
-  <name>makelist1</name>
+  <name>makelist</name>
   <listrepeat><![CDATA[
         <title> [makelist2.param3]</title>
         <link>$doregex[getUrl]</link>
