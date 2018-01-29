@@ -5,11 +5,11 @@
   <regex>
   <name>makelist3</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][param1][/COLOR]</title>
+        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="http://jkanime.net/letra/(.*?)</expres>
+<expres>a href="http://jkanime.net/letra/(.*?)/">(.*?) </expres>
 <page>http://jkanime.net</page>
 <cookieJar></cookieJar>
 </regex>
@@ -21,7 +21,7 @@
         <link>$doregex[makelist]</link>
 		<thumbnail>[makelist2.param3]</thumbnail>
         ]]></listrepeat>
-<expres>a href="http://jkanime.net/(.*?)/".*img src="(.*?)"</expres>
+<expres>a href="http://jkanime.net/(.*?)/">.*img src="(.*?)"</expres>
 <page>[makelist3]</page>
 <cookieJar></cookieJar>
 </regex>
