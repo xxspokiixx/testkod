@@ -32,7 +32,7 @@
 <regex>
   <name>makelist2</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B]Server: [COLOR white]Zippyshare - http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html [/B][/COLOR]</title>
+        <title>[COLOR skyblue][B]2Server: [COLOR white]Zippyshare - http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html [/B][/COLOR]</title>
         <link>$doregex[makelist]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
