@@ -1,15 +1,15 @@
 <item>
-<title> [COLOR lightgreen][B]Anime:[/B] [/COLOR][COLOR skyblue]Animeyt5 Emision[/COLOR]  </title>
+<title> [COLOR lightgreen][B]Anime:[/B] [/COLOR][COLOR skyblue]Animeyt2 Emision[/COLOR]  </title>
 <link>$doregex[makelist4]</link>
 
   <regex>
   <name>makelist4</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][makelist4.param3][/COLOR]</title>
+        <title>[COLOR skyblue][makelist4.param1][/COLOR]</title>
         <link>$doregex[makelist3]</link>
-		<thumbnail>[makelist4.param2]</thumbnail>
+		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres><![CDATA[href="http://www.animeyt.tv/(.*?)" class="anime__img-container">.\r.<img src="(.*?)" alt="(.*?)"]]></expres>
+<expres>a href="http://www.animeyt.tv/(.*?)" class="anime__img-container"</expres>
 <page>http://www.animeyt.tv/emision</page>
 <cookieJar></cookieJar>
 </regex>
