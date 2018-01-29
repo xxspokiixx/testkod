@@ -9,7 +9,7 @@
         <link>$doregex[makelist3]</link>
 		<thumbnail>[makelist4.param2]</thumbnail>
         ]]></listrepeat>
-<expres><![CDATA[a href="http://www.animeyt.tv/(.*?)" class="anime__img-container"><img src="(.*?)" alt="(.*?)"]]></expres>
+<expres><![CDATA[a href="http://www.animeyt.tv/(.*?)" class="anime__img-container">\r\n<img src="(.*?)" alt="(.*?)"]]></expres>
 <page>http://www.animeyt.tv/emision</page>
 <cookieJar></cookieJar>
 </regex>
