@@ -1,11 +1,11 @@
 <item>
-<title> [COLOR lightgreen][B]Anime:[/B] [/COLOR][COLOR skyblue]Animeyt Emision[/COLOR]  </title>
+<title> [COLOR lightgreen][B]Anime:[/B] [/COLOR][COLOR skyblue]Animeyt6 Emision[/COLOR]  </title>
 <link>$doregex[makelist4]</link>
 
   <regex>
   <name>makelist4</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue]test[makelist4.param3][/COLOR]</title>
+        <title>[COLOR skyblue][makelist4.param3][/COLOR]</title>
         <link>$doregex[makelist3]</link>
 		<thumbnail>[makelist4.param2]</thumbnail>
         ]]></listrepeat>
