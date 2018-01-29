@@ -32,7 +32,7 @@
 <regex>
   <name>makelist2</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B]3Server: [COLOR white]Zippyshare - http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html [/B][/COLOR]</title>
+        <title>[COLOR skyblue][B]4Server: [COLOR white]Zippyshare - http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html [/B][/COLOR]</title>
         <link>$doregex[makelist]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
@@ -48,7 +48,7 @@
         <link>[makelist.param1].mp4</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>input value="[url=(.*?).mp4[/url]" onclick=(.*?)"</expres>
+<expres>input value="[url=(.*?).mp4[/url]"</expres>
 <page>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html</page>
 <cookieJar></cookieJar>
 </regex>
