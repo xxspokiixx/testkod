@@ -39,7 +39,7 @@
 </regex>
 
 <regex>
-  <name>makelist2</name>
+  <name>makelist1</name>
   <listrepeat><![CDATA[
         <title> [makelist2.param3]</title>
         <link>$doregex[getUrl]</link>
