@@ -32,12 +32,12 @@
 <regex>
   <name>makelist2</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][makelist2.param1] - [makelist2.param2][/COLOR]</title>
+        <title>[COLOR skyblue][B}Server: [COLOR white][makelist2.param1] [/B][/COLOR]</title>
         <link>$doregex[makelist1]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="http://jkanime.net/(.*?)/(.*?)/"</expres>
-<page>http://jkanime.net/[makelist3.param1]</page>
+<expres> $('#video(.*?)').show().html('\u003Ciframe src="(.*?)"</expres>
+<page>http://www.animeyt.tv/ver/[makelist3.param1]</page>
 <cookieJar></cookieJar>
 </regex>
 
