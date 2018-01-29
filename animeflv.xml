@@ -44,7 +44,7 @@
 <regex>
   <name>makelist</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B]Link2: [makelist.param3] [/B][/COLOR]</title>
+        <title>[COLOR skyblue][B]Link3: [makelist.param1] - [makelist.param2] - [makelist.param3] [/B][/COLOR]</title>
         <link>http://www[makelist.param1].zippyshare.com/v/[makelist.param2]/file.html][makelist.param3]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
@@ -53,15 +53,6 @@
 <cookieJar></cookieJar>
 </regex>
 
-<regex>
-<name>getUrl</name>
-<expres>url=(.*?)[/url]"<expres>
-<page>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html</page>
-<connection>keep-alive</connection>
-<accept>*/*</accept>
-<X-Req>XMLHttpRequest</X-Req>
-<cookieJar></cookieJar>
-</regex>
 
 
 <thumbnail>https://i.ytimg.com/vi/ay5CIzGLoTg/hqdefault.jpg</thumbnail><fanart>https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200</fanart>
