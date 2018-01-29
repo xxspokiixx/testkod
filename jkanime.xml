@@ -36,7 +36,7 @@
         <link>$doregex[makelist1]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres> video(.*?)').show().html('\u003Ciframe src="(.*?)"</expres>
+<expres>u003Ciframe src="(.*?)"</expres>
 <page>http://www.animeyt.tv/ver/[makelist3.param1]</page>
 <cookieJar></cookieJar>
 </regex>
