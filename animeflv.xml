@@ -1,8 +1,8 @@
 <item>
-<title> [COLOR lightgreen][B]AnimeFLV:[/B] [/COLOR][COLOR skyblue] Emision[/COLOR]  </title>
+<title> [COLOR lightgreen][B]AnimeFLV:[/B] [/COLOR][COLOR skyblue] Recientemente Actualizados.[/COLOR]  </title>
 <link>$doregex[makelist4]</link>
 
- <!--Animes en Emision-->
+ <!--Recientemente Actualizados.-->
   <regex>
   <name>makelist4</name> 
   <listrepeat><![CDATA[
@@ -19,7 +19,7 @@
 <regex>
   <name>makelist3</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue]ep: [makelist3.param2][/COLOR]</title>
+        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
@@ -65,5 +65,79 @@
 <cookieJar></cookieJar>
 </regex>
 
-<thumbnail>https://i.ytimg.com/vi/ay5CIzGLoTg/hqdefault.jpg</thumbnail><fanart>https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200</fanart>
+<thumbnail>https://pm1.narvii.com/5610/c07d6c52e768eb8d7a79d81223402fc56611971b_hq.jpg</thumbnail><fanart>https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200</fanart>
 	</item>
+	
+	
+	
+<!--	Recientemente Agregados-->
+<item>
+<title> [COLOR lightgreen][B]AnimeFLV:[/B] [/COLOR][COLOR skyblue] Recientemente Actualizados.[/COLOR]  </title>
+<link>$doregex[makelist4]</link>
+
+ <!--Recientemente Actualizados.-->
+  <regex>
+  <name>makelist4</name> 
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][makelist4.param2][/COLOR]</title>
+        <link>$doregex[makelist3]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>a href="/anime/(.*?)/(.*?)"</expres>
+<page>https://animeflv.net/browse?order=added</page>
+<cookieJar></cookieJar>
+</regex>
+
+ <!--Capitulos de Anime seleccionado-->
+<regex>
+  <name>makelist3</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
+        <link>$doregex[makelist2]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>a href="/ver/(.*?)/(.*?)"</expres>
+<page>https://animeflv.net/anime/[makelist4.param1]/[makelist4.param2]</page>
+<cookieJar></cookieJar>
+</regex>
+
+ <!--Servers de Capitulo-->
+<regex>
+  <name>makelist2</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][B]Server: [COLOR white]http://s3.animeflv.com/[makelist2.param1]=[makelist2.param2]=[/B][/COLOR]</title>
+        <link>$doregex[makelist]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>s3.animeflv.com/(.*?)=(.*?)=</expres>
+<page>https://animeflv.net/ver/[makelist3.param1]/[makelist3.param2]</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][B]ScrappingLink: [makelist.param1]  [/B][/COLOR]</title>
+        <link>$doregex[getURL]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>http://www.mediafire.com/file/(.*?)/</expres>
+<page>http://s3.animeflv.com/[makelist2.param1]=[makelist2.param2]=</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+  <name>getURL</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][B]Link: http://download[getURL.param1]  [/B][/COLOR]</title>
+        <link>http://download[getURL.param1]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
+<expres>href='http://download(.*?)'</expres>
+<page>http://www.mediafire.com/file/[makelist.param1]/</page>
+<cookieJar></cookieJar>
+</regex>
+
+<thumbnail>https://pm1.narvii.com/5610/c07d6c52e768eb8d7a79d81223402fc56611971b_hq.jpg</thumbnail><fanart>https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200</fanart>
+	</item>
+	

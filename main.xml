@@ -44,6 +44,14 @@
 
 
 <item>
+<title>AnimeFLV</title>
+<link>http://ignorame</link><thumbnail>https://pm1.narvii.com/5610/c07d6c52e768eb8d7a79d81223402fc56611971b_hq.jpg</thumbnail>
+	<fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+<externallink>https://raw.githubusercontent.com/xxspokiixx/testkod/master/animeflv.xml</externallink>
+<info>[B][COLOR skyblue]AnimeFLV[/COLOR]
+[COLOR aquamarine][B]AnimeFLV [/B]tu fuente de anime online gratis en HD[/COLOR][/B]</info></item>
+
+<item>
 <title>Fitness</title>
 <link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/fitness.png</thumbnail><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <externallink>https://raw.githubusercontent.com/xxspokiixx/testkod/master/fitness.xml</externallink>
