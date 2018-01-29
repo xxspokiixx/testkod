@@ -1,3 +1,9 @@
+<item><title>[COLOR white][UPPERCASE][B]YOGA[/COLOR][/UPPERCASE][/B]</title>
+<link>ignorme</link>
+<jsonrpc>plugin://plugin.video.dailymotion_com/?url=k7mtnCs3Zj7GQ9q7wEP&mode=playVideo</jsonrpc>
+<thumbnail>https://www.jfsdelaware.org/wp-content/uploads/2016/07/yoga-icon-2.png</thumbnail> 
+<info>[B][COLOR skyblue]Shorty TV[/COLOR][/B]</info></item>
+
 <item>
 <title> [COLOR lightgreen][B]Animeyt:[/B] [/COLOR][COLOR skyblue] Emision[/COLOR]  </title>
 <link>$doregex[makelist4]</link>
