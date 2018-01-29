@@ -24,7 +24,7 @@
 		<thumbnail></thumbnail>
         ]]></listrepeat>
 <expres>a href="/ver/(.*?)/(.*?)"</expres>
-<page>https://animeflv.net/[makelist4.param1]/[makelist4.param2]</page>
+<page>https://animeflv.net/anime/[makelist4.param1]/[makelist4.param2]</page>
 <cookieJar></cookieJar>
 </regex>
 
