@@ -19,7 +19,7 @@
 <regex>
   <name>makelist3</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue]ep4: [makelist3.param2][/COLOR]</title>
+        <title>[COLOR skyblue]ep5: [makelist3.param2][/COLOR]</title>
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
