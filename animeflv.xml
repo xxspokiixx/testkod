@@ -19,7 +19,7 @@
 <regex>
   <name>makelist3</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue]ep: [makelist3.param2][/COLOR]</title>
+        <title>[COLOR skyblue]ep2: [makelist3.param2][/COLOR]</title>
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
@@ -36,7 +36,7 @@
         <link>$doregex[makelist]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>http://s3.animeflv.com/efire.php?v=(.*?)",</expres>
+<expres>"http://s3.animeflv.com/efire.php?v=(.*?)",</expres>
 <page>https://animeflv.net/ver/[makelist3.param1]/[makelist3.param2]</page>
 <cookieJar></cookieJar>
 </regex>
