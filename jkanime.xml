@@ -21,7 +21,7 @@
         <link>$doregex[makelist]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>><![CDATA[a class="titl" href="http://jkanime.net/(.*?)/">(.*?)<]]></expres>
+<expres>>a class="titl" href="http://jkanime.net/(.*?)/">(.*?)</expres>
 <page>[makelist3]</page>
 <cookieJar></cookieJar>
 </regex>
