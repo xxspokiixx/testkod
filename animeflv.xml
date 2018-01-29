@@ -32,8 +32,8 @@
 <regex>
   <name>makelist2</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B]Server: [COLOR white]Zippyshare - [makelist2.param1] [/B][/COLOR]</title>
-        <link>$doregex[getUrl]</link>
+        <title>[COLOR skyblue][B]Server: [COLOR white]Zippyshare - [makelist2.param2] [/B][/COLOR]</title>
+        <link>$doregex[getUrl.param1]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
 <expres>http%3A%2F%2Fwww(.*?).zippyshare.com%2Fv%2F(.*?)%2Ffile.html"</expres>
@@ -45,9 +45,6 @@
 <name>getUrl</name>
 <expres>url=(.*?)[/url]"<expres>
 <page>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html</page>
-<connection>keep-alive</connection>
-<accept>*/*</accept>
-<X-Req>XMLHttpRequest</X-Req>
 <cookieJar></cookieJar>
 </regex>
 
