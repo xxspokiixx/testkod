@@ -36,7 +36,7 @@
         <link>$doregex[makelist]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>s3.animeflv.com/efire.php?v=(.*?)"</expres>
+<expres>efire.php?v=(.*?)",</expres>
 <page>https://animeflv.net/ver/[makelist3.param1]/[makelist3.param2]</page>
 <cookieJar></cookieJar>
 </regex>
