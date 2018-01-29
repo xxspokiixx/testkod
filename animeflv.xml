@@ -16,7 +16,7 @@
         <link>$doregex[makelist3]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="/anime/(.*?)/(.*?)""</expres>
+<expres>a href="/anime/(.*?)/(.*?)"</expres>
 <page>https://animeflv.net/browse?order=updated</page>
 <cookieJar></cookieJar>
 </regex>
