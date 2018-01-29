@@ -9,7 +9,7 @@
         <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="http://jkanime.net/letra/(.*?)/">(.*?) </expres>
+<expres>a href="http://jkanime.net/letra/(.*?)/"</expres>
 <page>http://jkanime.net</page>
 <cookieJar></cookieJar>
 </regex>
