@@ -44,8 +44,8 @@
 <regex>
   <name>makelist</name>
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][B]Link: http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html[makelist.param1] [/B][/COLOR]</title>
-        <link>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html[makelist.param1]</link>
+        <title>[COLOR skyblue][B]Link: http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html][makelist.param1] [/B][/COLOR]</title>
+        <link>http://www[makelist2.param1].zippyshare.com/v/[makelist2.param2]/file.html][makelist.param1]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
 <expres>property="og:title" content="(.*?) "</expres>
