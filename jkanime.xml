@@ -30,10 +30,10 @@
   <name>makelist2</name>
   <listrepeat><![CDATA[
         <title>[COLOR skyblue][makelist2.param1] - [makelist2.param2][/COLOR]</title>
-        <link>$doregex[makelist2]</link>
+        <link>$doregex[makelist1]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="http://jkanime.net/(.*?)/(.*?)/</expres>
+<expres>a href="http://jkanime.net/(.*?)/(.*?)/"</expres>
 <page>http://jkanime.net/[makelist3.param1]</page>
 <cookieJar></cookieJar>
 </regex>
