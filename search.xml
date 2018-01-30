@@ -1,6 +1,6 @@
 <item>
 <title>Buscar</title>
-<link>$doregex[makelist]</link>
+<link>$doregex[search]</link>
 
 <regex>
 <name>makelist</name>
