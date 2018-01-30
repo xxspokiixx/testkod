@@ -1,0 +1,71 @@
+<item>
+<title>Buscar</title>
+<link>$doregex[makelist]</link>
+
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param2] </title>
+<link>$doregex[makelist2]</link>
+<fanart>]</fanart>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres>a href="/anime/(.*?)(.*?)</expres>
+<page>https://animeflv.net/browse?q=$doregex[search]</page>
+</regex>
+
+
+<regex>
+<name>search</name>
+<expres><![CDATA[#$pyFunction
+import xbmc
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    dialog = xbmcgui.Dialog()
+    d = dialog.input('Buscar  Anime: ejemplo: One Punch Man', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+    return d
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+
+
+
+
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<SetViewMode>55</SetViewMode>
+<title>[makelist.param3] server:[makelist2.param2] - idioma: [makelist2.param3]</title>
+ <link>$doregex[id3]</link>
+<fanart>[makelist.param2]</fanart>
+<thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres>elemento[\w\W\s]{0,8}href="(.*?)"[\w\W\s]{0,185}alt="(.*?)"[\w\W\s]{0,108}idiomas/(.*?).png</expres>
+<page>[makelist.param1]</page>
+</regex>
+
+
+
+
+
+<regex>
+<name>id3</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import urlresolver
+    url = '[makelist2.param1]'
+    try:
+        u = urlresolver.resolve(url)
+    except:
+        u = 'http://adryanlist.org/error.mp4'
+    return u
+]]></expres>
+<page></page>
+</regex>
+
+
+
+
+<thumbnail>http://adryanlist.org/adryan/img/adryflix.png</thumbnail><fanart>http://adryanlist.org/adryan/img/fanart.jpg</fanart></item>
