@@ -1,3 +1,22 @@
 #EXTM3U
-#EXTINF:0,Alf
+
+#EXTINF:0,Alf 1x1
+http://proxy-02.nyc.dailymotion.com/sec(x4afe44b4233260915dd69d95a715b60)/video/744/573/198375447_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x2
 http://proxy-15.nyc.dailymotion.com/sec(x03cbc9236a43f619934105e5a715b60)/video/166/816/198618661_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x3
+http://proxy-21.nyc.dailymotion.com/sec(xa091eefe04c733e0165f3325a715b60)/video/620/026/198620026_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x4
+http://proxy-01.nyc.dailymotion.com/sec(x6d22ba9bca09b72578331bc5a715b60)/video/616/126/198621616_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x5
+http://proxy-072.dc3.dailymotion.com/sec(x101f19e2b8a1e833c5e787b5a715b60)/video/526/326/198623625_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x6
+http://proxy-035.ix7.dailymotion.com/sec(xc0f56cfebfe45b8ce9e4ede5a715b60)/video/202/526/198625202_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x7
+http://proxy-01.nyc.dailymotion.com/sec(x1e07a205632075b7dabb3475a715b60)/video/312/268/198862213_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x8
+http://proxy-11.nyc.dailymotion.com/sec(x5ad0a42aaffc3352be707d55a715b60)/video/155/368/198863551_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x9
+http://proxy-02.nyc.dailymotion.com/sec(x38a9f5b541fee65cb1a04935a715b60)/video/209/368/198863902_mp4_h264_aac_hq_1.m3u8
+#EXTINF:0,Alf 1x10
+http://proxy-02.nyc.dailymotion.com/sec(x0f5b0c108d6719df82c869e5a715b60)/video/645/468/198864546_mp4_h264_aac_hq_1.m3u8
