@@ -22,9 +22,11 @@ import xbmc
 import xbmcaddon
 import xbmcgui
 def GetLSProData(page_data,Cookie_Jar,m):
-    dialog = xbmcgui.Dialog()
-    d = dialog.input('Buscar  Anime: ejemplo: One Punch Man', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
-    return d
+    keyboard = xbmc.Keyboard()
+	keyboard.doModal()
+	if keyboard.isConfirmed() and keyboard.getText():
+        search_string = keyboard.getText().replace(" ", "+")
+	    return search_string
 ]]></expres>
 <page></page>
 <cookieJar></cookieJar>
