@@ -95,6 +95,6 @@
 
 <item><title>dailymotion</title>
 <link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/regio.png</thumbnail>
-<externallink>plugin://plugin.video.dailymotion_com/?mode=playVideo&url=www.dailymotion.com/video/x3aecda</externallink><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
+<externallink>plugin://plugin.video.dailymotion_com/?mode=playVideo&url=x3aecda</externallink><fanart>https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyLiveTV/fanart.jpg</fanart>
 <info>[B][COLOR skyblue]Shorty TV[/COLOR]
 [COLOR aquamarine]Contenido totalmente gratis![/COLOR][/B]</info></item>
