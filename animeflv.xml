@@ -93,7 +93,7 @@
   <name>makelist3</name>
   <listrepeat><![CDATA[
         <title>[COLOR skyblue][makelist3.param2][/COLOR]</title>
-        <link>$doregex[server]</link>
+        <link>$doregex[makelist2]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
 <expres>a href="/ver/(.*?)/(.*?)"</expres>
@@ -103,26 +103,36 @@
 
  <!--Servers de Capitulo-->
 <regex>
-  <name>server</name>
-  <link>$doregex[scrap]</link>
+  <name>makelist2</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][B]Server: [COLOR white]http://s3.animeflv.com/[makelist2.param1]=[makelist2.param2]=[/B][/COLOR]</title>
+        <link>$doregex[makelist]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
 <expres>s3.animeflv.com/(.*?)=(.*?)=</expres>
 <page>https://animeflv.net/ver/[makelist3.param1]/[makelist3.param2]</page>
 <cookieJar></cookieJar>
 </regex>
 
 <regex>
-  <name>scrap</name>
-<link>$doregex[getURL]</link>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][B]ScrappingLink: [makelist.param1]  [/B][/COLOR]</title>
+        <link>$doregex[getURL]</link>
+		<thumbnail></thumbnail>
+        ]]></listrepeat>
 <expres>http://www.mediafire.com/file/(.*?)/</expres>
-<page>http://s3.animeflv.com/[server.param1]=[server.param2]=</page>
+<page>http://s3.animeflv.com/[makelist2.param1]=[makelist2.param2]=</page>
 <cookieJar></cookieJar>
 </regex>
 
 <regex>
   <name>getURL</name>
+  <listrepeat><![CDATA[
+        <title>[COLOR skyblue][B]Link: http://download[getURL.param1]  [/B][/COLOR]</title>
         <link>http://download[getURL.param1]</link>
 		<thumbnail></thumbnail>
-
+        ]]></listrepeat>
 <expres>href='http://download(.*?)'</expres>
 <page>http://www.mediafire.com/file/[makelist.param1]/</page>
 <cookieJar></cookieJar>
