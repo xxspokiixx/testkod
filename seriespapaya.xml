@@ -36,9 +36,7 @@
         <link>$doregex[makelist]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres><![CDATA[img src='http://seriespapaya.com/images/online/vidzi.png' /> (.*?)</div>
-		<div class="denlace">
-		<a href="(.*?)"]]>
+<expres><![CDATA[img src='http://seriespapaya.com/images/online/vidzi.png' /> (.*?)</div>\n<div class="denlace">\n<a href="(.*?)"]]>
 		</expres>
 <page>http://www.seriespapaya.com/ver/[makelist4.param1]/temporada-[makelist3.param1]/capitulo-[makelist3.param3].html</page>
 <cookieJar></cookieJar>
