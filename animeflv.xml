@@ -10,7 +10,7 @@
         <link>$doregex[makelist3]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="/anime/(.*?)/(.*?)[\w\W\s]{0,22}alt="(.*?)"</expres>
+<expres>a href="/anime/(.*?)/(.*?)"[\w\W\s]{0,47}img src="(.*?)" alt="(.*?)"</expres>
 <page>https://animeflv.net/browse?order=updated</page>
 <cookieJar></cookieJar>
 </regex>
