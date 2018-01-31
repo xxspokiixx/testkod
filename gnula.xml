@@ -986,7 +986,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 				<fanart>[makelist2.param2]</fanart>
                 ]]></listrepeat>
 
-                <expres>mirrorPlayer\(\"(http://.*?)\"</expres>
+                <expres>"http://s2.animeyt.tv/(.*?)"</expres>
 		<page>http://www.animeyt.tv/ver/[makelist.param1]</page>
 		</regex>
 
@@ -1000,7 +1000,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>dragon</name>
 <expres>location:(.+)\s*</expres>
-<page>[lista.param1]</page>
+<page>http://s2.animeyt.tv/[lista.param1]</page>
 <noredirect>true</noredirect>
 <referer>http://s2.animeyt.tv</referer>
 <agent>Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36</agent>
@@ -1011,7 +1011,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>dbs</name>
 <expres>location:(.+)\s*</expres>
-<page>[lista.param1]</page>
+<page>http://s2.animeyt.tv/[lista.param1]</page>
 <referer>http://s2.animeyt.tv</referer>
 <noredirect>true</noredirect>
 <includeheaders>true</includeheaders>
@@ -1020,7 +1020,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 <regex>
 <name>dura</name>
-<expres>location:(.+)\s*</expres>
+<expres>http://s2.animeyt.tv/location:(.+)\s*</expres>
 <page>[lista.param1]</page>
 <referer>http://s2.animeyt.tv</referer>
 <noredirect>true</noredirect>
