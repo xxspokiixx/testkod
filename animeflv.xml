@@ -6,7 +6,7 @@
   <regex>
   <name>makelist4</name> 
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][makelist4.param3][/COLOR]</title>
+        <title>[COLOR skyblue][makelist4.param4][/COLOR]</title>
         <link>$doregex[makelist3]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
