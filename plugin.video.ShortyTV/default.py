@@ -119,7 +119,7 @@ def addon_log(string):
 def makeRequest(url, headers=None):
         try:
             if headers is None:
-                headers = {'User-agent' : 'THEKING'}
+                headers = {'User-agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0'}
 
 
 
