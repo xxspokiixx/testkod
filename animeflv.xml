@@ -1,16 +1,16 @@
 <item>
-<title> [COLOR lightgreen][B]AnimeFLV:[/B] [/COLOR][COLOR skyblue] Recientemente Actualizados1.[/COLOR]  </title>
+<title> [COLOR lightgreen][B]AnimeFLV:[/B] [/COLOR][COLOR skyblue] Recientemente Actualizados.[/COLOR]  </title>
 <link>$doregex[makelist4]</link>
 
  <!--Recientemente Actualizados.-->
   <regex>
   <name>makelist4</name> 
   <listrepeat><![CDATA[
-        <title>[COLOR skyblue][makelist4.param4][/COLOR]</title>
+        <title>[COLOR skyblue][makelist4.param2][/COLOR]</title>
         <link>$doregex[makelist3]</link>
 		<thumbnail></thumbnail>
         ]]></listrepeat>
-<expres>a href="/anime/(.*?)/(.*?)"[\w\W\s]{0,47}img src="(.*?)" alt="(.*?)"</expres>
+<expres>a href="/anime/(.*?)/(.*?)"</expres>
 <page>https://animeflv.net/browse?order=updated</page>
 <cookieJar></cookieJar>
 </regex>
