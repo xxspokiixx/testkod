@@ -127,7 +127,7 @@ if mode is None:
     dialog.notification("Spokes", 'Mejor que el canal de los arbolitos felices!.',
                         xbmcgui.NOTIFICATION_INFO, duration, False)
     fanart = 'http://darkelite.ml/img/fondo.jpg'
-    
+
     url = build_url({'mode': 'Novelas'})
     li = xbmcgui.ListItem('[COLOR yellow][B]Novelas[/B][/COLOR]', iconImage='http://www.novelashdgratis.io/img/logo.gif',
                           thumbnailImage='http://www.novelashdgratis.io/img/logo.gif')
@@ -169,7 +169,7 @@ if mode is None:
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Aqui encontraras tus Animes Favoritos[/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
-	
+
     url = build_url({'mode': 'animeflv'})
     thumbnail = 'https://pm1.narvii.com/5610/c07d6c52e768eb8d7a79d81223402fc56611971b_hq.jpg'
     li = xbmcgui.ListItem('[COLOR yellow][B]AnimeFLV[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
@@ -1563,9 +1563,9 @@ elif mode[0] == '5': #search animeyt
         dialog = xbmcgui.Dialog()
         dialog.notification("Spokes", 'La Busqueda se cancelo',
                             xbmcgui.NOTIFICATION_INFO, 3500 , False)
-							
 
-elif mode[0] == 'animeflv': #lista secciones 
+
+elif mode[0] == 'animeflv': #lista secciones
 
     url = build_url({'mode': 'flvactualizados', 'direccion': 'https://animeflv.net/browse?order=added'})
     thumbnail = 'https://pm1.narvii.com/5610/c07d6c52e768eb8d7a79d81223402fc56611971b_hq.jpg'
@@ -1590,7 +1590,7 @@ elif mode[0] == 'animeflv': #lista secciones
     addMenuitem(url, li, True)
 
     endMenu()
-	
+
 elif mode[0] == 'flvactualizados':  #actualizados recientes
     actualizados = args['direccion'][0]
     data = read(actualizados)
@@ -1605,7 +1605,7 @@ elif mode[0] == 'flvactualizados':  #actualizados recientes
 
         pattern = 'class="Title">(.*?)<'
         title = re.findall(pattern,match,re.MULTILINE)[0]
-     
+
        # pattern = '<p>(.*?)</p>.*\n.*<span'
        # info = re.findall(pattern,match,re.MULTILINE)[0]
 
@@ -1627,7 +1627,7 @@ elif mode[0] == 'flvactualizados':  #actualizados recientes
     xbmcplugin.endOfDirectory(addon_handle)
 
     endMenu()
-	
+
 elif mode[0] == 'flvagregados':  #actualizados recientes
     actualizados = args['direccion'][0]
     data = read(actualizados)
@@ -1642,7 +1642,7 @@ elif mode[0] == 'flvagregados':  #actualizados recientes
 
         pattern = 'class="Title">(.*?)<'
         title = re.findall(pattern,match,re.MULTILINE)[0]
-		
+
       #  pattern = '</p>.*\n.*<p>(.*?)</p>'
        # plot = re.findall(pattern,match,re.MULTILINE)[0]
 
@@ -1663,32 +1663,67 @@ elif mode[0] == 'flvagregados':  #actualizados recientes
     addMenuitem(url, li, True)
     xbmcplugin.endOfDirectory(addon_handle)
 
-    endMenu()	
-	
-	
+    endMenu()
+
+
 
 elif mode[0] == 'flvepisodios':  #Mostrar episodios
     emision = args['direccion'][0]
     thumbnail = args['thumbnail'][0]
     data = read(emision)
-    pattern = '(<h3 class="Title">.*h3.*\n.*/p.*)'
+    pattern = '(\<li class="fa-play-circle">.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*)'
     matches = re.findall(pattern, data, re.IGNORECASE)
+
     for match in matches:
-        pattern = 'a href="(.*?)"'
+        pattern = '<a href="/ver/(.*?)">'
         url = re.findall(pattern, match, re.MULTILINE)[0]
 
-        pattern = 'href.*\n(.*)'
+        pattern = '<p>(.*?)</p>'
         title = re.findall(pattern, match, re.MULTILINE)[0]
 
         thumbnail = thumbnail
 
-        url = build_url({'mode': '3', 'direccion': url, 'thumbnail': thumbnail})
-        li = xbmcgui.ListItem('[COLOR green][B]' + title + '[/B][/COLOR]', iconImage=thumbnail,thumbnailImage=thumbnail)
-        li.setInfo("tvshows", {"Title": title, "FileName": title})
+        url = build_url({'mode': 'flvservers', 'direccion': 'https://animeflv.net/ver/'+url, 'thumbnail': thumbnail})
+        li = xbmcgui.ListItem('[COLOR green][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail,thumbnailImage=thumbnail)
+        li.setInfo("movies", {"Title": title, "FileName": title})
         li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
         addMenuitem(url, li, True)
     endMenu()
-	
+
+
+elif mode[0] == 'flvservers':   #servers para reproducir
+    emision = args['direccion'][0]
+    thumbnail = args['thumbnail'][0]
+    data = read(emision)
+    pattern = 's3.animeflv.com/(.*?)="'
+    url = re.findall(pattern, data, re.MULTILINE)[0]
+
+    mediaf= 'https://s3.animeflv.com/'+url+'='
+    data2=read(mediaf)
+    pattern2 = 'https://www.mediafire.com/file/(.*?)/'
+    url2 = re.findall(pattern2,data2,re.MULTILINE)[0]
+
+    scramed = 'https://www.mediafire.com/file/'+url2
+    data3=read(scramed)
+    pattern3 = 'https://www.mediafire.com/file/(.*?).mp4'
+    url3 = re.findall(pattern3,data3,re.MULTILINE)[0]
+
+
+
+    thumbnail = thumbnail
+    url = build_url({'mode': 'play', 'playlink':'https://www.mediafire.com/file/' + url3})
+    li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion Mediafire[/B][/COLOR]', iconImage=thumbnail,
+                          thumbnailImage=thumbnail)
+    li.setProperty('IsPlayable', 'true')
+    li.setProperty('fanart_image',thumbnail)
+    addMenuitem(url, li, False)
+
+
+
+
+    endMenu()
+
+
 elif mode[0] == 'flvsearch':
     website= 'https://animeflv.net/browse?q='
     kb = xbmc.Keyboard('default', 'heading')
@@ -1718,7 +1753,7 @@ elif mode[0] == 'flvsearch':
 
 				pattern = 'class="Title">(.*?)<'
 				title = re.findall(pattern,match,re.MULTILINE)[0]
-				
+
 				url = build_url({'mode': 'flvepisodios','direccion':'https://animeflv.net/anime/'+url,'thumbnail':'https://animeflv.net'+thumbnail})
 				li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage='https://animeflv.net'+thumbnail, thumbnailImage='https://animeflv.net'+thumbnail)
 				li.setInfo("tvshows", {"Title": title, "FileName": title})
