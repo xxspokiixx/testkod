@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 from urllib2 import Request, urlopen, URLError, HTTPError
 import requests
 import re
+from lib import jsunpack
 
 from core import httptools
 from core import scrapertools
@@ -1679,8 +1680,8 @@ elif mode[0] == 'flvagregados':  #actualizados recientes
 
     pattern2 = '<li><a href="(.*?)" rel="next"'
     paginacion = re.findall(pattern2, data, re.DOTALL)[0]
-    url = build_url({'mode': 'flvactualizados', 'direccion': 'https://animeflv.net' + paginacion})
-    li = xbmcgui.ListItem('[COLOR red][B]Siguente Pagina #[/B][/COLOR]'+paginacion,
+    url = build_url({'mode': 'flvactualizados', 'direccion': 'https://animeflv.net' + paginacion[1]})
+    li = xbmcgui.ListItem('[COLOR red][B]Siguente Pagina #[/B][/COLOR]'+paginacion[0],
                           iconImage='http://2.bp.blogspot.com/-q5yGYcBCQzg/Uv1E2m4c6oI/AAAAAAAAA7I/mK2JPXZh1w0/s1600/SIGUIENTE.png',
                           thumbnailImage='http://2.bp.blogspot.com/-q5yGYcBCQzg/Uv1E2m4c6oI/AAAAAAAAA7I/mK2JPXZh1w0/s1600/SIGUIENTE.png')
     addMenuitem(url, li, True)
@@ -1691,30 +1692,34 @@ elif mode[0] == 'flvagregados':  #actualizados recientes
 
 
 elif mode[0] == 'flvepisodios':  #Mostrar episodios
+    duration = 35000
+    dialog = xbmcgui.Dialog()
     emision = args['direccion'][0]
     thumbnail = args['thumbnail'][0]
     data = read(emision)
     pattern = '(\<li class="fa-play-circle">.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*)'
     matches = re.findall(pattern, data, re.IGNORECASE)
-
     for match in matches:
-            pattern = '<a href="/ver/(.*?)">'
-            url = re.findall(pattern, match, re.MULTILINE)[0]
+        pattern = '<a href="/ver/(.*?)">'
+        url = re.findall(pattern, match, re.MULTILINE)[0]
 
-            pattern = '<p>(.*?)</p>'
-            title = re.findall(pattern, match, re.MULTILINE)[0]
+        pattern = '<p>(.*?)</p>'
+        title = re.findall(pattern, match, re.MULTILINE)[0]
 
-            thumbnail = thumbnail
+        thumbnail = thumbnail
 
-            url = build_url({'mode': 'flvservers', 'direccion': 'https://animeflv.net/ver/'+url, 'thumbnail': thumbnail})
-            li = xbmcgui.ListItem('[COLOR green][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail,thumbnailImage=thumbnail)
-            li.setInfo("movies", {"Title": title, "FileName": title})
-            li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
-            addMenuitem(url, li, True)
+        url = build_url({'mode': 'flvservers', 'direccion': 'https://animeflv.net/ver/'+url, 'thumbnail': thumbnail})
+        li = xbmcgui.ListItem('[COLOR green][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail,thumbnailImage=thumbnail)
+        li.setInfo("movies", {"Title": title, "FileName": title})
+        li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+        addMenuitem(url, li, True)
+
+
     endMenu()
 
 
 elif mode[0] == 'flvservers':   #servers para reproducir
+#Mediafire
     # emision = args['direccion'][0]
     # thumbnail = args['thumbnail'][0]
     # data = read(emision)
@@ -1738,6 +1743,8 @@ elif mode[0] == 'flvservers':   #servers para reproducir
     # li.setProperty('IsPlayable', 'true')
     # li.setProperty('fanart_image',thumbnail)
     # addMenuitem(url, li, False)
+
+
 #ZippyShare
     emision = args['direccion'][0]
     thumbnail = args['thumbnail'][0]
@@ -1745,44 +1752,19 @@ elif mode[0] == 'flvservers':   #servers para reproducir
     duration = 35000
     dialog = xbmcgui.Dialog()
 
-    # pattern = '(\<td>Zippyshare</td>.*\n.*\n.*\n.*\n)'
-    # url = re.findall(pattern, data, re.IGNORECASE)[0]
-    # duration = 35000
-    # dialog = xbmcgui.Dialog()
-    # dialog.ok("Spokes", url[0])
-    # dialog.ok("Spokes", data )
-    #
-    # for match in url:
-
     pattern2 = '(\.*?s=http%3A%2F%2F(.*?)%2F(.*?)%2F(.*?)%2F(.*?)")'
     url2 = re.findall(pattern2, data ,re.MULTILINE)[0]
-    #url2 = [tuple(s if s != '%2F' else '/' for s in tup) for tup in url2][0]
     url3 = 'http://'+url2[1]+'/'+url2[2]+'/'+url2[3]+'/'+url2[4]
-    #dialog.ok("Spokes", url3)
-
-
-    #if 'zippyshare' in url3:
 
     zippyurl = url3
-        #dialog.ok("Spokes", zippyurl )
     data = read(zippyurl)
-
     pattern = 'getElementById\(\'dlbutton\'\).href\s*=\s*(.*?);'
     url3 = re.findall(pattern,data,re.MULTILINE)[0]
     numbers = re.findall('\((.*?)\)',url3,re.MULTILINE)[0]
     numbers2 = eval(numbers)
-    dialog.ok("Spokes", str(numbers2))
     pattern = 'property="og:title" content="(.*?)"'
     numvid = re.findall(pattern,data,re.MULTILINE)[0]
-    url4 = 'http://'+url2[1]+'/d/'+str(numbers2)+'/'+url2[3]+'/'+numvid
-    dialog.ok("Spokes", url4)
-        # pattern = 'property="og:title" content="(.*?)"'
-        # url3 = re.findall(pattern,data,re.MULTILINE)[0]
-
-        # url4 = zippyurl+']'+url3
-        #dialog.ok("Spokes", url4 )
-
-        #url5 = get_video_url(url3,'','','','')
+    url4 = 'http://'+url2[1]+'/d/'+url2[3]+'/'+str(numbers2)+'/'+numvid
     thumbnail = thumbnail
     url = build_url({'mode': 'play', 'playlink': url4 })
     li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion ZippyShare[/B][/COLOR]', iconImage=thumbnail,
@@ -1791,8 +1773,28 @@ elif mode[0] == 'flvservers':   #servers para reproducir
     li.setProperty('fanart_image',thumbnail)
     addMenuitem(url, li, False)
 
-
-
+#MP4Upload
+    emision = args['direccion'][0]
+    thumbnail = args['thumbnail'][0]
+    data = read(emision)
+    duration = 35000
+    dialog = xbmcgui.Dialog()
+    pattern2 = '(\.*src="https://www.mp4upload.com/(.*?)")'
+    url2 = re.findall(pattern2, data ,re.MULTILINE)[0]
+    mp4up = 'https://www.mp4upload.com/'+url2[1]
+    data = read(mp4up)
+    pattern = "(\.*text/javascript'>(.*?).*\n.*)"
+    match = re.findall(pattern,data,re.MULTILINE)[0]
+    data = jsunpack.unpack(match[0])
+    data = data.replace("\\'", "'")
+    media_url = re.findall('{type:"video/mp4",src:"([^"]+)"}',data,re.MULTILINE)[0]
+    thumbnail = thumbnail
+    url = build_url({'mode': 'play', 'playlink': media_url })
+    li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion MP4Upload[/B][/COLOR]', iconImage=thumbnail,
+                              thumbnailImage=thumbnail)
+    li.setProperty('IsPlayable', 'true')
+    li.setProperty('fanart_image',thumbnail)
+    addMenuitem(url, li, False)
     endMenu()
 
 
