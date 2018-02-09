@@ -14,7 +14,11 @@ import urlresolver
 from bs4 import BeautifulSoup
 from urllib2 import Request, urlopen, URLError, HTTPError
 import requests
+import re
 
+from core import httptools
+from core import scrapertools
+from platformcode import logger
 
 
 addon       = xbmcaddon.Addon()
@@ -104,6 +108,25 @@ def resolve_url(url):
     else:
         return stream_url
 
+def get_video_url(page_url, premium=False, user="", password="", video_password=""):
+    logger.info("(page_url='%s')" % page_url)
+    video_urls = []
+
+    data = httptools.downloadpage(page_url).data
+    match = re.search('(.+)/v/(\w+)/file.html', page_url)
+    domain = match.group(1)
+
+    patron = 'getElementById\(\'dlbutton\'\).href\s*=\s*(.*?);'
+    media_url = scrapertools.find_single_match(data, patron)
+    numbers = scrapertools.find_single_match(media_url, '\((.*?)\)')
+    url = media_url.replace(numbers, "'%s'" % eval(numbers))
+    url = eval(url)
+
+    mediaurl = '%s%s' % (domain, url)
+    extension = "." + mediaurl.split('.')[-1]
+    video_urls.append([extension + " [zippyshare]", mediaurl])
+
+    return video_urls
 
 def play_video(path):
     """
@@ -122,7 +145,7 @@ def play_video(path):
 mode = args.get('mode', None)
 
 if mode is None:
-    duration = 17500
+    duration = 5500
     dialog = xbmcgui.Dialog()
     dialog.notification("Spokes", 'Mejor que el canal de los arbolitos felices!.',
                         xbmcgui.NOTIFICATION_INFO, duration, False)
@@ -1606,8 +1629,8 @@ elif mode[0] == 'flvactualizados':  #actualizados recientes
         pattern = 'class="Title">(.*?)<'
         title = re.findall(pattern,match,re.MULTILINE)[0]
 
-       # pattern = '<p>(.*?)</p>.*\n.*<span'
-       # info = re.findall(pattern,match,re.MULTILINE)[0]
+        #pattern = '(\*/p>.*\n..*<p>(.*?)</p>)'
+        #info = re.findall(pattern,match,re.MULTILINE)[0]
 
 
         url = build_url({'mode': 'flvepisodios','direccion':'https://animeflv.net/anime/'+url,'thumbnail':'https://animeflv.net'+thumbnail})
@@ -1654,7 +1677,7 @@ elif mode[0] == 'flvagregados':  #actualizados recientes
         addMenuitem(url, li, True)
 
 
-    pattern2 = '.*?browse?order=added&page=(.*?)"'
+    pattern2 = '<li><a href="(.*?)" rel="next"'
     paginacion = re.findall(pattern2, data, re.DOTALL)[0]
     url = build_url({'mode': 'flvactualizados', 'direccion': 'https://animeflv.net' + paginacion})
     li = xbmcgui.ListItem('[COLOR red][B]Siguente Pagina #[/B][/COLOR]'+paginacion,
@@ -1675,49 +1698,98 @@ elif mode[0] == 'flvepisodios':  #Mostrar episodios
     matches = re.findall(pattern, data, re.IGNORECASE)
 
     for match in matches:
-        pattern = '<a href="/ver/(.*?)">'
-        url = re.findall(pattern, match, re.MULTILINE)[0]
+            pattern = '<a href="/ver/(.*?)">'
+            url = re.findall(pattern, match, re.MULTILINE)[0]
 
-        pattern = '<p>(.*?)</p>'
-        title = re.findall(pattern, match, re.MULTILINE)[0]
+            pattern = '<p>(.*?)</p>'
+            title = re.findall(pattern, match, re.MULTILINE)[0]
 
-        thumbnail = thumbnail
+            thumbnail = thumbnail
 
-        url = build_url({'mode': 'flvservers', 'direccion': 'https://animeflv.net/ver/'+url, 'thumbnail': thumbnail})
-        li = xbmcgui.ListItem('[COLOR green][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail,thumbnailImage=thumbnail)
-        li.setInfo("movies", {"Title": title, "FileName": title})
-        li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
-        addMenuitem(url, li, True)
+            url = build_url({'mode': 'flvservers', 'direccion': 'https://animeflv.net/ver/'+url, 'thumbnail': thumbnail})
+            li = xbmcgui.ListItem('[COLOR green][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail,thumbnailImage=thumbnail)
+            li.setInfo("movies", {"Title": title, "FileName": title})
+            li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+            addMenuitem(url, li, True)
     endMenu()
 
 
 elif mode[0] == 'flvservers':   #servers para reproducir
+    # emision = args['direccion'][0]
+    # thumbnail = args['thumbnail'][0]
+    # data = read(emision)
+    # pattern = 's3.animeflv.com/(.*?)="'
+    # url = re.findall(pattern, data, re.MULTILINE)[0]
+    #
+    # mediaf= 'https://s3.animeflv.com/'+url+'='
+    # data2=read(mediaf)
+    # pattern2 = 'https://www.mediafire.com/file/(.*?)/'
+    # url2 = re.findall(pattern2,data2,re.MULTILINE)[0]
+    #
+    # scramed = 'https://www.mediafire.com/file/'+url2
+    # data3=read(scramed)
+    # pattern3 = 'http://download(.*?).mp4'
+    # url3 = re.findall(pattern3,data3,re.MULTILINE)[0]
+    #
+    # thumbnail = thumbnail
+    # url = build_url({'mode': 'play', 'playlink':'http://download' + url3+'.mp4' })
+    # li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion Mediafire[/B][/COLOR]', iconImage=thumbnail,
+    #                       thumbnailImage=thumbnail)
+    # li.setProperty('IsPlayable', 'true')
+    # li.setProperty('fanart_image',thumbnail)
+    # addMenuitem(url, li, False)
+#ZippyShare
     emision = args['direccion'][0]
     thumbnail = args['thumbnail'][0]
     data = read(emision)
-    pattern = 's3.animeflv.com/(.*?)="'
-    url = re.findall(pattern, data, re.MULTILINE)[0]
+    duration = 35000
+    dialog = xbmcgui.Dialog()
 
-    mediaf= 'https://s3.animeflv.com/'+url+'='
-    data2=read(mediaf)
-    pattern2 = 'https://www.mediafire.com/file/(.*?)/'
-    url2 = re.findall(pattern2,data2,re.MULTILINE)[0]
+    # pattern = '(\<td>Zippyshare</td>.*\n.*\n.*\n.*\n)'
+    # url = re.findall(pattern, data, re.IGNORECASE)[0]
+    # duration = 35000
+    # dialog = xbmcgui.Dialog()
+    # dialog.ok("Spokes", url[0])
+    # dialog.ok("Spokes", data )
+    #
+    # for match in url:
 
-    scramed = 'https://www.mediafire.com/file/'+url2
-    data3=read(scramed)
-    pattern3 = 'https://www.mediafire.com/file/(.*?).mp4'
-    url3 = re.findall(pattern3,data3,re.MULTILINE)[0]
+    pattern2 = '(\.*?s=http%3A%2F%2F(.*?)%2F(.*?)%2F(.*?)%2F(.*?)")'
+    url2 = re.findall(pattern2, data ,re.MULTILINE)[0]
+    #url2 = [tuple(s if s != '%2F' else '/' for s in tup) for tup in url2][0]
+    url3 = 'http://'+url2[1]+'/'+url2[2]+'/'+url2[3]+'/'+url2[4]
+    #dialog.ok("Spokes", url3)
 
 
+    #if 'zippyshare' in url3:
 
+    zippyurl = url3
+        #dialog.ok("Spokes", zippyurl )
+    data = read(zippyurl)
+
+    pattern = 'getElementById\(\'dlbutton\'\).href\s*=\s*(.*?);'
+    url3 = re.findall(pattern,data,re.MULTILINE)[0]
+    numbers = re.findall('\((.*?)\)',url3,re.MULTILINE)[0]
+    numbers2 = eval(numbers)
+    dialog.ok("Spokes", str(numbers2))
+    pattern = 'property="og:title" content="(.*?)"'
+    numvid = re.findall(pattern,data,re.MULTILINE)[0]
+    url4 = 'http://'+url2[1]+'/d/'+str(numbers2)+'/'+url2[3]+'/'+numvid
+    dialog.ok("Spokes", url4)
+        # pattern = 'property="og:title" content="(.*?)"'
+        # url3 = re.findall(pattern,data,re.MULTILINE)[0]
+
+        # url4 = zippyurl+']'+url3
+        #dialog.ok("Spokes", url4 )
+
+        #url5 = get_video_url(url3,'','','','')
     thumbnail = thumbnail
-    url = build_url({'mode': 'play', 'playlink':'https://www.mediafire.com/file/' + url3})
-    li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion Mediafire[/B][/COLOR]', iconImage=thumbnail,
-                          thumbnailImage=thumbnail)
+    url = build_url({'mode': 'play', 'playlink': url4 })
+    li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion ZippyShare[/B][/COLOR]', iconImage=thumbnail,
+                              thumbnailImage=thumbnail)
     li.setProperty('IsPlayable', 'true')
     li.setProperty('fanart_image',thumbnail)
     addMenuitem(url, li, False)
-
 
 
 
