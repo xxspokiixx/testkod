@@ -1641,10 +1641,10 @@ elif mode[0] == 'flvactualizados':  #actualizados recientes
         addMenuitem(url, li, True)
 
 
-    pattern2 = '<li><a href="(.*?)" rel="next"'
+    pattern2 = '<li class="active">.*?</li><li><a href="([^"]+)">'
     paginacion = re.findall(pattern2, data, re.DOTALL)[0]
     url = build_url({'mode': 'flvactualizados', 'direccion': 'https://animeflv.net' + paginacion})
-    li = xbmcgui.ListItem('[COLOR red][B]Siguente Pagina[/B][/COLOR]'+paginacion,
+    li = xbmcgui.ListItem('[COLOR red][B]Siguente Pagina[/B][/COLOR]',
                           iconImage='http://2.bp.blogspot.com/-q5yGYcBCQzg/Uv1E2m4c6oI/AAAAAAAAA7I/mK2JPXZh1w0/s1600/SIGUIENTE.png',
                           thumbnailImage='http://2.bp.blogspot.com/-q5yGYcBCQzg/Uv1E2m4c6oI/AAAAAAAAA7I/mK2JPXZh1w0/s1600/SIGUIENTE.png')
     addMenuitem(url, li, True)
@@ -1667,9 +1667,11 @@ elif mode[0] == 'flvagregados':  #actualizados recientes
         pattern = 'class="Title">(.*?)<'
         title = re.findall(pattern,match,re.MULTILINE)[0]
 
-      #  pattern = '</p>.*\n.*<p>(.*?)</p>'
-       # plot = re.findall(pattern,match,re.MULTILINE)[0]
-
+        # pattern = '(\.*?</span></p>.*\n<p>(.*?)\</p>.*\n<span.*)'
+        # plot = re.findall(pattern,match,re.MULTILINE)[0]
+        # duration = 35000
+        # dialog = xbmcgui.Dialog()
+        # dialog.ok("Spokes",plot[1])
 
         url = build_url({'mode': 'flvepisodios','direccion':'https://animeflv.net/anime/'+url,'thumbnail':'https://animeflv.net'+thumbnail})
         li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage='https://animeflv.net'+thumbnail, thumbnailImage='https://animeflv.net'+thumbnail)
@@ -1678,10 +1680,10 @@ elif mode[0] == 'flvagregados':  #actualizados recientes
         addMenuitem(url, li, True)
 
 
-    pattern2 = '<li><a href="(.*?)" rel="next"'
+    pattern2 = '<li class="active">.*?</li><li><a href="([^"]+)">'
     paginacion = re.findall(pattern2, data, re.DOTALL)[0]
-    url = build_url({'mode': 'flvactualizados', 'direccion': 'https://animeflv.net' + paginacion[1]})
-    li = xbmcgui.ListItem('[COLOR red][B]Siguente Pagina #[/B][/COLOR]'+paginacion[0],
+    url = build_url({'mode': 'flvactualizados', 'direccion': 'https://animeflv.net' + paginacion})
+    li = xbmcgui.ListItem('[COLOR red][B]Siguente Pagina [/B][/COLOR]',
                           iconImage='http://2.bp.blogspot.com/-q5yGYcBCQzg/Uv1E2m4c6oI/AAAAAAAAA7I/mK2JPXZh1w0/s1600/SIGUIENTE.png',
                           thumbnailImage='http://2.bp.blogspot.com/-q5yGYcBCQzg/Uv1E2m4c6oI/AAAAAAAAA7I/mK2JPXZh1w0/s1600/SIGUIENTE.png')
     addMenuitem(url, li, True)
