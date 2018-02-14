@@ -146,18 +146,18 @@ def play_video(path):
 mode = args.get('mode', None)
 
 if mode is None:
-    duration = 5500
+    duration = 3500
     dialog = xbmcgui.Dialog()
     dialog.notification("Spokes", 'Mejor que el canal de los arbolitos felices!.',
                         xbmcgui.NOTIFICATION_INFO, duration, False)
     fanart = 'http://darkelite.ml/img/fondo.jpg'
 
-    url = build_url({'mode': 'Novelas'})
-    li = xbmcgui.ListItem('[COLOR yellow][B]Novelas[/B][/COLOR]', iconImage='http://www.novelashdgratis.io/img/logo.gif',
-                          thumbnailImage='http://www.novelashdgratis.io/img/logo.gif')
-    li.setInfo("video", {"Plot": '[COLOR skyblue][B]Reproduce el Mejor contenido en la Web de Novelas en tu Idioma[/B][/COLOR]'})
-    li.setProperty('fanart_image', fanart)
-    addMenuitem(url, li, True)
+    # url = build_url({'mode': 'Novelas'})
+    # li = xbmcgui.ListItem('[COLOR yellow][B]Novelas[/B][/COLOR]', iconImage='http://www.novelashdgratis.io/img/logo.gif',
+    #                       thumbnailImage='http://www.novelashdgratis.io/img/logo.gif')
+    # li.setInfo("video", {"Plot": '[COLOR skyblue][B]Reproduce el Mejor contenido en la Web de Novelas en tu Idioma[/B][/COLOR]'})
+    # li.setProperty('fanart_image', fanart)
+    # addMenuitem(url, li, True)
 
     url = build_url({'mode': 'search', 'site': 'youtube'})
     li = xbmcgui.ListItem('[COLOR yellow][B]Buscador de Youtube[/B][/COLOR]', iconImage='http://sm.pcmag.com/t/pcmag_latam/photo/default/original_z8cw.640.jpg', thumbnailImage='http://sm.pcmag.com/t/pcmag_latam/photo/default/original_z8cw.640.jpg')
@@ -198,6 +198,14 @@ if mode is None:
     thumbnail = 'https://pm1.narvii.com/5610/c07d6c52e768eb8d7a79d81223402fc56611971b_hq.jpg'
     li = xbmcgui.ListItem('[COLOR yellow][B]AnimeFLV[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Aqui encontraras tus Animes Favoritos[/B][/COLOR]'})
+    li.setProperty('fanart_image', fanart)
+    addMenuitem(url, li, True)
+
+
+    url = build_url({'mode': 'danimados'})
+    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    li = xbmcgui.ListItem('[COLOR yellow][B]Danimados[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li.setInfo("video", {"Plot": '[COLOR skyblue][B]Series y peliculas![/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
     xbmcplugin.endOfDirectory(addon_handle)
@@ -1844,3 +1852,109 @@ elif mode[0] == 'flvsearch':
         dialog = xbmcgui.Dialog()
         dialog.notification("Spokes", 'La Busqueda se cancelo',
                             xbmcgui.NOTIFICATION_INFO, 3500 , False)
+
+
+elif mode[0] == 'danimados': #lista secciones
+
+    url = build_url({'mode': 'danimadosclasicas', 'direccion': 'https://danimados.com/genero/series-clasicas'})
+    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    li = xbmcgui.ListItem('[COLOR orange][B]Series Clasicas[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li.setInfo("video", {"Plot": 'Aqui encontraras tus Peliculas Por Generos'})
+    li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
+    addMenuitem(url, li, True)
+
+
+
+
+    endMenu()
+
+elif mode[0] == 'danimadosclasicas':  #actualizados recientes
+    actualizados = args['direccion'][0]
+    data = read(actualizados)
+    duration = 3500
+    dialog = xbmcgui.Dialog()
+    pattern =  '(\<article.*?</article>)'
+    matches = re.findall(pattern,data,re.IGNORECASE)
+
+    for match in matches:
+        pattern = 'a href="(.*?)"'
+        url = re.findall(pattern,match,re.MULTILINE)[0]
+
+        pattern = 'img src="(.*?)"'
+        thumbnail = re.findall(pattern,match,re.MULTILINE)[0]
+
+        pattern = 'alt="(.*?)"'
+        title = re.findall(pattern,match,re.MULTILINE)[0]
+
+        # pattern = '(\.*<div class="texto">(.*?)<.*)'
+        # plot = re.findall(pattern,match,re.MULTILINE)[0]
+        # # dialog.ok("Spokes",plot[1])
+
+        url = build_url({'mode': 'danimadoslistado','direccion': url,'thumbnail': thumbnail})
+        li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+        li.setInfo("video", {"Title": title, "FileName": title})
+        li.setProperty('fanart_image', thumbnail)
+        addMenuitem(url, li, True)
+    endMenu()
+
+elif mode[0] == 'danimadoslistado':  #actualizados recientes
+    actualizados = args['direccion'][0]
+    data = read(actualizados)
+    pattern =  '(\<li><div.*?</li>)'
+    matches = re.findall(pattern,data,re.IGNORECASE)
+    for match in matches:
+        pattern = 'a href="(.*?)"'
+        url = re.findall(pattern,match,re.MULTILINE)[0]
+
+        pattern = 'img src="(.*?)"'
+        thumbnail = re.findall(pattern,match,re.MULTILINE)[0]
+
+        pattern = 'div class="numerando">(.*?)<'
+        title = re.findall(pattern,match,re.MULTILINE)[0]
+
+        #pattern = '(\*/p>.*\n..*<p>(.*?)</p>)'
+        #info = re.findall(pattern,match,re.MULTILINE)[0]
+
+
+        url = build_url({'mode': 'danimadosservers','direccion': url,'thumbnail': thumbnail})
+        li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage= thumbnail, thumbnailImage= thumbnail)
+        li.setInfo("video", {"Title": title, "FileName": title})
+        li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+        addMenuitem(url, li, True)
+
+
+
+    xbmcplugin.endOfDirectory(addon_handle)
+
+    endMenu
+
+elif mode[0] == 'danimadosservers':  #actualizados recientes
+    actualizados = args['direccion'][0]
+    data = read(actualizados)
+    pattern =  '(\<li><div.*?</li>)'
+    matches = re.findall(pattern,data,re.IGNORECASE)
+    for match in matches:
+        pattern = 'a href="(.*?)"'
+        url = re.findall(pattern,match,re.MULTILINE)[0]
+
+        pattern = 'img src="(.*?)"'
+        thumbnail = re.findall(pattern,match,re.MULTILINE)[0]
+
+        pattern = 'div class="numerando">(.*?)<'
+        title = re.findall(pattern,match,re.MULTILINE)[0]
+
+        #pattern = '(\*/p>.*\n..*<p>(.*?)</p>)'
+        #info = re.findall(pattern,match,re.MULTILINE)[0]
+
+
+        url = build_url({'mode': 'danimadosservers','direccion': url,'thumbnail': thumbnail})
+        li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage= thumbnail, thumbnailImage= thumbnail)
+        li.setInfo("video", {"Title": title, "FileName": title})
+        li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+        addMenuitem(url, li, True)
+
+
+
+    xbmcplugin.endOfDirectory(addon_handle)
+
+    endMenu()
