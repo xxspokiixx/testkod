@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.spokes"
-	name="Spokes"
-	version="0.0.1"
-	provider-name="Shorty">
+<addon id="plugin.video.Spokes"
+       name="Spokes"
+       version="0.0.2"
+       provider-name="Shorty">
   <requires>
-    <import version="2.1.0" addon="xbmc.python"/>
+    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
-	<import addon="script.module.urlresolver" version=""/>
-	<import addon="script.module.requests"    version="2.12.4"/>
-	<import addon="script.module.beautifulsoup4" version="4.3.2"/>
+    <import addon="script.module.urlresolver" version=""/>
+    <import addon="script.module.requests"    version="2.12.4"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.2"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="spokes.py">
     <provides>video</provides>
