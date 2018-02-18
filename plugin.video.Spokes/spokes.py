@@ -386,12 +386,6 @@ if mode is None:
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
 
-    url = build_url({'mode': 'openload'})
-    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
-    li = xbmcgui.ListItem('[COLOR yellow][B]Opeanload Test[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
-    li.setInfo("video", {"Plot": '[COLOR skyblue][B]Series y peliculas![/B][/COLOR]'})
-    li.setProperty('fanart_image', fanart)
-    addMenuitem(url, li, True)
     xbmcplugin.endOfDirectory(addon_handle)
 
 elif mode[0] == 'plus01':
@@ -2047,12 +2041,55 @@ elif mode[0] == 'danimados': #lista secciones
     li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
     addMenuitem(url, li, True)
 
+    url = build_url({'mode': 'danimadosactuales', 'direccion': 'https://danimados.com/genero/series-actuales/'})
+    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    li = xbmcgui.ListItem('[COLOR orange][B]Series Actuales[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li.setInfo("video", {"Plot": 'Aqui encontraras tus Peliculas Por Generos'})
+    li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
+    addMenuitem(url, li, True)
+
+    url = build_url({'mode': 'deanimadossearch', 'direccion': 'https://danimados.com/genero/series-actuales/'})
+    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    li = xbmcgui.ListItem('[COLOR orange][B]Busqueda[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li.setInfo("video", {"Plot": 'Aqui encontraras tus Peliculas Por Generos'})
+    li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
+    addMenuitem(url, li, True)
+
 
 
 
     endMenu()
 
 elif mode[0] == 'danimadosclasicas':  #actualizados recientes
+    actualizados = args['direccion'][0]
+    data = read(actualizados)
+    duration = 3500
+    dialog = xbmcgui.Dialog()
+    pattern =  '(\<article.*?</article>)'
+    matches = re.findall(pattern,data,re.IGNORECASE)
+
+    for match in matches:
+        pattern = 'a href="(.*?)"'
+        url = re.findall(pattern,match,re.MULTILINE)[0]
+
+        pattern = 'img src="(.*?)"'
+        thumbnail = re.findall(pattern,match,re.MULTILINE)[0]
+
+        pattern = 'alt="(.*?)"'
+        title = re.findall(pattern,match,re.MULTILINE)[0]
+
+        # pattern = '(\.*<div class="texto">(.*?)<.*)'
+        # plot = re.findall(pattern,match,re.MULTILINE)[0]
+        # # dialog.ok("Spokes",plot[1])
+
+        url = build_url({'mode': 'danimadoslistado','direccion': url,'thumbnail': thumbnail})
+        li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+        li.setInfo("video", {"Title": title, "FileName": title})
+        li.setProperty('fanart_image', thumbnail)
+        addMenuitem(url, li, True)
+    endMenu()
+
+elif mode[0] == 'danimadosactuales':  #actualizados recientes
     actualizados = args['direccion'][0]
     data = read(actualizados)
     duration = 3500
@@ -2140,21 +2177,49 @@ elif mode[0] == 'danimadosservers':  #actualizados recientes
     endMenu()
 
 
-elif mode[0] == 'openload':  #actualizados recientes
-    videotest = 'https://openload.co/embed/otyULCMV-L0/Ginger_01.mkv.mp4'
-    oload = get_ol_video_url(videotest)
-    duration = 3500
-    dialog = xbmcgui.Dialog()
-    dialog.ok('spokes',oload)
+elif mode[0] == 'deanimadossearch':
+    website= 'https://danimados.com/?s='
+    kb = xbmc.Keyboard('default', 'heading')
+    kb.setDefault('')
+    kb.setHeading('Buscar en la Coleccion FLV')
+    kb.setHiddenInput(False)
+    kb.doModal()
+    if (kb.isConfirmed()):
+        if kb.getText() == '':
+            duration = 3500
+            dialog = xbmcgui.Dialog()
+            dialog.notification("Spokes", 'No se detecto nada escrito en el buscador Vuelve a Intentar',
+                                xbmcgui.NOTIFICATION_INFO, duration, False)
+        else:
+            search_term = kb.getText()
+            search_term = search_term.replace(" ","+")
+            dir = website + search_term
+            html = read(dir)
+            pattern =  '(\<article.*?</article>)'
+            matches = re.findall(pattern,html,re.IGNORECASE)
 
-    url = build_url({'mode': 'play', 'playlink': oload })
-    li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion MP4Upload[/B][/COLOR]', iconImage='https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg',
-                              thumbnailImage='https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
-    li.setProperty('IsPlayable', 'true')
-    li.setProperty('fanart_image','https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
-    addMenuitem(url, li, False)
+            for match in matches:
+                pattern = 'a href="(.*?)"'
+                url = re.findall(pattern,match,re.MULTILINE)[0]
 
+                pattern = 'img src="(.*?)"'
+                thumbnail = re.findall(pattern,match,re.MULTILINE)[0]
 
-    xbmcplugin.endOfDirectory(addon_handle)
+                pattern = 'alt="(.*?)"'
+                title = re.findall(pattern,match,re.MULTILINE)[0]
 
-    endMenu()
+                # pattern = '(\.*<div class="texto">(.*?)<.*)'
+                # plot = re.findall(pattern,match,re.MULTILINE)[0]
+                # # dialog.ok("Spokes",plot[1])
+
+                url = build_url({'mode': 'danimadoslistado','direccion': url,'thumbnail': thumbnail})
+                li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+                li.setInfo("video", {"Title": title, "FileName": title})
+                li.setProperty('fanart_image', thumbnail)
+                addMenuitem(url, li, True)
+            endMenu()
+
+    else:
+        dialog = xbmcgui.Dialog()
+        dialog.notification("Spokes", 'La Busqueda se cancelo',
+                            xbmcgui.NOTIFICATION_INFO, 3500 , False)
