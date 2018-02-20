@@ -9,6 +9,15 @@
     <import addon="script.module.urlresolver" version=""/>
     <import addon="script.module.requests"    version="2.12.4"/>
     <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+	<import addon="script.module.simple.downloader" version="1.9.5"/> 
+	 <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="script.module.simplejson" />    
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="spokes.py">
     <provides>video</provides>

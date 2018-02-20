@@ -19,7 +19,7 @@ def test_video_exists(page_url):
     return True, ""
 
 
-def get_video_url(page_url, premium=False, user="", password="", video_password=""):
+def get_okru_video_url(page_url, premium=False, user="", password="", video_password=""):
     logger.info("url=" + page_url)
     video_urls = []
 
@@ -30,4 +30,4 @@ def get_video_url(page_url, premium=False, user="", password="", video_password=
         url = url.replace("%3B", ";").replace("u0026", "&")
         video_urls.append([type + " [okru]", url])
 
-    return video_urls
+    return url

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import sys
 import urllib
 import urllib2
 import re
@@ -2966,11 +2967,11 @@ if not playitem =='':
     s=getSoup('',data=playitem)
     name,url,regexs=getItems(s,None,dontLink=True)
     mode=117
-if mode==None:
-    addon_log("getSources")
-    getSources()
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
-
+# if mode==None:
+#     addon_log("getSources")
+#     getSources()
+#     xbmcplugin.endOfDirectory(int(sys.argv[1]))
+#
 elif mode==1:
     addon_log("getData")
     data=None

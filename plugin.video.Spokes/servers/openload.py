@@ -20,7 +20,7 @@ def test_video_exists(page_url):
 
     return True, ""
 
-def get_video_url(page_url, premium=False, user="", password="", video_password=""):
+def get_ol_video_url(page_url, premium=False, user="", password="", video_password=""):
     logger.info()
     itemlist = []
 
@@ -53,7 +53,7 @@ def get_video_url(page_url, premium=False, user="", password="", video_password=
                 itemlist.append([extension, url, 0,subtitle])
     logger.debug(itemlist)
 
-    return itemlist
+    return url
 
 
 def decode(code, parseInt, _0x59ce16, _1x4bfb36):
