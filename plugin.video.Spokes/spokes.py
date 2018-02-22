@@ -1,3 +1,4 @@
+# coding=utf-8
 import sys
 import urllib
 import urlparse
@@ -204,6 +205,13 @@ if mode is None:
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
 
+    url = build_url({'mode': 'gnula'})
+    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    li = xbmcgui.ListItem('[COLOR yellow][B]Gnula[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li.setInfo("video", {"Plot": '[COLOR skyblue][B]Series y peliculas![/B][/COLOR]'})
+    li.setProperty('fanart_image', fanart)
+    addMenuitem(url, li, True)
+
     url = build_url({'mode': 'animeyt'})
     thumbnail = 'http://pm1.narvii.com/6506/9dd6c94fb32122770ca08cce3e45d4c280e08414_hq.jpg'
     li = xbmcgui.ListItem('[COLOR orange][B]AnimeYT[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
@@ -239,7 +247,7 @@ if mode is None:
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
 
-    # url = build_url({'mode': 'test'})
+    # url = build_url({'mode': 'gnula'})
     # thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
     # li = xbmcgui.ListItem('[COLOR yellow][B]TEST[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     # li.setInfo("video", {"Plot": '[COLOR skyblue][B]Series y peliculas![/B][/COLOR]'})
@@ -2116,6 +2124,139 @@ elif mode[0] == 'shortytv':  #actualizados recientes
     shortytv.getSources()
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
-elif mode[0] == 'test':  #actualizados recientes
-    danimados.mainlist(item)
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+# elif mode[0] == 'test':  #actualizados recientes
+#     # danimados.mainlist(item)
+#     # xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+elif mode[0] == 'gnula':
+    url = build_url({'mode': 'gnulaestrenos', 'direccion': 'http://gnula.nu/peliculas-online/lista-de-peliculas-online-parte-1/'})
+    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    li = xbmcgui.ListItem('[COLOR orange][B]Estrenos[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li.setInfo("video", {"Plot": 'Aqui encontraras tus Peliculas Por Generos'})
+    li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
+    addMenuitem(url, li, True)
+
+    url = build_url({'mode': 'gnulageneros', 'direccion': 'http://gnula.nu/generos/lista-de-generos/'})
+    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    li = xbmcgui.ListItem('[COLOR orange][B]Generos[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li.setInfo("video", {"Plot": 'Aqui encontraras tus Peliculas Por Generos'})
+    li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
+    addMenuitem(url, li, True)
+    #
+    # url = build_url({'mode': 'deanimadossearch', 'direccion': 'https://danimados.com/genero/series-actuales/'})
+    # thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    # li = xbmcgui.ListItem('[COLOR orange][B]Busqueda[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    # li.setInfo("video", {"Plot": 'Aqui encontraras tus Peliculas Por Generos'})
+    # li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
+    # addMenuitem(url, li, True)
+    endMenu()
+
+elif mode[0] == 'gnulaestrenos':  #actualizados recientes
+    actualizados = args['direccion'][0]
+    # data = read(actualizados)
+    data = httptools.downloadpage(actualizados).data
+    duration = 3500
+    dialog = xbmcgui.Dialog()
+    patron  = '<a class="Ntooltip" href="([^"]+)">([^<]+)<span><br[^<]+'
+    patron += '<img src="([^"]+)"></span></a>(.*?)<br'
+    matches = re.compile(patron, re.DOTALL).findall(data)
+    itemlist = []
+    for scrapedurl, scrapedtitle, scrapedthumbnail, resto in matches:
+        language = []
+        plot = scrapertools.htmlclean(resto).strip()
+        languages = scrapertools.find_multiple_matches(plot, r'\((V.)\)')
+        quality = scrapertools.find_single_match(plot, r'(?:\[.*?\].*?)\[(.*?)\]')
+        for lang in languages:
+            language.append(lang)
+        title = scrapedtitle + " " + plot
+        if not scrapedurl.startswith("http"):
+            scrapedurl = actualizados + scrapedurl
+
+        url = build_url({'mode': 'gnulaservers','direccion': scrapedurl})
+        li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage=scrapedthumbnail, thumbnailImage=scrapedthumbnail)
+        li.setInfo("show", {"Title": title, "FileName": title})
+        li.setProperty('fanart_image', scrapedthumbnail)
+
+        addMenuitem(url, li, True)
+    endMenu()
+
+elif mode[0] == 'gnulageneros':  #actualizados recientes
+    actualizados = args['direccion'][0]
+    # data = read(actualizados)
+    data = httptools.downloadpage(actualizados).data
+    data = scrapertools.find_single_match(data, '<spa[^>]+>Lista de g(.*?)/table')
+
+    patron = '<strong>([^<]+)</strong> .<a href="([^"]+)"'
+    matches = re.compile(patron, re.DOTALL).findall(data)
+    for genero, scrapedurl in matches:
+        title = scrapertools.htmlclean(genero)
+        plot = ""
+        url = actualizados + scrapedurl
+        thumbnail = ""
+
+        url = build_url({'mode': 'gnulaestrenos','direccion': url})
+        li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]')
+        li.setInfo("show", {"Title": title, "FileName": title})
+
+        addMenuitem(url, li, True)
+    endMenu()
+
+elif mode[0] == 'gnulaservers':  #actualizados recientes
+    actualizados = args['direccion'][0]
+    duration = 7500
+    dialog = xbmcgui.Dialog()
+
+    data = httptools.downloadpage(actualizados).data
+    plot = scrapertools.find_single_match(data, '<div class="entry">(.*?)<div class="iframes">')
+    plot = scrapertools.htmlclean(plot).strip()
+    contentPlot = plot
+    patron = '<strong>Ver película online.*?>.*?>([^<]+)'
+    scrapedopcion = scrapertools.find_single_match(data, patron)
+    titulo_opcional = scrapertools.find_single_match(scrapedopcion, ".*?, (.*)").upper()
+    bloque  = scrapertools.find_multiple_matches(data, 'contenedor_tab.*?/table')
+    cuenta = 0
+    for datos in bloque:
+        cuenta = cuenta + 1
+        patron = '<em>(opción %s.*?)</em>' %cuenta
+        scrapedopcion = scrapertools.find_single_match(data, patron)
+        titulo_opcion = "(" + scrapertools.find_single_match(scrapedopcion, "op.*?, (.*)").upper() + ")"
+        if "TRAILER" in titulo_opcion or titulo_opcion == "()":
+            titulo_opcion = "(" + titulo_opcional + ")"
+        urls = scrapertools.find_multiple_matches(datos, '(?:src|href)="([^"]+)')
+        titulo = "Ver en %s "+ titulo_opcion
+        for url in urls:
+            if "ok.ru" in url:
+                server='okru'
+                url = okru.get_okru_video_url(url)
+            else:
+                server=''
+            if "youtube" in url:
+                server='youtube'
+            if "openload" in url:
+                server='openload'
+                url = openload.get_ol_video_url(url)
+
+            if "google" in url:
+                server='gvideo'
+                # gvideo.get_gvideo_video_url(url)
+
+            if "rapidvideo" in url:
+                server='rapidvideo'
+                url = rapidvideo.get_rapid_video_url(url)
+            if "streamango" in url:
+                server='streamango'
+            if server!='':
+                title="Enlace encontrado en %s " % (server.capitalize())
+            else:
+                title="NO DISPONIBLE"
+            if title!="NO DISPONIBLE":
+                li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion [/B][/COLOR]'+server+titulo_opcion, iconImage='https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg',
+                                              thumbnailImage='https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+                li.setProperty('IsPlayable', 'true')
+                li.setProperty('fanart_image','https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+                addMenuitem(url, li, False)
+
+
+
+
+    endMenu()

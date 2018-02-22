@@ -1,15 +1,32 @@
 # -*- coding: utf-8 -*-
-
-import re
+import sys
+import urllib
 import urlparse
-
-from channels import renumbertools
+import xbmcgui
+import xbmcplugin
+import urllib2
+import socket
+import xbmcaddon
+import datetime
+import re
+import os
+import base64
+import urlresolver
+from bs4 import BeautifulSoup
+from urllib2 import Request, urlopen, URLError, HTTPError
+import requests
+import re
+from lib import jsunpack
+import shortytv
 from core import httptools
 from core import scrapertools
-from core import servertools
-from core.item import Item
-from core import tmdb
-from platformcode import config,logger
+from platformcode import logger,config
+from core import jsontools
+from servers import openload
+from servers import okru
+from servers import rapidvideo
+from servers import gvideo
+
 
 __modo_grafico__ = config.get_setting('modo_grafico', 'animeyt')
 
@@ -17,31 +34,163 @@ HOST = "http://animeyt.tv/"
 systempjos1 = 'http://www.animeyt.tv/emision'
 systempjos2= 'http://www.animeyt.tv/animes'
 systempjos3= 'http://www.animeyt.tv'
+base_url = sys.argv[0]
+addon_handle = int(sys.argv[1])
+args = urlparse.parse_qs(sys.argv[2][1:])
+scrape_url = "https://www.youtube.com"
+search_url = "/results?search_query="
+mozhdr = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'}
+xbmcplugin.setContent(addon_handle, 'movies')
+
+
+def findall(pattern, searText, flags):
+
+    try:
+        return re.findall(pattern, searText, flags)
+
+    except Exception as e:
+        return None
+
+
+def verificar_video(url):
+    codigo=httptools.downloadpage(url).code
+    if codigo==200:
+        # Revise de otra forma
+        data=httptools.downloadpage(url).data
+        removed = scrapertools.find_single_match(data,'removed(.+)')
+        if len(removed) != 0:
+            codigo1=404
+        else:
+            codigo1=200
+    else:
+        codigo1=200
+    return codigo1
+
+def build_url(query):
+    return base_url + '?' + urllib.urlencode(query)
+
+mode = args.get('mode', None)
+
+
+
+def getusersearch(website):
+    kb = xbmc.Keyboard('default', 'heading')
+    kb.setDefault('')
+    kb.setHeading('Buscador de '+website )
+    kb.setHiddenInput(False)
+    kb.doModal()
+    if (kb.isConfirmed()):
+        search_term = kb.getText()
+        return(search_term)
+    else:
+        return
+
+
+def addMenuitem(url, li, folder):
+    return xbmcplugin.addDirectoryItem(handle=addon_handle, url=url, listitem=li, isFolder=folder)
+
+
+def endMenu():
+    xbmcplugin.endOfDirectory(addon_handle)
+
+
+def bstheurl(url):
+    sb_get = requests.get(url, headers=mozhdr)
+    soupeddata = BeautifulSoup(sb_get.content, "html.parser")
+    yt_links = soupeddata.find_all("a", class_="yt-uix-tile-link")
+    for x in yt_links:
+        yt_href = x.get("href")
+        yt_title = x.get("title")
+        yt_final = scrape_url + yt_href
+        url = build_url({'mode': 'play', 'playlink': yt_final})
+        li = xbmcgui.ListItem(yt_title, iconImage='DefaultVideo.png')
+        li.setProperty('IsPlayable', 'true')
+        addMenuitem(url, li, False)
+    endMenu()
+
+def read(url):
+    opener = urllib2.build_opener()
+    opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.71 Safari/537.36')]
+    response = opener.open(url)
+    data = response.read()
+
+    return data
+
+
+def resolve_url(url):
+    duration = 7500  # in milliseconds
+    message = "Este enlace no utiliza Resolver"
+    stream_url = urlresolver.HostedMediaFile(url=url).resolve()
+    # If urlresolver returns false then the video url was not resolved.
+    if not stream_url:
+        dialog = xbmcgui.Dialog()
+        dialog.notification("Spokes", message,
+                            xbmcgui.NOTIFICATION_INFO, duration, False)
+        return False
+    else:
+        return stream_url
+
+def get_video_url(page_url, premium=False, user="", password="", video_password=""):
+    logger.info("(page_url='%s')" % page_url)
+    video_urls = []
+
+    data = httptools.downloadpage(page_url).data
+    match = re.search('(.+)/v/(\w+)/file.html', page_url)
+    domain = match.group(1)
+
+    patron = 'getElementById\(\'dlbutton\'\).href\s*=\s*(.*?);'
+    media_url = scrapertools.find_single_match(data, patron)
+    numbers = scrapertools.find_single_match(media_url, '\((.*?)\)')
+    url = media_url.replace(numbers, "'%s'" % eval(numbers))
+    url = eval(url)
+
+    mediaurl = '%s%s' % (domain, url)
+    extension = "." + mediaurl.split('.')[-1]
+    video_urls.append([extension + " [zippyshare]", mediaurl])
+
+    return video_urls
+
+def play_video(path):
+    """
+    Prueba de Funcionamiento de Repositorio
+    """
+    # Create a playable item with a path to play.
+    play_item = xbmcgui.ListItem(path=path)
+    vid_url = play_item.getfilename()
+    stream_url = resolve_url(vid_url)
+    if stream_url:
+        play_item.setPath(stream_url)
+    # Pass the item to the Kodi player.
+    xbmcplugin.setResolvedUrl(addon_handle, True, listitem=play_item)
+
+
+
+
 
 def animeyt(): #lista de secciones
 
-    url = animeytreciente(systempjos3)
+    url = build_url({'mode': 'animeytreciente', 'direccion': systempjos3})
     thumbnail = 'https://3.bp.blogspot.com/-2Syl4EthAAg/VtOq5pCnmdI/AAAAAAAAACY/4QwHamZIyFIscovoVHdzkOzcNXJDWG9Vw/s1600/bleach4.png'
     li = xbmcgui.ListItem('[COLOR orange][B]Capitulos Recientes[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": 'Seccion Donde Estan Todos los Animes Finalizados'})
     li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
     addMenuitem(url, li, True)
 
-    url = animeytlista(systempjos1)
+    url = build_url({'mode': 'animeytlista', 'direccion': systempjos1})
     thumbnail = 'https://3.bp.blogspot.com/-2Syl4EthAAg/VtOq5pCnmdI/AAAAAAAAACY/4QwHamZIyFIscovoVHdzkOzcNXJDWG9Vw/s1600/bleach4.png'
     li = xbmcgui.ListItem('[COLOR orange][B]Anime en Emision[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": 'Aqui encontraras tus Animes en Emision'})
     li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
     addMenuitem(url, li, True)
 
-    url = animeytlista(systempjos2)
+    url = build_url({'mode': 'animeytlista', 'direccion': systempjos2})
     thumbnail = 'https://3.bp.blogspot.com/-2Syl4EthAAg/VtOq5pCnmdI/AAAAAAAAACY/4QwHamZIyFIscovoVHdzkOzcNXJDWG9Vw/s1600/bleach4.png'
     li = xbmcgui.ListItem('[COLOR orange][B]Todos los Animes[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": 'Seccion Donde Estan Todos los Animes Finalizados'})
     li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
     addMenuitem(url, li, True)
 
-    url = animeytsearch()
+    url = build_url({'mode': 'animeytsearch'})
     thumbnail = 'https://3.bp.blogspot.com/-2Syl4EthAAg/VtOq5pCnmdI/AAAAAAAAACY/4QwHamZIyFIscovoVHdzkOzcNXJDWG9Vw/s1600/bleach4.png'
     li = xbmcgui.ListItem('[COLOR orange][B]Buscar un Anime[/B][/COLOR]', iconImage=thumbnail,
                           thumbnailImage=thumbnail)
@@ -50,9 +199,25 @@ def animeyt(): #lista de secciones
     addMenuitem(url, li, True)
 
     endMenu()
+    #return url
+mode = args.get('mode', None)
 
-def animeytreciente(url):  #Mostrar episodios
-    emision = url
+
+url=None
+playitem=''
+try:
+    playitem=urllib.unquote_plus(params["playitem"])
+except:
+    pass
+
+if not playitem == '':
+    s=getSoup('',data=playitem)
+    name,url,regexs=getItems(s,None,dontLink=True)
+    mode=117
+
+
+elif mode == 'animeytreciente':  #Mostrar episodios
+    emision = args['direccion'][0]
     data = read(emision)
     data = re.sub(r"\n|\r|\t|&nbsp;|<br>", "", data)
     patron_novedades = '<div class="capitulos-portada">[\s\S]+?<h2>Comentarios</h2>'
@@ -68,8 +233,8 @@ def animeytreciente(url):  #Mostrar episodios
         addMenuitem(url, li, True)
     endMenu()
 
-def animeytlista(url): #mostrar lista de animes
-    emision = url
+elif mode == 'animeytlista': #mostrar lista de animes
+    emision = args['direccion'][0]
     data = read(emision)
     pattern = '(\<article.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*)'
     matches = re.findall(pattern,data,re.IGNORECASE)
@@ -102,9 +267,9 @@ def animeytlista(url): #mostrar lista de animes
 
     endMenu()
 
-def animeytepi(url,thumbnail):  #Mostrar episodios
-    emision = url
-    thumbnail = thumbnail
+elif mode == 'animeytepi':  #Mostrar episodios
+    emision = args['direccion'][0]
+    thumbnail = args['thumbnail'][0]
     data = read(emision)
     pattern = '(\<div.*item.*\n.*trian.*\n.*\n.*\n.*<\/a\>)'
     matches = re.findall(pattern, data, re.IGNORECASE)
@@ -125,9 +290,9 @@ def animeytepi(url,thumbnail):  #Mostrar episodios
     endMenu()
 
 
-def animeytservers(url,thumbnail):   #servers para reproducir
-    emision = url
-    thumbnail = thumbnail
+elif mode == 'animeytservers':   #servers para reproducir
+    emision = args['direccion'][0]
+    thumbnail = args['thumbnail'][0]
     data = read(emision)
     pattern = '(if.*Opci.*\n.*?\.show.*?ht.*)'
     matches = re.findall(pattern, data, re.IGNORECASE)
@@ -166,7 +331,7 @@ def animeytservers(url,thumbnail):   #servers para reproducir
 
 
 
-def animeytsearch(): #search animeyt
+elif mode == 'animeytsearch': #search animeyt
     website= 'http://www.animeyt.tv/busqueda?terminos='
     kb = xbmc.Keyboard('default', 'heading')
     kb.setDefault('')
@@ -212,3 +377,4 @@ def animeytsearch(): #search animeyt
         dialog = xbmcgui.Dialog()
         dialog.notification("Spokes", 'La Busqueda se cancelo',
                             xbmcgui.NOTIFICATION_INFO, 3500 , False)
+
