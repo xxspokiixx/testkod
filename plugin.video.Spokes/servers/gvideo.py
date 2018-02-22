@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import urllib
-
+import xbmcgui
+import xbmc
 from core import httptools
 from core import scrapertools
 from platformcode import logger
@@ -25,11 +26,14 @@ def test_video_exists(page_url):
     return True, ""
 
 
-def get_video_url(page_url, user="", password="", video_password=""):
+def get_gvideo_video_url(page_url, user="", password="", video_password=""):
     video_urls = []
     urls = []
     streams =[]
     logger.debug('page_url: %s'%page_url)
+    duration = 7500
+    dialog = xbmcgui.Dialog()
+    
     if 'googleusercontent' in page_url:
 
         response = httptools.downloadpage(page_url, follow_redirects = False, cookies=False, headers={"Referer": page_url})
@@ -41,12 +45,13 @@ def get_video_url(page_url, user="", password="", video_password=""):
         data = response.data.decode('unicode-escape')
         data = urllib.unquote_plus(urllib.unquote_plus(data))
         headers_string = "|Cookie=" + cookies
-
+        
         quality = scrapertools.find_single_match (url, '.itag=(\d+).')
 
         streams.append((quality, url))
 
     else:
+        
         response = httptools.downloadpage(page_url, cookies=False, headers={"Referer": page_url})
         cookies = ""
         cookie = response.headers["set-cookie"].split("HttpOnly, ")
@@ -54,11 +59,12 @@ def get_video_url(page_url, user="", password="", video_password=""):
             cookies += c.split(";", 1)[0] + "; "
         data = response.data.decode('unicode-escape')
         data = urllib.unquote_plus(urllib.unquote_plus(data))
+        xbmc.log("El debug"+data)
         headers_string = "|Cookie=" + cookies
         url_streams = scrapertools.find_single_match(data, 'url_encoded_fmt_stream_map=(.*)')
         streams = scrapertools.find_multiple_matches(url_streams,
                                                      'itag=(\d+)&url=(.*?)(?:;.*?quality=.*?(?:,|&)|&quality=.*?(?:,|&))')
-
+        
     itags = {'18': '360p', '22': '720p', '34': '360p', '35': '480p', '37': '1080p', '43': '360p', '59': '480p'}
     for itag, video_url in streams:
         if not video_url in urls:

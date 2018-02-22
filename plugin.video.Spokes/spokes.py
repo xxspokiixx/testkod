@@ -23,7 +23,10 @@ from platformcode import logger,config
 from core import jsontools
 from servers import openload
 from servers import okru
-from channels import danimados
+from servers import rapidvideo
+from servers import gvideo
+
+
 
 addon       = xbmcaddon.Addon()
 addonname   = addon.getAddonInfo('name')
@@ -36,7 +39,7 @@ search_url = "/results?search_query="
 mozhdr = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'}
 systempjos1 = 'http://www.animeyt.tv/emision'
 systempjos2= 'http://www.animeyt.tv/animes'
-
+systempjos3= 'http://www.animeyt.tv'
 xbmcplugin.setContent(addon_handle, 'movies')
 
 
@@ -180,7 +183,7 @@ if mode is None:
 
     url = build_url({'mode': 'shortytv'})
     thumbnail = 'https://github.com/xxspokiixx/testkod/raw/master/plugin.video.ShortyTV/icon.png'
-    li = xbmcgui.ListItem('[COLOR yellow][B]ShortyTV[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li = xbmcgui.ListItem('[COLOR skyblue][B]ShortyTV[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Series y peliculas![/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
@@ -203,14 +206,14 @@ if mode is None:
 
     url = build_url({'mode': 'animeyt'})
     thumbnail = 'http://pm1.narvii.com/6506/9dd6c94fb32122770ca08cce3e45d4c280e08414_hq.jpg'
-    li = xbmcgui.ListItem('[COLOR yellow][B]AnimeYT[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li = xbmcgui.ListItem('[COLOR orange][B]AnimeYT[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Aqui encontraras tus Animes Favoritos[/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
 
     url = build_url({'mode': 'animeflv'})
     thumbnail = 'https://pm1.narvii.com/5610/c07d6c52e768eb8d7a79d81223402fc56611971b_hq.jpg'
-    li = xbmcgui.ListItem('[COLOR yellow][B]AnimeFLV[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li = xbmcgui.ListItem('[COLOR orange][B]AnimeFLV[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Aqui encontraras tus Animes Favoritos[/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
@@ -218,20 +221,20 @@ if mode is None:
 
     url = build_url({'mode': 'danimados'})
     thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
-    li = xbmcgui.ListItem('[COLOR yellow][B]Danimados[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li = xbmcgui.ListItem('[COLOR green][B]Danimados[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Series y peliculas![/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
 
     url = build_url({'mode': 'karaoke'})
-    li = xbmcgui.ListItem('[COLOR yellow][B]Karaoke[/B][/COLOR]', iconImage='https://i.pinimg.com/736x/6d/4e/d9/6d4ed9bda988e53269d0e925a259b612--karaoke-logos.jpg',
+    li = xbmcgui.ListItem('[COLOR red][B]Karaoke[/B][/COLOR]', iconImage='https://i.pinimg.com/736x/6d/4e/d9/6d4ed9bda988e53269d0e925a259b612--karaoke-logos.jpg',
                           thumbnailImage='https://i.pinimg.com/736x/6d/4e/d9/6d4ed9bda988e53269d0e925a259b612--karaoke-logos.jpg')
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Coleccion Selecta de Karaokes[/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
 
     url = build_url({'mode': 'search', 'site': 'youtube'})
-    li = xbmcgui.ListItem('[COLOR yellow][B]Buscador de Youtube[/B][/COLOR]', iconImage='http://sm.pcmag.com/t/pcmag_latam/photo/default/original_z8cw.640.jpg', thumbnailImage='http://sm.pcmag.com/t/pcmag_latam/photo/default/original_z8cw.640.jpg')
+    li = xbmcgui.ListItem('[COLOR red][B]Buscador de Youtube[/B][/COLOR]', iconImage='http://sm.pcmag.com/t/pcmag_latam/photo/default/original_z8cw.640.jpg', thumbnailImage='http://sm.pcmag.com/t/pcmag_latam/photo/default/original_z8cw.640.jpg')
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Encuentra tus Videos Favoritos con el Buscador de Youtube[/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
     addMenuitem(url, li, True)
@@ -1441,6 +1444,13 @@ elif mode[0] == 'play':
 
 elif mode[0] == 'animeyt': #lista de secciones
 
+    url = build_url({'mode': 'animeytreciente', 'direccion': systempjos3})
+    thumbnail = 'https://3.bp.blogspot.com/-2Syl4EthAAg/VtOq5pCnmdI/AAAAAAAAACY/4QwHamZIyFIscovoVHdzkOzcNXJDWG9Vw/s1600/bleach4.png'
+    li = xbmcgui.ListItem('[COLOR orange][B]Capitulos Recientes[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
+    li.setInfo("video", {"Plot": 'Seccion Donde Estan Todos los Animes Finalizados'})
+    li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+    addMenuitem(url, li, True)
+
     url = build_url({'mode': 'animeytlista', 'direccion': systempjos1})
     thumbnail = 'https://3.bp.blogspot.com/-2Syl4EthAAg/VtOq5pCnmdI/AAAAAAAAACY/4QwHamZIyFIscovoVHdzkOzcNXJDWG9Vw/s1600/bleach4.png'
     li = xbmcgui.ListItem('[COLOR orange][B]Anime en Emision[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
@@ -1463,6 +1473,23 @@ elif mode[0] == 'animeyt': #lista de secciones
     li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
     addMenuitem(url, li, True)
 
+    endMenu()
+
+elif mode[0] == 'animeytreciente':  #Mostrar episodios
+    emision = args['direccion'][0]
+    data = read(emision)
+    data = re.sub(r"\n|\r|\t|&nbsp;|<br>", "", data)
+    patron_novedades = '<div class="capitulos-portada">[\s\S]+?<h2>Comentarios</h2>'
+    data_novedades = scrapertools.find_single_match(data, patron_novedades)
+    patron = 'href="([^"]+)"[\s\S]+?src="([^"]+)"[^<]+alt="([^"]+) (\d+)([^"]+)'
+    matches = scrapertools.find_multiple_matches(data_novedades, patron)
+    for url, img, scrapedtitle, eps, info in matches:
+        title = scrapedtitle + " " + "1x" + eps + info
+        url = build_url({'mode': 'animeytservers', 'direccion': url, 'thumbnail': img})
+        li = xbmcgui.ListItem('[COLOR green][B]' + title + '[/B][/COLOR]', iconImage=img,thumbnailImage=img)
+        li.setInfo("tvshows", {"Title": title, "FileName": title, "Plot": info})
+        li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+        addMenuitem(url, li, True)
     endMenu()
 
 elif mode[0] == 'animeytlista': #mostrar lista de animes
@@ -1562,27 +1589,6 @@ elif mode[0] == 'animeytservers':   #servers para reproducir
     endMenu()
 
 
-elif mode[0] == '4':
-    thumbnail = args['thumbnail'][0]
-    response = 'http://s2.animeyt.tv/narutos_animeyt.php'
-    id = re.findall('id=([0-9]+).*', datos, re.DOTALL)[0]
-    file = re.findall('file\=(.*)', datos, re.DOTALL)[0]
-    token = 'eyJjdCI6IjJhckx0bDIrRmlzQzliaU5UazdsblE9PSIsIml2IjoiZTJhNWIyYWJlOTIxOTUyOGI5M2ZiMjAzZDY0YjRhOTYiLCJzIjoiODJlMjhiNTM0ZDg1ZWI1YyJ9'
-    handler = 'Animeyt'
-    opener = urllib2.build_opener()
-    data_post = urllib.urlencode({'cd': id, 'file': file, 'token': token, 'handler': handler})
-    opener.addheaders = [('User-Agent',
-                          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.71 Safari/537.36')]
-    f = opener.open(response, data_post)
-    parse = f.read()
-    pattern1 = 'file\"\:\"(.*?)\"'
-    web = re.findall(pattern1, parse, re.DOTALL)[0]
-    url = web.replace("\\", "")
-    li = xbmcgui.ListItem('[COLOR yellow][B]Reproducir[/B][/COLOR]', iconImage=thumbnail,thumbnailImage=thumbnail)
-    li.setProperty('fanart_image', 'https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
-    addMenuitem(url, li, False)
-    endMenu()
-
 
 elif mode[0] == 'animeytsearch': #search animeyt
     website= 'http://www.animeyt.tv/busqueda?terminos='
@@ -1616,7 +1622,7 @@ elif mode[0] == 'animeytsearch': #search animeyt
                 title = re.findall(pattern, match, re.MULTILINE)[0]
                 title = title.replace("&amp;", "&")
 
-                url = build_url({'mode': '2', 'direccion': url, 'thumbnail': thumbnail})
+                url = build_url({'mode': 'animeytepi', 'direccion': url, 'thumbnail': thumbnail})
                 li = xbmcgui.ListItem('[COLOR orange][B]' + title + '[/B][/COLOR]', iconImage=thumbnail,
                                       thumbnailImage=thumbnail)
                 li.setProperty('fanart_image','https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
@@ -1941,8 +1947,9 @@ elif mode[0] == 'danimadosclasicas':  #actualizados recientes
 
         url = build_url({'mode': 'danimadoslistado','direccion': url,'thumbnail': thumbnail})
         li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
-        li.setInfo("video", {"Title": title, "FileName": title})
+        li.setInfo("show", {"Title": title, "FileName": title})
         li.setProperty('fanart_image', thumbnail)
+
         addMenuitem(url, li, True)
     endMenu()
 
@@ -2025,19 +2032,21 @@ elif mode[0] == 'danimadosservers':  #actualizados recientes
             if "ok.ru" in url:
                 server='okru'
                 url = okru.get_okru_video_url(url)
-                dialog.ok("spokes",url)
             else:
                 server=''
             if "youtube" in url:
                 server='youtube'
             if "openload" in url:
                 server='openload'
-
                 url = openload.get_ol_video_url(url)
+
             if "google" in url:
                 server='gvideo'
+                # gvideo.get_gvideo_video_url(url)
+
             if "rapidvideo" in url:
                 server='rapidvideo'
+                url = rapidvideo.get_rapid_video_url(url)
             if "streamango" in url:
                 server='streamango'
             if server!='':
@@ -2059,7 +2068,7 @@ elif mode[0] == 'deanimadossearch':
     website= 'https://danimados.com/?s='
     kb = xbmc.Keyboard('default', 'heading')
     kb.setDefault('')
-    kb.setHeading('Buscar en la Coleccion FLV')
+    kb.setHeading('Buscar en la Coleccion Danimados')
     kb.setHiddenInput(False)
     kb.doModal()
     if (kb.isConfirmed()):

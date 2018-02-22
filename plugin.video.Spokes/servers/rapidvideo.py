@@ -29,7 +29,7 @@ def test_video_exists(page_url):
     return True, ""
 
 
-def get_video_url(page_url, premium=False, user="", password="", video_password=""):
+def get_rapid_video_url(page_url, premium=False, user="", password="", video_password=""):
     logger.info("url=" + page_url)
     video_urls = []
     data = httptools.downloadpage(page_url).data
@@ -42,4 +42,4 @@ def get_video_url(page_url, premium=False, user="", password="", video_password=
        ext = scrapertools.get_filename_from_url(url)[-4:]
        video_urls.append(['%s %s [rapidvideo]' % (ext, res), url])
 
-    return video_urls
+    return url
