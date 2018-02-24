@@ -54,7 +54,7 @@
 
 <addon id="plugin.video.Spokes"
        name="Spokes"
-       version="0.0.6"
+       version="0.0.7"
        provider-name="Shorty">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
