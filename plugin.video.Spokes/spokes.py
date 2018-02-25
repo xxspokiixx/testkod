@@ -173,7 +173,7 @@ if mode is None:
     dialog = xbmcgui.Dialog()
     dialog.notification("Spokes", 'Mejor que el canal de los arbolitos felices!.',
                         xbmcgui.NOTIFICATION_INFO, duration, False)
-    fanart = 'http://darkelite.ml/img/fondo.jpg'
+    fanart = 'https://github.com/xxspokiixx/testkod/raw/master/plugin.video.Spokes/fanart.jpg'
 
     # url = build_url({'mode': 'Novelas'})
     # li = xbmcgui.ListItem('[COLOR yellow][B]Novelas[/B][/COLOR]', iconImage='http://www.novelashdgratis.io/img/logo.gif',
@@ -206,7 +206,7 @@ if mode is None:
     addMenuitem(url, li, True)
 
     url = build_url({'mode': 'gnula'})
-    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    thumbnail = 'https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG'
     li = xbmcgui.ListItem('[COLOR yellow][B]Gnula[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": '[COLOR skyblue][B]Series y peliculas![/B][/COLOR]'})
     li.setProperty('fanart_image', fanart)
@@ -2130,17 +2130,17 @@ elif mode[0] == 'shortytv':  #actualizados recientes
 
 elif mode[0] == 'gnula':
     url = build_url({'mode': 'gnulaestrenos', 'direccion': 'http://gnula.nu/peliculas-online/lista-de-peliculas-online-parte-1/'})
-    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    thumbnail = 'https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG'
     li = xbmcgui.ListItem('[COLOR orange][B]Estrenos[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": 'Aqui encontraras tus Peliculas Por Generos'})
-    li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
+    li.setProperty('fanart_image', 'https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG')
     addMenuitem(url, li, True)
 
     url = build_url({'mode': 'gnulageneros', 'direccion': 'http://gnula.nu/generos/lista-de-generos/'})
-    thumbnail = 'https://danimados.com/wp-content/uploads/2017/08/rsz_1logo.png'
+    thumbnail = 'https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG'
     li = xbmcgui.ListItem('[COLOR orange][B]Generos[/B][/COLOR]', iconImage=thumbnail, thumbnailImage=thumbnail)
     li.setInfo("video", {"Plot": 'Aqui encontraras tus Peliculas Por Generos'})
-    li.setProperty('fanart_image', 'https://kasukabe48.files.wordpress.com/2016/07/1444014275-106dee95104209bb9436d6df2b6d5145.jpg?w=1200')
+    li.setProperty('fanart_image', 'https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG')
     addMenuitem(url, li, True)
     #
     # url = build_url({'mode': 'deanimadossearch', 'direccion': 'https://danimados.com/genero/series-actuales/'})
@@ -2166,6 +2166,7 @@ elif mode[0] == 'gnulaestrenos':  #actualizados recientes
         plot = scrapertools.htmlclean(resto).strip()
         languages = scrapertools.find_multiple_matches(plot, r'\((V.)\)')
         quality = scrapertools.find_single_match(plot, r'(?:\[.*?\].*?)\[(.*?)\]')
+        scrapedthumbnail = 'https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG'
         for lang in languages:
             language.append(lang)
         title = scrapedtitle + " " + plot
@@ -2174,7 +2175,7 @@ elif mode[0] == 'gnulaestrenos':  #actualizados recientes
 
         url = build_url({'mode': 'gnulaservers','direccion': scrapedurl})
         li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]', iconImage=scrapedthumbnail, thumbnailImage=scrapedthumbnail)
-        li.setInfo("show", {"Title": title, "FileName": title})
+        li.setInfo("video", {"Title": title, "FileName": title})
         li.setProperty('fanart_image', scrapedthumbnail)
 
         addMenuitem(url, li, True)
@@ -2196,7 +2197,7 @@ elif mode[0] == 'gnulageneros':  #actualizados recientes
 
         url = build_url({'mode': 'gnulaestrenos','direccion': url})
         li = xbmcgui.ListItem('[COLOR orange][B]'+ title + '[/B][/COLOR]')
-        li.setInfo("show", {"Title": title, "FileName": title})
+        li.setInfo("video", {"Title": title, "FileName": title})
 
         addMenuitem(url, li, True)
     endMenu()
@@ -2250,10 +2251,10 @@ elif mode[0] == 'gnulaservers':  #actualizados recientes
             else:
                 title="NO DISPONIBLE"
             if title!="NO DISPONIBLE":
-                li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion [/B][/COLOR]'+server+titulo_opcion, iconImage='https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg',
-                                              thumbnailImage='https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+                li = xbmcgui.ListItem('[COLOR skyblue][B]Opcion [/B][/COLOR]'+server+titulo_opcion, iconImage='https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG',
+                                              thumbnailImage='https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG')
                 li.setProperty('IsPlayable', 'true')
-                li.setProperty('fanart_image','https://i1.wp.com/www.gamerfocus.co/wp-content/uploads/2017/03/anime.jpeg')
+                li.setProperty('fanart_image','https://1.bp.blogspot.com/-JZNbHrKIquo/VXTuIOhbsEI/AAAAAAAALpw/KnEC5ZJzdsk/s1600/g%2Bnula%2Bpalma2mex.JPG')
                 addMenuitem(url, li, False)
 
 

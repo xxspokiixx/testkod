@@ -54,7 +54,7 @@
 
 <addon id="plugin.video.Spokes"
        name="Spokes"
-       version="0.0.7"
+       version="0.0.8"
        provider-name="Shorty">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -77,9 +77,9 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Spokes</summary>
-    <description lang="en">Almost every content type!</description>
+    <description lang="en">De tocho morocho!!</description>
     <summary lang="es">Spokes</summary>
-    <description lang="es">Contenido de casi todo tipo!</description>
+    <description lang="es">De tocho morocho!!</description>
     <platform>all</platform>
   </extension>
 </addon>
